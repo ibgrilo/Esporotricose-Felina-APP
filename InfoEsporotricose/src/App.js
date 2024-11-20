@@ -1,24 +1,18 @@
 import '../gesture-handler.native'
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 import customFonts from './theme/useCustomFonts';
 import style from './Styles';
+import { Text, View } from 'react-native';
+import colors from './theme/colors';
+import Drawer from './routes/Drawer';
+import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
+  <customFonts />;
 
   return (
-    <View style={styles.container}>
-      <Text style={style.textFromButton}>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Drawer />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
