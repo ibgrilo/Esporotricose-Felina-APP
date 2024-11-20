@@ -1,6 +1,6 @@
 import { useFonts } from "expo-font";
 
-export default customFonts => {
+export default function customFonts() {
     const [fontsLoaded] = useFonts({
         'Poppins-Regular': require('../assets/fonts/Poppins-Regular.ttf'),
         'Poppins-Bold': require('../assets/fonts/Poppins-Bold.ttf'),
@@ -8,4 +8,6 @@ export default customFonts => {
         'Poppins-SemiBold': require('../assets/fonts/Poppins-SemiBold.ttf'),
         'Poppins-Medium': require('../assets/fonts/Poppins-Medium.ttf'),
     });
+
+    return fontsLoaded;
 }

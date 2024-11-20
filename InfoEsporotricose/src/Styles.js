@@ -30,7 +30,7 @@ export const drawerStyle = {
     drawerActiveBackgroundColor: colors.backgroundTextBlue,
     drawerLabelStyle: {
         fontSize: 16,
-        fontFamily: 'Poppins-SemiBold',
+        fontFamily: 'Poppins-Medium',
         color: colors.textBlue
     }
 }
@@ -45,7 +45,6 @@ export const headerStyle = {
 export const headerLeftStyle = {
     ...headerStyle,
     ...drawerStyle,
-    // Define dinamicamente o headerLeft
     headerLeft: () =>
         route.name === 'Menu' ? (
             <Icon
@@ -53,7 +52,7 @@ export const headerLeftStyle = {
                 type="feather"
                 color="#FFF"
                 style={{ marginLeft: 15 }}
-                onPress={() => navigation.toggleDrawer()} // Abre o menu lateral
+                onPress={() => navigation.toggleDrawer()}
             />
         ) : (
             <Icon
@@ -61,7 +60,7 @@ export const headerLeftStyle = {
                 type="material"
                 color="#FFF"
                 style={{ marginLeft: 15 }}
-                onPress={() => navigation.goBack()} // Volta para a tela anterior
+                onPress={() => navigation.goBack()}
             />
         ),
 }
