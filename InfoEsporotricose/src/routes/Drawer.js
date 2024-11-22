@@ -1,7 +1,7 @@
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import MainMenuScreen from '../views/MainMenuScreen';
 import colors from '../theme/colors';
-import style, { headerStyle, drawerStyle } from '../Styles';
+import style, { headerStyle, drawerStyle } from '../styles';
 import { Icon } from '@rneui/themed';
 import AboutUs from '../views/AboutUsScreen';
 import { color } from '@rneui/base';
@@ -51,12 +51,13 @@ export default props => {
                 headerLeft: () => headerLeftIcon(route, navigation),
                 headerRight: () => headerRightIcon(),
                 drawerType: 'slide',
+
             })}
         >
             <Drawer.Screen name="Menu" component={MainMenuScreen} />
-            <Drawer.Screen name="Sinais e sintomas" component={SingsAndSymptomsScreen} />
+            <Drawer.Screen name="Sinais & sintomas" component={SingsAndSymptomsScreen} />
             <Drawer.Screen name="Prevenção" component={PreventionScreen} />
-            <Drawer.Screen name="Como Lidar?" component={HowToDealScreen} />
+            <Drawer.Screen name="Como lidar?" component={HowToDealScreen} />
             <Drawer.Screen name="Glossário" component={GlossaryScreen} />
             <Drawer.Screen name="Sobre nós" component={AboutUs} />
         </Drawer.Navigator>

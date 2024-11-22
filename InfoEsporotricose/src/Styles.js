@@ -10,11 +10,36 @@ const style = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    containerMainMenuButtons: {
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 15,
+    },
+
+    containerInsideButton: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    changeScreenTo: {
+        backgroundColor: colors.backgroundChangeScreenButton,
+        borderRadius: 30,
+        width: 150,
+        height: 150,
+        margin: 15,
+
+    },
 
     textFromButton: {
+        flexWrap: 'wrap',
+        textAlign: 'center',
         color: colors.textBlack,
-        fontSize: 16,
+        fontSize: 15,
         fontFamily: 'Poppins-SemiBold',
+        maxWidth: 120,
     },
 
     textFromHearder: {
@@ -25,7 +50,7 @@ const style = StyleSheet.create({
 })
 
 export const drawerStyle = {
-    drawerActiveTintColor: colors.textBlue,
+    drawerActiveTintColor: colors.surfaceWhite,
     drawerInactiveTintColor: colors.textBlue,
     drawerActiveBackgroundColor: colors.backgroundTextBlue,
     drawerLabelStyle: {
