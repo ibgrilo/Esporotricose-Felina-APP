@@ -11,11 +11,19 @@ const style = StyleSheet.create({
         justifyContent: 'center',
     },
     containerMainMenuButtons: {
+        flex: 1,
         flexWrap: 'wrap',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         alignItems: 'center',
         padding: 15,
+    },
+
+    containerAboutUsButton: {
+        flex: 1,
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        margin: 20,
     },
 
     containerInsideButton: {
@@ -56,12 +64,14 @@ export const drawerStyle = {
     drawerLabelStyle: {
         fontSize: 16,
         fontFamily: 'Poppins-Medium',
-        color: colors.textBlue
-    }
+        color: colors.textBlue,
+    },
 }
 
 export const headerStyle = {
-    headerStyle: { backgroundColor: colors.primary },
+    headerStyle: {
+        backgroundColor: colors.primary,
+    },
     headerTitleStyle: style.textFromHearder,
     headerTintColor: colors.surfaceWhite,
     headerTitleAlign: 'center',

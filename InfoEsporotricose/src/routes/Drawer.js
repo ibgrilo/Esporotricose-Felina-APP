@@ -31,14 +31,14 @@ export default props => {
                 name="menu"
                 type="feather"
                 color="#FFF"
-                style={{ marginLeft: 15 }}
+                style={{ marginLeft: 20 }}
                 onPress={() => navigation.toggleDrawer()}
             />) : (
             <Icon
                 name="arrow-back"
                 type="material"
                 color="#FFF"
-                style={{ marginLeft: 15 }}
+                style={{ marginLeft: 20 }}
                 onPress={() => navigation.goBack()}
             />);
     }
@@ -51,7 +51,6 @@ export default props => {
                 headerLeft: () => headerLeftIcon(route, navigation),
                 headerRight: () => headerRightIcon(),
                 drawerType: 'slide',
-
             })}
         >
             <Drawer.Screen name="Menu" component={MainMenuScreen} />

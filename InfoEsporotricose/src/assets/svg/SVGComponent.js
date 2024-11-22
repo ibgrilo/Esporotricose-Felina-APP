@@ -3,6 +3,7 @@ import Stethoscope from "./icons/Stethoscope";
 import Prevention from "./icons/Prevention";
 import HowToDeal from "./icons/HowToDeal";
 import Glossary from "./icons/Glossary";
+import AboutUs from "./icons/AboutUs";
 
 const SVGComponent = (props) => {
     switch (props.name) {
@@ -14,8 +15,9 @@ const SVGComponent = (props) => {
             return <HowToDeal width={100} height={100} />;
         case "Glossário":
             return <Glossary width={100} height={100} />;
-        default:
-            break;
+        case "Sobre nós":
+            return <AboutUs />
+        default: break;
     }
 }
 
