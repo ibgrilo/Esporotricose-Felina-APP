@@ -13,7 +13,7 @@ const style = StyleSheet.create({
     containerMainMenuButtons: {
         flexWrap: 'wrap',
         flexDirection: 'row',
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center',
         padding: 15,
     },
@@ -27,8 +27,8 @@ const style = StyleSheet.create({
     changeScreenTo: {
         backgroundColor: colors.backgroundChangeScreenButton,
         borderRadius: 30,
-        width: 150,
-        height: 150,
+        width: 170,
+        height: 170,
         margin: 15,
 
     },
@@ -37,8 +37,8 @@ const style = StyleSheet.create({
         flexWrap: 'wrap',
         textAlign: 'center',
         color: colors.textBlack,
-        fontSize: 15,
-        fontFamily: 'Poppins-SemiBold',
+        fontSize: 18,
+        fontFamily: 'Poppins-Bold',
         maxWidth: 120,
     },
 
@@ -67,26 +67,4 @@ export const headerStyle = {
     headerTitleAlign: 'center',
 }
 
-export const headerLeftStyle = {
-    ...headerStyle,
-    ...drawerStyle,
-    headerLeft: () =>
-        route.name === 'Menu' ? (
-            <Icon
-                name="menu"
-                type="feather"
-                color="#FFF"
-                style={{ marginLeft: 15 }}
-                onPress={() => navigation.toggleDrawer()}
-            />
-        ) : (
-            <Icon
-                name="arrow-back"
-                type="material"
-                color="#FFF"
-                style={{ marginLeft: 15 }}
-                onPress={() => navigation.goBack()}
-            />
-        ),
-}
 export default style;

@@ -7,13 +7,13 @@ import Glossary from "./icons/Glossary";
 const SVGComponent = (props) => {
     switch (props.name) {
         case "Sinais & sintomas":
-            return <Stethoscope width={90} height={90} />;
+            return <Stethoscope width={100} height={100} />;
         case "Prevenção":
-            return <Prevention width={90} height={90} />;
+            return <Prevention width={100} height={100} />;
         case "Como lidar?":
-            return <HowToDeal width={90} height={90} />;
+            return <HowToDeal width={100} height={100} />;
         case "Glossário":
-            return <Glossary width={90} height={90} />;
+            return <Glossary width={100} height={100} />;
         default:
             break;
     }
