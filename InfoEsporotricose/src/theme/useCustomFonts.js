@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react';
+import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from "expo-font";
 
 export default function customFonts() {
@@ -8,6 +10,14 @@ export default function customFonts() {
         'Poppins-SemiBold': require('../assets/fonts/Poppins-SemiBold.ttf'),
         'Poppins-Medium': require('../assets/fonts/Poppins-Medium.ttf'),
     });
+
+    useEffect(() => {
+        if (fontsLoaded) {
+            SplashScreen.hideAsync(); // Esconde a splash screen quando as fontes são carregadas
+        } else {
+            SplashScreen.preventAutoHideAsync(); // Previne que a splash screen feche antes
+        }
+    }, [fontsLoaded]);
 
     return fontsLoaded;
 }
