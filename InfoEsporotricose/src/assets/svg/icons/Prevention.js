@@ -1,8 +1,8 @@
 import React from "react";
 import Svg, { G, Path, Mask, Rect } from "react-native-svg"
 
-const Prevention = () => (
-    <Svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/Svg">
+const Prevention = ({ width, height }) => (
+    <Svg width={width} height={height} viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/Svg">
         <Path fill-rule="evenodd" clipRule="evenodd" d="M12.6657 19.0593C11.25 21.0763 11.25 27.0718 11.25 39.0629V44.968C11.25 66.1105 27.1461 76.3709 37.1196 80.7276C39.825 81.9092 41.1776 82.5002 45 82.5002V7.50024C41.9573 7.50024 39.0187 8.50614 33.1414 10.5179L30.9934 11.2532C19.7187 15.1126 14.0814 17.0423 12.6657 19.0593Z" fill="#375CA6" />
         <Path opacity="0.5" d="M78.75 44.968V39.0629C78.75 27.0718 78.75 21.0763 77.3344 19.0593C75.9187 17.0423 70.2814 15.1126 59.0066 11.2532L56.8586 10.5179C50.9813 8.50614 48.0427 7.50024 45 7.50024V82.5002C48.8224 82.5002 50.175 81.9092 52.8803 80.7276C62.8538 76.3709 78.75 66.1105 78.75 44.968Z" fill="#375CA6" />
         <Mask id="mask0_56_250" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="22" y="23" width="45" height="45">

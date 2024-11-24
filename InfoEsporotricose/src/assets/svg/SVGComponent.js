@@ -4,19 +4,20 @@ import Prevention from "./icons/Prevention";
 import HowToDeal from "./icons/HowToDeal";
 import Glossary from "./icons/Glossary";
 import AboutUs from "./icons/AboutUs";
+import { buttonSizes } from "../../styles";
 
 const SVGComponent = (props) => {
     switch (props.name) {
         case "Sinais & sintomas":
-            return <Stethoscope width={100} height={100} />;
+            return <Stethoscope width={`${buttonSizes * .5}`} height={`${buttonSizes * .5}`} />;
         case "Prevenção":
-            return <Prevention width={100} height={100} />;
+            return <Prevention width={`${buttonSizes * .6}`} height={`${buttonSizes * .6}`} />;
         case "Como lidar?":
-            return <HowToDeal width={100} height={100} />;
+            return <HowToDeal width={`${buttonSizes * .5}`} height={`${buttonSizes * .5}`} />;
         case "Glossário":
-            return <Glossary width={100} height={100} />;
+            return <Glossary width={`${buttonSizes * .55}`} height={`${buttonSizes * .55}`} />;
         case "Sobre nós":
-            return <AboutUs />
+            return <AboutUs width={`${buttonSizes * .35}`} height={`${buttonSizes * .35}`} />
         default: break;
     }
 }

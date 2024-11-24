@@ -3,8 +3,8 @@ import { StyleSheet, Dimensions } from 'react-native';
 import { Icon } from '@rneui/themed';
 import colors from './theme/colors';
 
-const { width, height } = Dimensions.get('window')
-const buttonSizes = width * 0.41
+export const { width, height } = Dimensions.get('window')
+export const buttonSizes = width * 0.41
 
 const style = StyleSheet.create({
     container: {
