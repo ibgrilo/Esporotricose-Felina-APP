@@ -1,7 +1,10 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import { Icon } from '@rneui/themed';
 import colors from './theme/colors';
+
+const { width, height } = Dimensions.get('window')
+const buttonSizes = width * 0.41
 
 const style = StyleSheet.create({
     container: {
@@ -14,45 +17,45 @@ const style = StyleSheet.create({
         flex: 1,
         flexWrap: 'wrap',
         flexDirection: 'row',
-        justifyContent: 'space-evenly',
+        justifyContent: 'space-around',
         alignItems: 'center',
-        padding: 15,
+        padding: buttonSizes * .01,
     },
 
     containerAboutUsButton: {
         flex: 1,
         justifyContent: 'flex-end',
         alignItems: 'flex-end',
-        margin: 20,
+        margin: width * .05,
     },
 
     containerInsideButton: {
         flex: 1,
+        padding: buttonSizes * .1,
         alignItems: 'center',
         justifyContent: 'center',
     },
 
     changeScreenTo: {
         backgroundColor: colors.backgroundChangeScreenButton,
-        borderRadius: 30,
-        width: 170,
-        height: 170,
-        margin: 15,
-
+        borderRadius: buttonSizes * .25,
+        width: buttonSizes,
+        height: buttonSizes,
+        margin: buttonSizes * .1,
     },
 
     textFromButton: {
         flexWrap: 'wrap',
         textAlign: 'center',
         color: colors.textBlack,
-        fontSize: 18,
+        fontSize: buttonSizes * .12,
         fontFamily: 'Poppins-Bold',
-        maxWidth: 120,
+        maxWidth: buttonSizes,
     },
 
     textFromHearder: {
         color: colors.surfaceWhite,
-        fontSize: 18,
+        fontSize: width * .05,
         fontFamily: 'Poppins-Regular',
     },
 })
@@ -62,7 +65,7 @@ export const drawerStyle = {
     drawerInactiveTintColor: colors.textBlue,
     drawerActiveBackgroundColor: colors.backgroundTextBlue,
     drawerLabelStyle: {
-        fontSize: 16,
+        fontSize: width * .042,
         fontFamily: 'Poppins-Medium',
         color: colors.textBlue,
     },
