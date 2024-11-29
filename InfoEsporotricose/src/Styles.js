@@ -48,36 +48,35 @@ const style = StyleSheet.create({
         flexWrap: 'wrap',
         textAlign: 'center',
         color: colors.textBlack,
-        fontSize: buttonSizes * .12,
+        fontSize: Math.round(buttonSizes * .12),
         fontFamily: 'Poppins-Bold',
         maxWidth: buttonSizes,
     },
 
-    textFromHearder: {
+    textFromHeader: {
         color: colors.surfaceWhite,
-        fontSize: width * .05,
+        fontSize: Math.round(width * .05),
         fontFamily: 'Poppins-Regular',
     },
 })
-
-export const drawerStyle = {
-    drawerActiveTintColor: colors.surfaceWhite,
-    drawerInactiveTintColor: colors.textBlue,
-    drawerActiveBackgroundColor: colors.backgroundTextBlue,
-    drawerLabelStyle: {
-        fontSize: width * .042,
-        fontFamily: 'Poppins-Medium',
-        color: colors.textBlue,
-    },
-}
 
 export const headerStyle = {
     headerStyle: {
         backgroundColor: colors.primary,
     },
-    headerTitleStyle: style.textFromHearder,
+    headerTitleStyle: style.textFromHeader,
     headerTintColor: colors.surfaceWhite,
     headerTitleAlign: 'center',
 }
 
 export default style;
+// export const drawerStyle = {
+//     drawerActiveTintColor: colors.surfaceWhite,
+//     drawerInactiveTintColor: colors.textBlue,
+//     drawerActiveBackgroundColor: colors.backgroundTextBlue,
+//     drawerLabelStyle: {
+//         fontSize: width * .042,
+//         fontFamily: 'Poppins-Medium',
+//         color: colors.textBlue,
+//     },
+// }
