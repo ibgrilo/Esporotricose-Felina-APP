@@ -5,7 +5,7 @@ import SVGComponent from "../assets/svg/SVGComponent";
 
 export default ({ props, name }) => {
     return (
-        <TouchableOpacity style={Style.changeScreenTo} onPress={() => props.navigation.navigate(name)}>
+        <TouchableOpacity style={Style.changeScreenTo} onPress={() => props.navigation.push(name)}>
             <View style={Style.containerInsideButton}>
                 <SVGComponent name={name} />
                 <Text style={Style.textFromButton}>{name}</Text>

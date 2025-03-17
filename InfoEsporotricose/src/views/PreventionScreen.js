@@ -1,14 +1,22 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { View, Text } from "react-native";
-import style from "../styles";
+import { View, Text, ScrollView } from "react-native";
+import Prevention from "../assets/svg/icons/Prevention.svg"
+import styles from "../styles";
 import colors from "../theme/colors";
+import { buttonSizes } from "../styles";
+import PreventionText from "../data/PreventionText";
 
 export default props => {
     return (
-        <View >
+
+        <ScrollView style={styles.scrollContainer}>
             <StatusBar translucent={false} backgroundColor={colors.primary} />
-            <Text style={style.textFromButton}> Prevenção!!!</Text>
-        </View>
+            <View style={styles.container}>
+                <Prevention width={`${buttonSizes * .7}`} height={`${buttonSizes * .7}`} />
+            </View>
+            <PreventionText />
+        </ScrollView>
+
     )
 }
