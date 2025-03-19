@@ -7,7 +7,7 @@ export default props => (
         <View style={styles.section}>
             <Text style={styles.titleFromHowToDeal}>📌 O que é a Transmissão da Esporotricose?</Text>
             <Text style={styles.text}>
-                A esporotricose é uma micose causada pelo fungo Sporothrix spp., que pode infectar gatos, humanos e outros animais.
+                A esporotricose é uma micose causada pelo fungo <Text style={styles.italic}>Sporothrix sp</Text>., que pode infectar gatos, humanos e outros animais.
             </Text>
         </View>
 

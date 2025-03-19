@@ -96,8 +96,14 @@ const style = StyleSheet.create({
     textAlign: 'center'
   },
 
+  italicTitle: {
+    fontFamily: "Poppins-Italic",
+    color: colors.surfaceWhite,
+    fontSize: Math.round(buttonSizes * .1),
+  },
+
   italic: {
-    fontFamily: "Poppins-Italic"
+    fontFamily: "Poppins-Italic",
   },
 
   description: {
@@ -194,9 +200,8 @@ const style = StyleSheet.create({
 
   overlayHeaderText: {
     fontSize: buttonSizes * 0.1,
-    fontWeight: "bold",
     color: colors.surfaceWhite,
-    fontFamily: "Poppins-Regular",
+    fontFamily: "Poppins-Medium",
   },
 
   overlayText: {
@@ -219,7 +224,6 @@ const style = StyleSheet.create({
   overlayCloseButtonText: {
     color: "#FFFFFF",
     fontSize: buttonSizes * 0.1,
-    fontWeight: "bold",
     textAlign: "center",
     fontFamily: "Poppins-SemiBold",
   },

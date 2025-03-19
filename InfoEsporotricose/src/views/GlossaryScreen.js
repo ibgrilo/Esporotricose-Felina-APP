@@ -25,7 +25,7 @@ const Accordion = () => {
               expanded === key && styles.activeHeader,
             ]}
           >
-            <Text style={styles.title}>{title}</Text>
+            <Text style={title !== "Sporothrix sp." ? styles.title : styles.italicTitle}>{title}</Text>
             <Icon
               name={expanded === key ? "keyboard-arrow-up" : "keyboard-arrow-down"}
               size={24}
