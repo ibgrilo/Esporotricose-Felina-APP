@@ -4,6 +4,8 @@ import Stethoscope from "./icons/Stethoscope.svg"
 import HowToDeal from "./icons/HowToDeal.svg";
 import Glossary from "./icons/Glossary.svg";
 import AboutUs from "./icons/AboutUs.svg";
+import VisibleSign from "./icons/VisibleSign.svg"
+import InvisibleSign from "./icons/InvisibleSign.svg"
 import { buttonSizes } from "../../styles";
 
 const SVGComponent = (props) => {
@@ -18,6 +20,11 @@ const SVGComponent = (props) => {
             return <Glossary width={`${buttonSizes * .55}`} height={`${buttonSizes * .55}`} />;
         case "Sobre nós":
             return <AboutUs width={`${buttonSizes * .4}`} height={`${buttonSizes * .4}`} />
+        case "VisibleSign":
+            return <VisibleSign width={`${buttonSizes * .22}`} height={`${buttonSizes * .22}`} />
+        case "InvisibleSign":
+            return <InvisibleSign width={`${buttonSizes * .22}`} height={`${buttonSizes * .22}`} />
+
         default: break;
     }
 }

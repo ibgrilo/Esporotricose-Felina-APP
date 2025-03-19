@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Dimensions } from 'react-native';
 import { Icon } from '@rneui/themed';
 import colors from './theme/colors';
+import { color } from '@rneui/base';
 
 export const { width, height } = Dimensions.get('window')
 export const buttonSizes = width * 0.41
@@ -24,6 +25,13 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
+    padding: buttonSizes * .01,
+  },
+
+  containerSignAndSymptomsMenu: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
     padding: buttonSizes * .01,
   },
 
@@ -114,7 +122,8 @@ const style = StyleSheet.create({
   },
 
   section: {
-    marginBottom: 15,
+    margin: buttonSizes * 0.03,
+    marginBottom: buttonSizes * 0.05,
   },
 
   textFromButton: {
@@ -130,6 +139,32 @@ const style = StyleSheet.create({
     color: colors.surfaceWhite,
     fontSize: Math.round(width * .05),
     fontFamily: 'Poppins-SemiBold',
+  },
+
+  //Signs and Symptoms Button
+
+  SignsAndSymptomsButton: {
+    width: buttonSizes * 1.7,
+    height: 'auto',
+    flexDirection: 'row',
+    borderRadius: buttonSizes * 0.5,
+    margin: buttonSizes * 0.04,
+    padding: buttonSizes * 0.04
+  },
+
+  SignsAndSymptomsButtonContainer: {
+    flex: 1,
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+
+  SignsAndSymptomsButtontitles: {
+    color: colors.surfaceWhite,
+    fontSize: Math.round(buttonSizes * .20),
+    fontFamily: "Poppins-Medium",
+    paddingRight: buttonSizes * 0.04
   },
 
   // Accordion

@@ -1,7 +1,7 @@
 import React from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import MainMenuScreen from "../views/MainMenuScreen";
-import SingsAndSymptomsScreen from "../views/SingsAndSymptomsScreen";
+import SignsAndSymptomsScreen from "../views/SignsAndSymptomsScreen";
 import PreventionScreen from "../views/PreventionScreen";
 import HowToDealScreen from "../views/HowToDealScreen";
 import GlossaryScreen from "../views/GlossaryScreen";
@@ -21,7 +21,7 @@ export default props => {
             ...headerStyle,
         }}>
             <Stack.Screen name="Menu" component={MainMenuScreen} />
-            <Stack.Screen name="Sinais & sintomas" component={SingsAndSymptomsScreen} />
+            <Stack.Screen name="Sinais & sintomas" component={SignsAndSymptomsScreen} />
             <Stack.Screen name="Prevenção" component={PreventionScreen} />
             <Stack.Screen name="Como lidar?" component={HowToDealScreen} />
             <Stack.Screen name="Está com esporotricose?" component={HowToDealScreen1} />
