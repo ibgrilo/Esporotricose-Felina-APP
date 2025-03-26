@@ -35,6 +35,13 @@ const style = StyleSheet.create({
     padding: buttonSizes * .01,
   },
 
+  containerSignAndSymptomsMenu2: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    padding: buttonSizes * .01,
+  },
+
   containerAboutUsButton: {
     flex: 1,
     justifyContent: 'flex-end',
@@ -42,9 +49,11 @@ const style = StyleSheet.create({
     margin: width * .05,
   },
 
+  // Buttons from main menu
+
   containerInsideButton: {
     flex: 1,
-    padding: buttonSizes * .1,
+    padding: buttonSizes * .01,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -55,6 +64,15 @@ const style = StyleSheet.create({
     width: buttonSizes,
     height: buttonSizes,
     margin: buttonSizes * .1,
+  },
+
+  textFromButton: {
+    flexWrap: 'wrap',
+    textAlign: 'center',
+    color: colors.textBlack,
+    fontSize: Math.round(buttonSizes * .11),
+    fontFamily: 'Poppins-SemiBold',
+    maxWidth: buttonSizes,
   },
 
   textButtonWhite: {
@@ -126,14 +144,7 @@ const style = StyleSheet.create({
     marginBottom: buttonSizes * 0.05,
   },
 
-  textFromButton: {
-    flexWrap: 'wrap',
-    textAlign: 'center',
-    color: colors.textBlack,
-    fontSize: Math.round(buttonSizes * .12),
-    fontFamily: 'Poppins-Bold',
-    maxWidth: buttonSizes,
-  },
+
 
   textFromHeader: {
     color: colors.surfaceWhite,
@@ -141,7 +152,7 @@ const style = StyleSheet.create({
     fontFamily: 'Poppins-SemiBold',
   },
 
-  //Signs and Symptoms Button
+  //Signs and Symptoms Button 1
 
   SignsAndSymptomsButton: {
     width: buttonSizes * 1.7,
@@ -165,6 +176,79 @@ const style = StyleSheet.create({
     fontSize: Math.round(buttonSizes * .20),
     fontFamily: "Poppins-Medium",
     paddingRight: buttonSizes * 0.04
+  },
+
+  //Signs and Symptoms Button 
+
+  SignsAndSymptomsPanel: {
+    backgroundColor: colors.tertiary,
+    flex: 1,
+    textAlign: 'center',
+    justifyContent: 'center',
+    width: buttonSizes * 2.2,
+    margin: buttonSizes * 0.08,
+    paddingLeft: buttonSizes * 0.1,
+    paddingRight: buttonSizes * 0.1,
+    paddingBottom: buttonSizes * 0.08,
+    paddingTop: buttonSizes * 0.08,
+  },
+
+  SignsAndSymptomsPanelTitle: {
+    fontFamily: 'Poppins-ExtraBold',
+    fontSize: Math.round(buttonSizes * .15),
+  },
+
+  SignsAndSymptomsPanelDescription: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: Math.round(buttonSizes * .09),
+  },
+
+  SignsAndSymptomsPanelViews: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: "space-between",
+  },
+
+  SignsAndSymptomsPanelIconView: {
+    flex: 0.1,
+    flexDirection: 'column',
+    alignItems: 'flex-end',
+    marginTop: buttonSizes * 0.03
+  },
+
+  SignsAndSymptomsPanelTitleView: {
+    flex: 1,
+    flexDirection: 'row-reverse',
+    alignItems: 'center',
+    justifyContent: "flex-end",
+  },
+
+  //Signs and Symptoms Button 3
+
+  SignsAndSymptomsButton3: {
+    backgroundColor: colors.primary,
+    flexDirection: 'row',
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: buttonSizes * 0.05,
+    borderRadius: buttonSizes * 0.5,
+    paddingHorizontal: buttonSizes * 0.1,
+  },
+
+  SignsAndSymptomsButton3Title: {
+    fontFamily: 'Poppins-SemiBold',
+    color: colors.surfaceWhite,
+    fontSize: Math.round(buttonSizes * .065),
+    marginRight: buttonSizes * 0.02
+  },
+
+  SignsAndSymptomsButtonViews: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
   },
 
   // Accordion

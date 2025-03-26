@@ -4,14 +4,14 @@ import styles from "../styles";
 import colors from "../theme/colors";
 import SVGComponent from "../assets/svg/SVGComponent";
 
-export default ({ name, buttonName }) => {
-
-    console.log(name)
+export default ({ name, buttonName, navigation }) => {
     return (
         <TouchableOpacity style={{
             ...styles.SignsAndSymptomsButton,
-            backgroundColor: (name) => name === "VisibleSign" ? colors.secondary : colors.primary
-        }}>
+            backgroundColor: name === "VisibleSign" ? colors.secondary : colors.primary
+        }}
+            onPress={() => navigation.push("Lista de sinais e sintomas", name)}
+        >
             <View style={styles.SignsAndSymptomsButtonContainer}>
                 <Text style={styles.SignsAndSymptomsButtontitles}>{buttonName}</Text>
                 <SVGComponent name={name} />
