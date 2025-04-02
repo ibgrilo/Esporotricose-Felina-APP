@@ -9,6 +9,12 @@ import InvisibleSign from "./icons/InvisibleSign.svg"
 import Bandage from "./icons/Bandage.svg"
 import Image from "./icons/Image.svg"
 import Cross from "./icons/Cross.svg"
+import Info from "./icons/Info.svg"
+import Brain from "./icons/Brain.svg"
+import Lung from "./icons/Lung.svg"
+import Mushroom from "./icons/Mushroom.svg"
+import Paw from "./icons/Paw.svg"
+import Logo from "./icons/Logo.svg"
 import { buttonSizes } from "../../styles";
 
 const SVGComponent = (props) => {
@@ -33,7 +39,18 @@ const SVGComponent = (props) => {
             return <Image width={`${buttonSizes * .13}`} height={`${buttonSizes * .13}`} />
         case "Cross":
             return <Cross width={`${buttonSizes * .13}`} height={`${buttonSizes * .13}`} />
-
+        case "Info":
+            return <Info width={`${buttonSizes * .13}`} height={`${buttonSizes * .13}`} />
+        case "Brain":
+            return <Brain width={`${buttonSizes * .15}`} height={`${buttonSizes * .15}`} />
+        case "Lung":
+            return <Lung width={`${buttonSizes * .15}`} height={`${buttonSizes * .15}`} />
+        case "Mushroom":
+            return <Mushroom width={`${buttonSizes * .15}`} height={`${buttonSizes * .15}`} />
+        case "Paw":
+            return <Paw width={`${buttonSizes * .15}`} height={`${buttonSizes * .15}`} />
+        case "Logo":
+            return <Logo width={`${buttonSizes * .15}`} height={`${buttonSizes * .15}`} />
         default: break;
     }
 }

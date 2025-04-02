@@ -11,14 +11,7 @@ const HowToDealOverlay = ({ visible, onClose, title, message }) => {
             overlayStyle={styles.overlayContainer}
         >
             <View style={styles.overlayContent}>
-                <View style={styles.overlayHeader}>
-                    <Text style={styles.overlayHeaderText}>{title}</Text>
-                </View>
                 <Text style={styles.overlayText}>{message}</Text>
-
-                <TouchableOpacity onPress={onClose} style={styles.overlayCloseButton}>
-                    <Text style={styles.overlayCloseButtonText}>Fechar</Text>
-                </TouchableOpacity>
             </View>
         </Overlay>
     );

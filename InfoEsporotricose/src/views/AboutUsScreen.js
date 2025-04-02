@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { View, Text } from "react-native";
 import style from "../styles";
 import colors from "../theme/colors";
+import FixedLogo from "../components/FixedLogo";
 
 export default props => {
     return (

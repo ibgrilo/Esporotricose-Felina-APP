@@ -6,6 +6,7 @@ import styles from "../styles";
 import colors from "../theme/colors";
 import { buttonSizes } from "../styles";
 import PreventionText from "../data/PreventionText";
+import FixedLogo from "../components/FixedLogo";
 
 export default props => {
     return (

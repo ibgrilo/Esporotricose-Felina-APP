@@ -6,6 +6,7 @@ import colors from "../theme/colors";
 import ChangeScreenTo from "../components/changeScreenTo";
 import SVGComponent from "../assets/svg/SVGComponent";
 import ToAboutUsScreen from "../components/ToAboutUsScreen";
+import FixedLogo from "../components/FixedLogo";
 
 export default props => {
     return (

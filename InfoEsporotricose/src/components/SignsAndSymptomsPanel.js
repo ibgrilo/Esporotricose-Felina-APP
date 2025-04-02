@@ -3,11 +3,33 @@ import { Text, View } from "react-native";
 import styles, { buttonSizes } from "../styles";
 import colors from "../theme/colors";
 import SVGComponent from "../assets/svg/SVGComponent";
-import SignsAndSymptomsButton3 from "./SignsAndSymptomsButton3";
+import SignsAndSymptomsButton2 from "./SignsAndSymptomsButton2";
 
-export default ({ name, description }) => {
+export default ({ name, description, types, system }) => {
 
     const [height, setHeight] = useState(0); // Estado para armazenar a altura do botão
+
+    function SideIcon({ system }) {
+        let iconName = ""
+        switch (system) {
+            case "Sistema respiratório":
+                iconName = "Lung";
+                break;
+            case "Sistema linfático":
+                iconName = "Mushroom";
+                break;
+            case "Sistema locomotor":
+                iconName = "Paw";
+                break;
+            case "Sistema nervoso":
+                iconName = "Brain";
+                break;
+            default:
+                iconName = "Bandage"
+                break;
+        }
+        return <SVGComponent name={iconName} />
+    }
 
     return (
         <View
@@ -22,7 +44,7 @@ export default ({ name, description }) => {
                     <Text style={styles.SignsAndSymptomsPanelTitle}>{name}</Text>
                 </View>
                 <View style={styles.SignsAndSymptomsPanelIconView}>
-                    <SVGComponent name="Bandage" />
+                    <SideIcon system={system} />
                 </View>
             </View>
 
@@ -32,8 +54,8 @@ export default ({ name, description }) => {
                 </Text>
             </View>
             <View style={styles.SignsAndSymptomsButtonViews}>
-                <SignsAndSymptomsButton3 type={1} />
-                <SignsAndSymptomsButton3 type={2} />
+                <SignsAndSymptomsButton2 type={types[0]} />
+                <SignsAndSymptomsButton2 type={types[1]} />
             </View>
         </View>
     );

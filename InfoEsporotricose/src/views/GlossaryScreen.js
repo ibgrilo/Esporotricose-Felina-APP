@@ -5,6 +5,7 @@ import Icon from "react-native-vector-icons/MaterialIcons";
 import styles from "../styles";
 import itens from "../data/glossaryText";
 import colors from "../theme/colors";
+import FixedLogo from "../components/FixedLogo";
 
 const Accordion = () => {
   const [expanded, setExpanded] = useState(null);

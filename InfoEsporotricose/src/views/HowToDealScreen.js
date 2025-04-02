@@ -4,6 +4,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import styles from "../styles";
 import colors from "../theme/colors";
 import HowToDealButton from "../components/HowToDealButton";
+import FixedLogo from "../components/FixedLogo";
 
 export default props => {
     return (

@@ -6,12 +6,12 @@ import SignsAndSymptomsScreen2 from "../views/SignsAndSymptomsScreen2";
 import PreventionScreen from "../views/PreventionScreen";
 import HowToDealScreen from "../views/HowToDealScreen";
 import GlossaryScreen from "../views/GlossaryScreen";
-import AboutUs from "../assets/svg/icons/AboutUs";
-import colors from "../theme/colors";
 import { headerStyle } from "../styles";
 import AboutUsScreen from "../views/AboutUsScreen";
 import HowToDealScreen1 from "../views/HowToDealScreen1";
 import HowToDealScreen2 from "../views/HowToDealScreen2";
+import SVGComponent from "../assets/svg/SVGComponent";
+import { View } from "react-native";
 
 const Stack = createNativeStackNavigator()
 
@@ -31,7 +31,7 @@ export default props => {
             <Stack.Screen name="Como é transmitida?" component={HowToDealScreen2} />
             <Stack.Screen name="Glossário" component={GlossaryScreen} />
             <Stack.Screen name="Sobre nós" component={AboutUsScreen} />
-
         </Stack.Navigator >
+
     )
 }

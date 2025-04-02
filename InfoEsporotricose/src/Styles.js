@@ -8,6 +8,17 @@ export const { width, height } = Dimensions.get('window')
 export const buttonSizes = width * 0.41
 
 const style = StyleSheet.create({
+  fixedLogo: {
+    flex: 1,
+    alignSelf: 'flex-end',
+    position: "absolute",
+  },
+
+  globalContainer: {
+    flex: 1,
+    padding: buttonSizes * 0.07,
+  },
+
   container: {
     flex: 1,
     textAlign: 'center',
@@ -144,8 +155,6 @@ const style = StyleSheet.create({
     marginBottom: buttonSizes * 0.05,
   },
 
-
-
   textFromHeader: {
     color: colors.surfaceWhite,
     fontSize: Math.round(width * .05),
@@ -227,6 +236,7 @@ const style = StyleSheet.create({
   //Signs and Symptoms Button 3
 
   SignsAndSymptomsButton3: {
+    flex: 0.45,
     backgroundColor: colors.primary,
     flexDirection: 'row',
     textAlign: 'center',
@@ -301,10 +311,11 @@ const style = StyleSheet.create({
     borderRadius: buttonSizes * 0.09,
     padding: 0,
     backgroundColor: "#FFFFFF",
-
+    alignContent: 'center',
   },
 
   overlayContent: {
+    justifyContent: "center",
     alignItems: "center",
     padding: buttonSizes * 0.1,
   },

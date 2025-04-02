@@ -1,14 +1,30 @@
 import React, { useEffect } from "react";
-import { StatusBar } from "expo-status-bar";
 import { ScrollView, View } from "react-native";
 import styles from "../styles";
-import colors from "../theme/colors";
 import SignsAndSymptomsPanel from "../components/SignsAndSymptomsPanel";
-import sintomas from "../data/visibleSymptoms";
+import visibleSymptoms from "../data/visibleSymptoms";
+import invisibleSymptoms from "../data/invisibleSymptoms";
+import FixedLogo from "../components/FixedLogo";
+
+const renderSymptoms = (symptomsData, types, includeSystem = false) => (
+    <ScrollView>
+        <View style={styles.containerSignAndSymptomsMenu2}>
+            {Object.keys(symptomsData).map((chave) => (
+                <SignsAndSymptomsPanel
+                    key={chave}
+                    name={symptomsData[chave].nome}
+                    description={symptomsData[chave].descricao}
+                    types={types}
+                    system={includeSystem ? symptomsData[chave].sistemaAssociado : undefined}
+                />
+            ))}
+        </View>
+    </ScrollView>
+);
 
 export default ({ navigation, route }) => {
 
-    //Muda o título do header conforme a opção de menu selecionada
+    // Muda o título do header conforme a opção de menu selecionada
     useEffect(() => {
         let title = "";
         switch (route.params) {
@@ -22,20 +38,15 @@ export default ({ navigation, route }) => {
                 title = route.name;
                 break;
         }
-        navigation.setOptions({ title: title });
+        navigation.setOptions({ title });
     }, [route.params, navigation]);
 
-    return (
-        <ScrollView>
-            <View style={styles.containerSignAndSymptomsMenu2}>
-                {Object.keys(sintomas).map((chave) => (
-                    <SignsAndSymptomsPanel
-                        key={chave}
-                        name={sintomas[chave].nome}
-                        description={sintomas[chave].descricao}
-                    />
-                ))}
-            </View>
-        </ScrollView>
-    );
+    switch (route.params) {
+        case "VisibleSign":
+            return renderSymptoms(visibleSymptoms, [1, 2]);
+        case "InvisibleSign":
+            return renderSymptoms(invisibleSymptoms, [3, 2], true);
+        default:
+            return null;
+    }
 };

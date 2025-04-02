@@ -24,10 +24,6 @@ const PetCremationOverlay = ({ visible, onClose }) => {
                 <Text style={styles.overlayText}>
                     📍 Estr. de Ribamar - Vila Santa Teresinha, São José de Ribamar - MA, 65137-000
                 </Text>
-
-                <TouchableOpacity onPress={onClose} style={styles.overlayCloseButton}>
-                    <Text style={styles.overlayCloseButtonText}>Fechar</Text>
-                </TouchableOpacity>
             </View>
         </Overlay>
     );
