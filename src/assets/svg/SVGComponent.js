@@ -1,20 +1,29 @@
 import React from "react";
 import Prevention from "./icons/Prevention.svg";
-import Stethoscope from "./icons/Stethoscope.svg"
+import Stethoscope from "./icons/Stethoscope.svg";
 import HowToDeal from "./icons/HowToDeal.svg";
 import Glossary from "./icons/Glossary.svg";
 import AboutUs from "./icons/AboutUs.svg";
-import VisibleSign from "./icons/VisibleSign.svg"
-import InvisibleSign from "./icons/InvisibleSign.svg"
-import Bandage from "./icons/Bandage.svg"
-import Image from "./icons/Image.svg"
-import Cross from "./icons/Cross.svg"
-import Info from "./icons/Info.svg"
-import Brain from "./icons/Brain.svg"
-import Lung from "./icons/Lung.svg"
-import Mushroom from "./icons/Mushroom.svg"
-import Paw from "./icons/Paw.svg"
-import Logo from "./icons/Logo.svg"
+import VisibleSign from "./icons/VisibleSign.svg";
+import InvisibleSign from "./icons/InvisibleSign.svg";
+import Bandage from "./icons/Bandage.svg";
+import Image from "./icons/Image.svg";
+import Cross from "./icons/Cross.svg";
+import Info from "./icons/Info.svg";
+import Brain from "./icons/Brain.svg";
+import Lung from "./icons/Lung.svg";
+import Mushroom from "./icons/Mushroom.svg";
+import Paw from "./icons/Paw.svg";
+import Logo from "./icons/Logo.svg";
+import BigBrain from "./icons/BigBrain.svg";
+import BigLung from "./icons/BigLung.svg";
+import BigMushroom from "./icons/BigMushroom.svg";
+import BigPaw from "./icons/BigPaw.svg";
+import LocomotorSystemSymptoms from "./icons/LocomotorSystemSymptoms.svg";
+import LymphaticSystemSymptoms from "./icons/LymphaticSystemSymptoms.svg";
+import NervousSystemSymptoms from "./icons/NervousSystemSymptoms.svg";
+import RespiratorySystemSymptoms from "./icons/RespiratorySystemSymptoms.svg";
+
 import { buttonSizes } from "../../styles";
 
 const SVGComponent = (props) => {
@@ -22,37 +31,54 @@ const SVGComponent = (props) => {
         case "Sinais & sintomas":
             return <Stethoscope width={buttonSizes * .5} height={buttonSizes * .5} />;
         case "Prevenção":
-            return <Prevention width={`${buttonSizes * .6}`} height={`${buttonSizes * .6}`} />;
+            return <Prevention width={buttonSizes * .6} height={buttonSizes * .6} />;
         case "Como lidar?":
-            return <HowToDeal width={`${buttonSizes * .55}`} height={`${buttonSizes * .55}`} />;
+            return <HowToDeal width={buttonSizes * .55} height={buttonSizes * .55} />;
         case "Glossário":
-            return <Glossary width={`${buttonSizes * .55}`} height={`${buttonSizes * .55}`} />;
+            return <Glossary width={buttonSizes * .55} height={buttonSizes * .55} />;
         case "Sobre nós":
-            return <AboutUs width={`${buttonSizes * .4}`} height={`${buttonSizes * .4}`} />
+            return <AboutUs width={buttonSizes * .4} height={buttonSizes * .4} />;
         case "VisibleSign":
-            return <VisibleSign width={`${buttonSizes * .22}`} height={`${buttonSizes * .22}`} />
+            return <VisibleSign width={buttonSizes * .22} height={buttonSizes * .22} />;
         case "InvisibleSign":
-            return <InvisibleSign width={`${buttonSizes * .22}`} height={`${buttonSizes * .22}`} />
+            return <InvisibleSign width={buttonSizes * .22} height={buttonSizes * .22} />;
         case "Bandage":
-            return <Bandage width={`${buttonSizes * .15}`} height={`${buttonSizes * .15}`} />
+            return <Bandage width={buttonSizes * .15} height={buttonSizes * .15} />;
         case "Image":
-            return <Image width={`${buttonSizes * .13}`} height={`${buttonSizes * .13}`} />
+            return <Image width={buttonSizes * .13} height={buttonSizes * .13} />;
         case "Cross":
-            return <Cross width={`${buttonSizes * .13}`} height={`${buttonSizes * .13}`} />
+            return <Cross width={buttonSizes * .13} height={buttonSizes * .13} />;
         case "Info":
-            return <Info width={`${buttonSizes * .13}`} height={`${buttonSizes * .13}`} />
+            return <Info width={buttonSizes * .13} height={buttonSizes * .13} />;
         case "Brain":
-            return <Brain width={`${buttonSizes * .15}`} height={`${buttonSizes * .15}`} />
+            return <Brain width={buttonSizes * .15} height={buttonSizes * .15} />;
         case "Lung":
-            return <Lung width={`${buttonSizes * .15}`} height={`${buttonSizes * .15}`} />
+            return <Lung width={buttonSizes * .15} height={buttonSizes * .15} />;
         case "Mushroom":
-            return <Mushroom width={`${buttonSizes * .15}`} height={`${buttonSizes * .15}`} />
+            return <Mushroom width={buttonSizes * .15} height={buttonSizes * .15} />;
         case "Paw":
-            return <Paw width={`${buttonSizes * .15}`} height={`${buttonSizes * .15}`} />
+            return <Paw width={buttonSizes * .15} height={buttonSizes * .15} />;
         case "Logo":
-            return <Logo width={`${buttonSizes * .15}`} height={`${buttonSizes * .15}`} />
-        default: break;
+            return <Logo width={buttonSizes * .15} height={buttonSizes * .15} />;
+        case "BigBrain":
+            return <BigBrain width={buttonSizes * .7} height={buttonSizes * .7} />;
+        case "BigLung":
+            return <BigLung width={buttonSizes * .7} height={buttonSizes * .7} />;
+        case "BigMushroom":
+            return <BigMushroom width={buttonSizes * .7} height={buttonSizes * .7} />;
+        case "BigPaw":
+            return <BigPaw width={buttonSizes * .7} height={buttonSizes * .7} />;
+        case "LocomotorSystemSymptoms":
+            return <LocomotorSystemSymptoms width={buttonSizes * 1.5} height={buttonSizes * 1.5} />;
+        case "LymphaticSystemSymptoms":
+            return <LymphaticSystemSymptoms width={buttonSizes * 1.5} height={buttonSizes * 1.5} />;
+        case "NervousSystemSymptoms":
+            return <NervousSystemSymptoms width={buttonSizes * 1.5} height={buttonSizes * 1.5} />;
+        case "RespiratorySystemSymptoms":
+            return <RespiratorySystemSymptoms width={buttonSizes * 1.5} height={buttonSizes * 1.5} />;
+        default:
+            return null;
     }
-}
+};
 
 export default SVGComponent;

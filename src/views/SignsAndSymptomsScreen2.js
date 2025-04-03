@@ -6,21 +6,27 @@ import visibleSymptoms from "../data/visibleSymptoms";
 import invisibleSymptoms from "../data/invisibleSymptoms";
 import FixedLogo from "../components/FixedLogo";
 
-const renderSymptoms = (symptomsData, types, includeSystem = false) => (
-    <ScrollView>
-        <View style={styles.containerSignAndSymptomsMenu2}>
-            {Object.keys(symptomsData).map((chave) => (
-                <SignsAndSymptomsPanel
-                    key={chave}
-                    name={symptomsData[chave].nome}
-                    description={symptomsData[chave].descricao}
-                    types={types}
-                    system={includeSystem ? symptomsData[chave].sistemaAssociado : undefined}
-                />
-            ))}
-        </View>
-    </ScrollView>
-);
+const renderSymptoms = (symptomsData, types, options = {}) => {
+    const { includeExtended = false, includeSystem = false } = options;
+
+    return (
+        <ScrollView>
+            <View style={styles.containerSignAndSymptomsMenu2}>
+                {Object.keys(symptomsData).map((chave) => (
+                    <SignsAndSymptomsPanel
+                        key={chave}
+                        name={symptomsData[chave].nome}
+                        description={symptomsData[chave].descricao}
+                        extended={includeExtended ? symptomsData[chave].extendido : null}
+                        system={includeSystem ? symptomsData[chave].sistemaAssociado : null}
+                        types={types}
+                    />
+                ))}
+            </View>
+        </ScrollView>
+    );
+};
+
 
 export default ({ navigation, route }) => {
 
@@ -43,10 +49,13 @@ export default ({ navigation, route }) => {
 
     switch (route.params) {
         case "VisibleSign":
-            return renderSymptoms(visibleSymptoms, [1, 2]);
+            return renderSymptoms(visibleSymptoms, [1, 2], { includeSystem: true });
+
         case "InvisibleSign":
-            return renderSymptoms(invisibleSymptoms, [3, 2], true);
-        default:
-            return null;
+            return renderSymptoms(invisibleSymptoms, [3, 2], {
+                includeExtended: true,
+                includeSystem: true
+            });
+
     }
 };

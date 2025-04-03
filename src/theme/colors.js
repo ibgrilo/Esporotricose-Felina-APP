@@ -9,6 +9,7 @@ const colors = {
     textBlue: '#1B55A4',
     surfaceWhite: '#FEF7FF',
     attention: '#D94141',
-}
+    primaryTransparent20: '#D7DEED',
+};
 
 export default colors;

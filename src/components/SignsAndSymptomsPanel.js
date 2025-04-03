@@ -5,8 +5,7 @@ import colors from "../theme/colors";
 import SVGComponent from "../assets/svg/SVGComponent";
 import SignsAndSymptomsButton2 from "./SignsAndSymptomsButton2";
 
-export default ({ name, description, types, system }) => {
-
+export default ({ name, description, types, system, extended }) => {
     const [height, setHeight] = useState(0); // Estado para armazenar a altura do botão
 
     function SideIcon({ system }) {
@@ -54,8 +53,14 @@ export default ({ name, description, types, system }) => {
                 </Text>
             </View>
             <View style={styles.SignsAndSymptomsButtonViews}>
-                <SignsAndSymptomsButton2 type={types[0]} />
-                <SignsAndSymptomsButton2 type={types[1]} />
+
+                <SignsAndSymptomsButton2
+                    type={types[0]} name={name} description={description} types={types} system={system} extended={extended}
+                />
+                <SignsAndSymptomsButton2
+                    type={types[1]} name={name} description={description} types={types} system={system} extended={extended}
+                />
+
             </View>
         </View>
     );

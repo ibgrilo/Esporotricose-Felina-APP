@@ -58,6 +58,67 @@ const styles = StyleSheet.create({
     margin: width * .05,
   },
 
+
+  // Content from SignAndSymptomsScreen3
+
+  firstIconContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: buttonSizes * .09,
+    marginBottom: buttonSizes * .09,
+  },
+
+  secondIconContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  firstTitlePanel: {
+    backgroundColor: colors.primary,
+    borderRadius: buttonSizes * 0.5,
+    margintop: buttonSizes * .09,
+    alignSelf: 'center',
+    paddingHorizontal: buttonSizes * .1,
+    paddingVertical: buttonSizes * .01,
+  },
+
+  secondTitlePanel: {
+    backgroundColor: colors.primaryTransparent20,
+    borderRadius: buttonSizes * 0.5,
+    marginTop: buttonSizes * .09,
+    alignSelf: 'center',
+    paddingHorizontal: buttonSizes * .1,
+    paddingVertical: buttonSizes * .01,
+  },
+
+  firstTitleText: {
+    color: colors.surfaceWhite,
+    fontSize: buttonSizes * .12,
+    fontFamily: 'Poppins-Bold',
+    textAlign: 'center',
+  },
+
+  secondTitleText: {
+    color: colors.primary,
+    fontSize: buttonSizes * .12,
+    fontFamily: 'Poppins-Bold',
+    textAlign: 'center',
+  },
+
+  mainTextPanel: {
+    padding: buttonSizes * .12,
+    margintop: buttonSizes * .12,
+  },
+
+  extendedText: {
+    fontSize: buttonSizes * 0.1,
+    lineHeight: buttonSizes * 0.15,
+    fontFamily: 'Poppins-Regular',
+    textAlign: "justify",
+  },
+
   // Buttons from main menu
 
   containerInsideButton: {
@@ -117,7 +178,7 @@ const styles = StyleSheet.create({
 
   text: {
     fontSize: buttonSizes * 0.1,
-    lineHeight: 22,
+    lineHeight: buttonSizes * 0.12,
     fontFamily: 'Poppins-Regular',
     textAlign: "justify",
   },
@@ -258,9 +319,9 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
 
-  //Signs and Symptoms Button 3
+  //Signs and Symptoms Button 2
 
-  SignsAndSymptomsButton3: {
+  SignsAndSymptomsButton2: {
     flex: 0.45,
     backgroundColor: colors.primary,
     flexDirection: 'row',
@@ -272,7 +333,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: buttonSizes * 0.1,
   },
 
-  SignsAndSymptomsButton3Title: {
+  SignsAndSymptomsButton2Title: {
     fontFamily: 'Poppins-SemiBold',
     color: colors.surfaceWhite,
     fontSize: Math.round(buttonSizes * .065),
