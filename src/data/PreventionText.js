@@ -1,9 +1,10 @@
 import React from "react";
 import { View, ScrollView, Text } from "react-native";
 import styles from "../styles"
+import { buttonSizes } from "../styles";
 
 export default props => (
-    <ScrollView style={styles.scrollContainer}>
+    <View style={{ marginBottom: buttonSizes * 0.15 }}>
         <Text style={styles.description}>
             A esporotricose felina é transmitida principalmente pela inoculação do fungo
             <Text style={styles.italic}> Sporothrix sp.</Text> na pele. Pequenas ações podem evitá-la:
@@ -49,5 +50,5 @@ export default props => (
                 Cuide do seu felino com muito amor e responsabilidade, pois a esporotricose é grave, mas pode ser previnida com simples atitutes.
             </Text>
         </View>
-    </ScrollView>
+    </View>
 )

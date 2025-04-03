@@ -1,13 +1,11 @@
 import React from 'react';
 import { StyleSheet, Dimensions } from 'react-native';
-import { Icon } from '@rneui/themed';
 import colors from './theme/colors';
-import { color } from '@rneui/base';
 
 export const { width, height } = Dimensions.get('window')
 export const buttonSizes = width * 0.41
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   fixedLogo: {
     flex: 1,
     alignSelf: 'flex-end',
@@ -16,7 +14,7 @@ const style = StyleSheet.create({
 
   globalContainer: {
     flex: 1,
-    padding: buttonSizes * 0.07,
+    padding: buttonSizes * 0.08,
   },
 
   container: {
@@ -27,7 +25,7 @@ const style = StyleSheet.create({
   },
 
   scrollContainer: {
-    padding: buttonSizes * 0.07,
+    padding: buttonSizes * 0.08,
   },
 
   containerMainMenuButtons: {
@@ -124,6 +122,32 @@ const style = StyleSheet.create({
     textAlign: "justify",
   },
 
+  textFromAboutUs: {
+    fontSize: buttonSizes * 0.1,
+    fontFamily: 'Poppins-Regular',
+    textAlign: "justify"
+  },
+
+  titleFromAboutUs: {
+    fontSize: buttonSizes * 0.1,
+    fontFamily: 'Poppins-Bold',
+    color: colors.primary,
+    textAlign: "justify"
+  },
+
+  listItemFromAboutUs: {
+    fontSize: buttonSizes * 0.1,
+    fontFamily: 'Poppins-Regular',
+    textAlign: "justify"
+  },
+
+  boldFromAboutUs: {
+    fontSize: buttonSizes * 0.1,
+    fontFamily: 'Poppins-SemiBold',
+    color: colors.primary,
+    textAlign: "justify"
+  },
+
   textAtention: {
     fontSize: buttonSizes * 0.1,
     lineHeight: 22,
@@ -187,7 +211,7 @@ const style = StyleSheet.create({
     paddingRight: buttonSizes * 0.04
   },
 
-  //Signs and Symptoms Button 
+  //Signs and Symptoms Panel
 
   SignsAndSymptomsPanel: {
     backgroundColor: colors.tertiary,
@@ -210,6 +234,7 @@ const style = StyleSheet.create({
   SignsAndSymptomsPanelDescription: {
     fontFamily: 'Poppins-Medium',
     fontSize: Math.round(buttonSizes * .09),
+    textAlign: 'justify',
   },
 
   SignsAndSymptomsPanelViews: {
@@ -363,12 +388,12 @@ export const headerStyle = {
   headerStyle: {
     backgroundColor: colors.primary,
   },
-  headerTitleStyle: style.textFromHeader,
+  headerTitleStyle: styles.textFromHeader,
   headerTintColor: colors.surfaceWhite,
   headerTitleAlign: 'center',
 }
 
-export default style;
+export default styles;
 // export const drawerStyle = {
 //     drawerActiveTintColor: colors.surfaceWhite,
 //     drawerInactiveTintColor: colors.textBlue,

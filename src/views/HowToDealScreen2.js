@@ -8,7 +8,7 @@ import FixedLogo from "../components/FixedLogo";
 
 export default props => {
     return (
-        <ScrollView>
+        <ScrollView style={styles.scrollContainer}>
             <StatusBar translucent={false} backgroundColor={colors.primary} />
             <HowToDealText2 />
         </ScrollView>

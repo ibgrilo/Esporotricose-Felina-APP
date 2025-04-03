@@ -1,9 +1,10 @@
 import React from "react";
-import { View, ScrollView, Text } from "react-native";
+import { View, Text } from "react-native";
 import styles from "../styles"
+import { buttonSizes } from "../styles";
 
 export default props => (
-    <ScrollView style={styles.scrollContainer}>
+    <View style={{ marginBottom: buttonSizes * 0.15 }}>
         <View style={styles.section}>
             <Text style={styles.titleFromHowToDeal}>🐱 Isole o seu gato:</Text>
             <Text style={styles.text}>
@@ -46,5 +47,5 @@ export default props => (
                 NUNCA ABANDONE UM ANIMAL DOENTE!
             </Text>
         </View>
-    </ScrollView>
+    </View>
 )
