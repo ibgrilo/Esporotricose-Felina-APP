@@ -58,6 +58,43 @@ const styles = StyleSheet.create({
     margin: width * .05,
   },
 
+  // Content from SignAndSymptomsScreen4
+
+  firstImageTitlePanel: {
+    backgroundColor: colors.primary,
+    borderRadius: buttonSizes * 0.5,
+    margintop: buttonSizes * .09,
+    alignSelf: 'center',
+    paddingHorizontal: buttonSizes * .1,
+    paddingVertical: buttonSizes * .01,
+    marginTop: buttonSizes * 0.1
+  },
+
+  imageContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: buttonSizes * 0.1,
+    marginBottom: buttonSizes * 0.1
+  },
+
+  image: {
+    borderRadius: buttonSizes * 0.1,
+    borderWidth: buttonSizes * 0.01,
+    borderColor: colors.primary,
+    resizeMode: 'cover',
+    overflow: 'hidden'
+  },
+
+  regionTagsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 5,
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    marginBottom: buttonSizes * 0.01,
+  },
+
 
   // Content from SignAndSymptomsScreen3
 
@@ -424,7 +461,7 @@ const styles = StyleSheet.create({
     fontSize: buttonSizes * 0.11,
     textAlign: "center",
     color: colors.textBlack,
-    marginTop: buttonSizes * 0.09,
+
     paddingHorizontal: buttonSizes * 0.09,
     fontFamily: "Poppins-Regular",
   },

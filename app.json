@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "name": "SeuApp",
+    "slug": "seu-app",
+    "android": {
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ],
+      "package": "com.anonymous.seuapp"
+    },
+    "ios": {
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Este app precisa da sua localização para mostrar crematórios próximos."
+      }
+    }
+  }
+}

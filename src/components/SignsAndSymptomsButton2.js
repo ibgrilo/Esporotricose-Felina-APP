@@ -5,13 +5,14 @@ import { useNavigation } from "@react-navigation/native";
 import styles from "../styles";
 import SVGComponent from "../assets/svg/SVGComponent";
 
-const InfoButton = ({ type, name, description, types, system, extended }) => {
+const InfoButton = ({ type, name, description, types, system, extended, affectedRegions, tipsAndCare }) => {
+    console.log(tipsAndCare)
     const [visible, setVisible] = useState(false);
     const navigation = useNavigation();
 
     const handlePress = () => {
-        if (type === 1 || type === 3) {
-            navigation.navigate("Sintoma", {
+        if (type === 3) {
+            navigation.navigate("Sinal", {
                 type,
                 name,
                 description,
@@ -19,7 +20,16 @@ const InfoButton = ({ type, name, description, types, system, extended }) => {
                 system,
                 extended,
             });
-        } else {
+        } else if (type === 1) {
+            navigation.navigate("Sintoma", {
+                type,
+                name,
+                description,
+                types,
+                affectedRegions,
+            })
+        }
+        else {
             setVisible(true);
         }
     };
@@ -68,7 +78,7 @@ const InfoButton = ({ type, name, description, types, system, extended }) => {
                 >
                     <View style={styles.overlayContent}>
                         <Text style={styles.overlayText}>
-                            ⚠️ Procure um veterinário para avaliação e tratamento adequado.
+                            {tipsAndCare ? tipsAndCare : "⚠️ Procure um veterinário para avaliação e tratamento adequado."}
                         </Text>
                     </View>
                 </Overlay>

@@ -8,7 +8,6 @@ import FixedLogo from "../components/FixedLogo";
 
 const renderSymptoms = (symptomsData, types, options = {}) => {
     const { includeExtended = false, includeSystem = false } = options;
-
     return (
         <ScrollView>
             <View style={styles.containerSignAndSymptomsMenu2}>
@@ -20,6 +19,8 @@ const renderSymptoms = (symptomsData, types, options = {}) => {
                         extended={includeExtended ? symptomsData[chave].extendido : null}
                         system={includeSystem ? symptomsData[chave].sistemaAssociado : null}
                         types={types}
+                        affectedRegions={symptomsData[chave].regioesAfetadas}
+                        tipsAndCare={symptomsData[chave].dicasECuidados}
                     />
                 ))}
             </View>

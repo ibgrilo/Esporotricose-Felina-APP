@@ -23,6 +23,10 @@ import LocomotorSystemSymptoms from "./icons/LocomotorSystemSymptoms.svg";
 import LymphaticSystemSymptoms from "./icons/LymphaticSystemSymptoms.svg";
 import NervousSystemSymptoms from "./icons/NervousSystemSymptoms.svg";
 import RespiratorySystemSymptoms from "./icons/RespiratorySystemSymptoms.svg";
+import DisseminacaoPorLesoes from "./icons/DisseminacaoPorLesoes.svg";
+import NodulosEAbscessos from "./icons/NodulosEAbscessos.svg";
+import SecrecaoPurulenta from "./icons/SecrecaoPurulenta.svg";
+import UlcerasNaPele from "./icons/UlcerasNaPele.svg";
 
 import { buttonSizes } from "../../styles";
 
@@ -76,6 +80,15 @@ const SVGComponent = (props) => {
             return <NervousSystemSymptoms width={buttonSizes * 1.5} height={buttonSizes * 1.5} />;
         case "RespiratorySystemSymptoms":
             return <RespiratorySystemSymptoms width={buttonSizes * 1.5} height={buttonSizes * 1.5} />;
+        case "DisseminacaoPorLesoes":
+            return <DisseminacaoPorLesoes width={buttonSizes * 1.3} height={buttonSizes * 1.3} />;
+        case "NodulosEAbscessos":
+            return <NodulosEAbscessos width={buttonSizes * 1.3} height={buttonSizes * 1.3} />;
+        case "SecrecaoPurulenta":
+            return <SecrecaoPurulenta width={buttonSizes * 1.3} height={buttonSizes * 1.3} />;
+        case "UlcerasNaPele":
+            return <UlcerasNaPele width={buttonSizes * 1.3} height={buttonSizes * 1.3} />;
+
         default:
             return null;
     }
