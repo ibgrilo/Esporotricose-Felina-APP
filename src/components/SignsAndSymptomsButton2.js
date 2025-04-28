@@ -6,7 +6,6 @@ import styles from "../styles";
 import SVGComponent from "../assets/svg/SVGComponent";
 
 const InfoButton = ({ type, name, description, types, system, extended, affectedRegions, tipsAndCare }) => {
-    console.log(tipsAndCare)
     const [visible, setVisible] = useState(false);
     const navigation = useNavigation();
 

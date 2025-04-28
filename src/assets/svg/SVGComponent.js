@@ -81,13 +81,13 @@ const SVGComponent = (props) => {
         case "RespiratorySystemSymptoms":
             return <RespiratorySystemSymptoms width={buttonSizes * 1.5} height={buttonSizes * 1.5} />;
         case "DisseminacaoPorLesoes":
-            return <DisseminacaoPorLesoes width={buttonSizes * 1.3} height={buttonSizes * 1.3} />;
+            return <DisseminacaoPorLesoes width={buttonSizes * 1.2} height={buttonSizes * 1.2} />;
         case "NodulosEAbscessos":
-            return <NodulosEAbscessos width={buttonSizes * 1.3} height={buttonSizes * 1.3} />;
+            return <NodulosEAbscessos width={buttonSizes * 1.2} height={buttonSizes * 1.2} />;
         case "SecrecaoPurulenta":
-            return <SecrecaoPurulenta width={buttonSizes * 1.3} height={buttonSizes * 1.3} />;
+            return <SecrecaoPurulenta width={buttonSizes * 1.2} height={buttonSizes * 1.2} />;
         case "UlcerasNaPele":
-            return <UlcerasNaPele width={buttonSizes * 1.3} height={buttonSizes * 1.3} />;
+            return <UlcerasNaPele width={buttonSizes * 1.2} height={buttonSizes * 1.2} />;
 
         default:
             return null;

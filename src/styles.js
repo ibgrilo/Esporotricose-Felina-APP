@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
 
   scrollContainer: {
-    padding: buttonSizes * 0.08,
+    padding: buttonSizes * 0.065,
   },
 
   containerMainMenuButtons: {
@@ -74,8 +74,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: buttonSizes * 0.1,
-    marginBottom: buttonSizes * 0.1
+    marginTop: buttonSizes * 0.08,
+    marginBottom: buttonSizes * 0.08
   },
 
   image: {
@@ -91,8 +91,10 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     gap: 5,
     justifyContent: 'space-evenly',
+    alignSelf: 'stretch',
     alignItems: 'center',
     marginBottom: buttonSizes * 0.01,
+
   },
 
 
@@ -139,7 +141,7 @@ const styles = StyleSheet.create({
 
   secondTitleText: {
     color: colors.primary,
-    fontSize: buttonSizes * .12,
+    fontSize: buttonSizes * .11,
     fontFamily: 'Poppins-Bold',
     textAlign: 'center',
   },
@@ -221,9 +223,10 @@ const styles = StyleSheet.create({
   },
 
   textFromAboutUs: {
-    fontSize: buttonSizes * 0.1,
     fontFamily: 'Poppins-Regular',
-    textAlign: "justify"
+    fontSize: 16,
+    textAlign: 'justify',
+    marginBottom: buttonSizes * 0.07, // novo
   },
 
   titleFromAboutUs: {
@@ -234,10 +237,11 @@ const styles = StyleSheet.create({
   },
 
   listItemFromAboutUs: {
-    fontSize: buttonSizes * 0.1,
     fontFamily: 'Poppins-Regular',
-    textAlign: "justify"
+    fontSize: 16,
+    marginBottom: buttonSizes * 0.05, // novo
   },
+
 
   boldFromAboutUs: {
     fontSize: buttonSizes * 0.1,
@@ -435,6 +439,8 @@ const styles = StyleSheet.create({
     padding: 0,
     backgroundColor: "#FFFFFF",
     alignContent: 'center',
+    paddingTop: buttonSizes * 0.05,
+    paddingBottom: buttonSizes * 0.05
   },
 
   overlayContent: {
@@ -459,7 +465,7 @@ const styles = StyleSheet.create({
 
   overlayText: {
     fontSize: buttonSizes * 0.11,
-    textAlign: "center",
+    textAlign: "justify",
     color: colors.textBlack,
 
     paddingHorizontal: buttonSizes * 0.09,

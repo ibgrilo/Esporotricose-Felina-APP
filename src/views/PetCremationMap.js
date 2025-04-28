@@ -12,14 +12,16 @@ export default function PetCremationMap() {
         {
             latitude: -2.572988041319032,
             longitude: -44.16441173112429,
-            title: "Pet Forever Cemitério e Crematório de animais",
-            description: "Cemitério de animais de estimação"
+            title: "Pet Forever Cemitério e Crematório de Animais",
+            description: "Cemitério de animais de estimação",
+            address: "Av. Mascarenhas de Moraes, 58 - Matinha, São José de Ribamar - MA, 65110-000"
         },
         {
             latitude: -2.5575829827636873,
             longitude: -44.189527988163405,
             title: "Salvatore Pet",
-            description: "Serviços funerários para animais de estimação"
+            description: "Serviços funerários para animais de estimação",
+            address: "Estr. de Ribamar - Vila Santa Teresinha, São José de Ribamar - MA, 65137-000"
         }
     ];
 
@@ -78,7 +80,13 @@ export default function PetCremationMap() {
                         ref={(ref) => (markerRefs.current[index] = ref)}
                         coordinate={{ latitude: loc.latitude, longitude: loc.longitude }}
                         title={loc.title}
-                        description={loc.description}
+                        description={loc.description} // apenas a descrição curta
+                        onPress={() => {
+                            Alert.alert(
+                                loc.title,
+                                `${loc.description}\n\nEndereço:\n${loc.address}`
+                            );
+                        }}
                     />
                 ))}
             </MapView>
