@@ -7,6 +7,7 @@ import SignsAndSymptomsScreen3 from "../views/SignsAndSymptomsScreen3";
 import SignsAndSymptomsScreen4 from "../views/SignsAndSymptomsScreen4";
 import PreventionScreen from "../views/PreventionScreen";
 import HowToDealScreen from "../views/HowToDealScreen";
+import NearbyVeterinariesMap from "../views/NearbyVeterinariesMap";
 import GlossaryScreen from "../views/GlossaryScreen";
 import { headerStyle } from "../styles";
 import AboutUsScreen from "../views/AboutUsScreen";
@@ -33,6 +34,7 @@ export default props => {
             <Stack.Screen name="Sintoma" component={SignsAndSymptomsScreen4} />
             <Stack.Screen name="Prevenção" component={PreventionScreen} />
             <Stack.Screen name="Como lidar?" component={HowToDealScreen} />
+            <Stack.Screen name="Veterinários" component={NearbyVeterinariesMap} />
             <Stack.Screen name="Locais para cremação" component={PetCremationMap} />
             <Stack.Screen name="Está com esporotricose?" component={HowToDealScreen1} />
             <Stack.Screen name="Como é transmitida?" component={HowToDealScreen2} />

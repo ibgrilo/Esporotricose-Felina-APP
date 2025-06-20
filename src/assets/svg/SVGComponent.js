@@ -27,6 +27,8 @@ import DisseminacaoPorLesoes from "./icons/DisseminacaoPorLesoes.svg";
 import NodulosEAbscessos from "./icons/NodulosEAbscessos.svg";
 import SecrecaoPurulenta from "./icons/SecrecaoPurulenta.svg";
 import UlcerasNaPele from "./icons/UlcerasNaPele.svg";
+import Location from "./icons/Location.svg";
+
 
 import { buttonSizes } from "../../styles";
 
@@ -40,6 +42,8 @@ const SVGComponent = (props) => {
             return <HowToDeal width={buttonSizes * .55} height={buttonSizes * .55} />;
         case "Glossário":
             return <Glossary width={buttonSizes * .55} height={buttonSizes * .55} />;
+        case "Veterinários":
+            return <Location width={buttonSizes * .5} height={buttonSizes * .5} />;
         case "Sobre nós":
             return <AboutUs width={buttonSizes * .4} height={buttonSizes * .4} />;
         case "VisibleSign":

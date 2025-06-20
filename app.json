@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "SeuApp",
-    "slug": "seu-app",
+    "name": "Esporotricose-Felina-App",
+    "slug": "esporotricose-felina-app",
     "android": {
       "permissions": [
         "ACCESS_FINE_LOCATION",

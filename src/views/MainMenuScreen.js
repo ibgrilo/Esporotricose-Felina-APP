@@ -17,6 +17,7 @@ export default props => {
                 <ChangeScreenTo name="Prevenção" props={props} />
                 <ChangeScreenTo name="Como lidar?" props={props} />
                 <ChangeScreenTo name="Glossário" props={props} />
+                <ChangeScreenTo name="Veterinários" props={props} />
             </View>
             <View style={styles.containerAboutUsButton}>
                 <ToAboutUsScreen props={props} />
