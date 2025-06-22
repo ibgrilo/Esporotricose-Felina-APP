@@ -13,6 +13,22 @@
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Este app precisa da sua localização para mostrar crematórios próximos."
       }
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "efe478ee-8ca6-495c-85d1-499415fe323f"
+      }
+    },
+    "owner": "ibgrilo",
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "kotlinVersion": "1.9.25"
+          }
+        }
+      ]
+    ]
   }
 }
