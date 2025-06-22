@@ -391,43 +391,62 @@ const styles = StyleSheet.create({
   // Accordion
 
   accordionContainer: {
-    marginVertical: buttonSizes * .03,
-    marginHorizontal: buttonSizes * .07,
-    borderRadius: buttonSizes * .1,
+    marginVertical: buttonSizes * 0.03,
+    marginHorizontal: buttonSizes * 0.07,
+    borderRadius: buttonSizes * 0.1,
     overflow: "hidden",
+    backgroundColor: colors.primary, // 👈 garante base uniforme
   },
+
+
   accordionHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: colors.primary,
-    paddingVertical: buttonSizes * .10,
-    paddingHorizontal: buttonSizes * .10,
+    padding: buttonSizes * 0.08,
+    borderBottomWidth: 1, // 👈 Evita artefato visual
+    borderBottomColor: colors.secondary, // 👈 Combina com fundo do conteúdo
   },
+
   activeHeader: {
     backgroundColor: colors.secondary,
   },
+
   title: {
     color: colors.surfaceWhite,
-    fontSize: Math.round(buttonSizes * .1),
+    fontSize: Math.round(buttonSizes * 0.1),
     fontFamily: "Poppins-Medium",
   },
+
+  italicTitle: {
+    color: colors.surfaceWhite,
+    fontSize: Math.round(buttonSizes * 0.1),
+    fontFamily: "Poppins-Medium",
+    fontStyle: "italic",
+  },
+
   titleMiddle: {
     fontSize: buttonSizes * 0.1,
-    fontFamily: 'Poppins-Bold',
+    fontFamily: "Poppins-Bold",
     color: colors.textBlack,
-    marginBottom: 5,
-    textAlign: 'center',
+    marginBottom: buttonSizes * 0.02,
+    textAlign: "center",
   },
+
   accordionContent: {
     backgroundColor: colors.secondary,
-    padding: buttonSizes * .08,
-    marginTop: -(buttonSizes * .13),
+    paddingTop: buttonSizes * 0.02,
+    paddingBottom: buttonSizes * 0.08,
+    paddingHorizontal: buttonSizes * 0.08,
+    borderTopWidth: 0,
   },
+
+
   contentText: {
     color: colors.surfaceWhite,
-    fontSize: buttonSizes * .090,
-    lineHeight: buttonSizes * .12,
+    fontSize: buttonSizes * 0.09,
+    lineHeight: buttonSizes * 0.12,
     fontFamily: "Poppins-Regular",
   },
 
