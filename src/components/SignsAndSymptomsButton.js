@@ -8,9 +8,9 @@ export default ({ name, buttonName, navigation }) => {
     return (
         <TouchableOpacity style={{
             ...styles.SignsAndSymptomsButton,
-            backgroundColor: name === "VisibleSign" ? colors.secondary : colors.primary
+            backgroundColor: name === "SkinSign" ? colors.secondary : colors.primary
         }}
-            onPress={() => navigation.push("Lista de sinais e sintomas", name)}
+            onPress={() => navigation.push("Lista de sinais", name)}
         >
             <View style={styles.SignsAndSymptomsButtonContainer}>
                 <Text style={styles.SignsAndSymptomsButtontitles}>{buttonName}</Text>

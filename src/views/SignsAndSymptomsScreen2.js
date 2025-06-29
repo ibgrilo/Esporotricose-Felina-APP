@@ -36,10 +36,10 @@ export default ({ navigation, route }) => {
         let title = "";
         switch (route.params) {
             case "VisibleSign":
-                title = "Sinais e sintomas visíveis";
+                title = "Sinais cutâneos (Pele)";
                 break;
             case "InvisibleSign":
-                title = "Sinais e sintomas internos";
+                title = "Sinais Sistêmicos";
                 break;
             default:
                 title = route.name;
@@ -49,10 +49,10 @@ export default ({ navigation, route }) => {
     }, [route.params, navigation]);
 
     switch (route.params) {
-        case "VisibleSign":
+        case "SkinSign":
             return renderSymptoms(visibleSymptoms, [1, 2], { includeSystem: true });
 
-        case "InvisibleSign":
+        case "SystemSign":
             return renderSymptoms(invisibleSymptoms, [3, 2], {
                 includeExtended: true,
                 includeSystem: true

@@ -290,7 +290,7 @@ const styles = StyleSheet.create({
   //Signs and Symptoms Button 1
 
   SignsAndSymptomsButton: {
-    width: buttonSizes * 1.7,
+    width: buttonSizes * 1.8,
     height: 'auto',
     flexDirection: 'row',
     borderRadius: buttonSizes * 0.5,
@@ -308,7 +308,7 @@ const styles = StyleSheet.create({
 
   SignsAndSymptomsButtontitles: {
     color: colors.surfaceWhite,
-    fontSize: Math.round(buttonSizes * .20),
+    fontSize: Math.round(buttonSizes * .16),
     fontFamily: "Poppins-Medium",
     paddingRight: buttonSizes * 0.04
   },

@@ -13,7 +13,7 @@ export default props => {
         <>
             <View style={styles.containerMainMenuButtons}>
                 <StatusBar translucent={false} backgroundColor={colors.primary} />
-                <ChangeScreenTo name="Sinais & sintomas" props={props} />
+                <ChangeScreenTo name="Sinais Clínicos" props={props} />
                 <ChangeScreenTo name="Prevenção" props={props} />
                 <ChangeScreenTo name="Como lidar?" props={props} />
                 <ChangeScreenTo name="Glossário" props={props} />

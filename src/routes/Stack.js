@@ -28,8 +28,8 @@ export default props => {
 
         }}>
             <Stack.Screen name="Menu" component={MainMenuScreen} />
-            <Stack.Screen name="Sinais & sintomas" component={SignsAndSymptomsScreen} />
-            <Stack.Screen name="Lista de sinais e sintomas" component={SignsAndSymptomsScreen2} />
+            <Stack.Screen name="Sinais Clínicos" component={SignsAndSymptomsScreen} />
+            <Stack.Screen name="Lista de sinais" component={SignsAndSymptomsScreen2} />
             <Stack.Screen name="Sinal" component={SignsAndSymptomsScreen3} />
             <Stack.Screen name="Sintoma" component={SignsAndSymptomsScreen4} />
             <Stack.Screen name="Prevenção" component={PreventionScreen} />
