@@ -11,7 +11,7 @@ export default ({ navigation }) => {
         <View style={styles.globalContainer}>
             <View style={styles.containerSignAndSymptomsMenu}>
                 <StatusBar translucent={false} backgroundColor={colors.primary} />
-                <SignsAndSymptomsButton name="SkinSign" buttonName="Cutâneo" navigation={navigation} />
+                <SignsAndSymptomsButton name="SkinSign" buttonName="Cutâneos - Pele" navigation={navigation} />
                 <SignsAndSymptomsButton name="SystemSign" buttonName="Sistêmicos" navigation={navigation} />
             </View>
         </View>

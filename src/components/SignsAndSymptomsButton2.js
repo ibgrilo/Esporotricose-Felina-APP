@@ -11,7 +11,7 @@ const InfoButton = ({ type, name, description, types, system, extended, affected
 
     const handlePress = () => {
         if (type === 3) {
-            navigation.navigate("Sinal", {
+            navigation.navigate("Sinal Sistêmico", {
                 type,
                 name,
                 description,
@@ -20,7 +20,7 @@ const InfoButton = ({ type, name, description, types, system, extended, affected
                 extended,
             });
         } else if (type === 1) {
-            navigation.navigate("Sintoma", {
+            navigation.navigate("Sinal Cutâneo", {
                 type,
                 name,
                 description,

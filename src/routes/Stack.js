@@ -30,8 +30,8 @@ export default props => {
             <Stack.Screen name="Menu" component={MainMenuScreen} />
             <Stack.Screen name="Sinais Clínicos" component={SignsAndSymptomsScreen} />
             <Stack.Screen name="Lista de sinais" component={SignsAndSymptomsScreen2} />
-            <Stack.Screen name="Sinal" component={SignsAndSymptomsScreen3} />
-            <Stack.Screen name="Sintoma" component={SignsAndSymptomsScreen4} />
+            <Stack.Screen name="Sinal Sistêmico" component={SignsAndSymptomsScreen3} />
+            <Stack.Screen name="Sinal Cutâneo" component={SignsAndSymptomsScreen4} />
             <Stack.Screen name="Prevenção" component={PreventionScreen} />
             <Stack.Screen name="Como lidar?" component={HowToDealScreen} />
             <Stack.Screen name="Veterinários" component={NearbyVeterinariesMap} />
