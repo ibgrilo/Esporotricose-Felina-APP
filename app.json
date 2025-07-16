@@ -4,14 +4,21 @@
     "slug": "esporotricose-felina-app",
     "android": {
       "permissions": [
-        "ACCESS_FINE_LOCATION",
         "ACCESS_FINE_LOCATION"
       ],
-      "package": "com.anonymous.seuapp"
+      "package": "com.anonymous.seuapp",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAdF6NRC6czSt3vhoz8sH0lGtPd0EIK-lA"
+        }
+      }
     },
     "ios": {
       "infoPlist": {
         "NSLocationWhenInUseUsageDescription": "Este app precisa da sua localização para mostrar crematórios próximos."
+      },
+      "config": {
+        "googleMapsApiKey": "AIzaSyAdF6NRC6czSt3vhoz8sH0lGtPd0EIK-lA"
       }
     },
     "extra": {
