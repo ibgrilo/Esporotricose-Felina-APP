@@ -555,6 +555,105 @@ const styles = StyleSheet.create({
   loadingSpinner: {
     marginTop: buttonSizes * 0.07,
   },
+
+  // VETERINARY MAP
+  mapContainer: {
+    flex: 1,
+  },
+  map: {
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height,
+  },
+  vetModalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  vetModalContainer: {
+    width: '85%',
+    backgroundColor: 'white',
+    borderRadius: buttonSizes * 0.059,
+    overflow: 'hidden',
+  },
+  vetModalHeader: {
+    backgroundColor: colors.primary,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: buttonSizes * 0.089,
+    paddingVertical: buttonSizes * 0.107,
+  },
+  vetModalTitle: {
+    color: 'white',
+    fontSize: buttonSizes * 0.107,
+    fontFamily: 'Poppins-SemiBold',
+    flex: 1,
+    paddingRight: buttonSizes * 0.059,
+  },
+  vetModalBody: {
+    padding: buttonSizes * 0.089,
+  },
+  vetInfoItem: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginBottom: buttonSizes * 0.01,
+  },
+  vetInfoText: {
+    marginLeft: buttonSizes * 0.059,
+    flex: 1,
+    fontFamily: 'Poppins-Regular',
+    fontSize: buttonSizes * 0.089,
+  },
+  vetButtonRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    padding: buttonSizes * 0.089,
+    borderTopWidth: 1,
+    borderTopColor: colors.primaryTransparent20,
+  },
+  vetButton: {
+    paddingVertical: buttonSizes * 0.059,
+    paddingHorizontal: buttonSizes * 0.119,
+    borderRadius: buttonSizes * 1.5,
+    minWidth: buttonSizes * 0.593,
+    alignItems: 'center',
+  },
+  vetPrimaryButton: {
+    backgroundColor: colors.primary,
+  },
+  vetSecondaryButton: {
+    backgroundColor: 'white',
+    borderWidth: 1,
+    borderColor: colors.primary,
+  },
+  vetButtonText: {
+    color: 'white',
+    fontFamily: 'Poppins-Medium',
+    fontSize: buttonSizes * 0.1,
+  },
+  vetSecondaryButtonText: {
+    color: colors.primary,
+    fontFamily: 'Poppins-Medium',
+    fontSize: buttonSizes * 0.089,
+  },
+
+  mapLoadingTitle: {
+    fontSize: buttonSizes * 0.12,  // Menor que o loadingTitle padrão
+    fontFamily: 'Poppins-SemiBold',
+    color: colors.textBlack,
+    textAlign: 'center',
+    marginBottom: buttonSizes * 0.02,
+    marginTop: buttonSizes * 0.07,
+  },
+
+  mapLoadingSubtitle: {
+    fontSize: buttonSizes * 0.09,  // Menor que o loadingSubtitle padrão
+    fontFamily: 'Poppins-Regular',
+    color: colors.textBlack,
+    textAlign: 'center',
+    paddingHorizontal: buttonSizes * 0.12,
+  },
 })
 
 export const headerStyle = {

@@ -2,9 +2,12 @@ import React, { useEffect, useState, useRef } from "react";
 import { View, Dimensions, Alert } from "react-native";
 import MapView, { Marker } from "react-native-maps";
 import * as Location from "expo-location";
+import VetInfoModal from "../components/VetInfoModal";
 
 export default function PetCremationMap() {
     const [userLocation, setUserLocation] = useState(null);
+    const [selectedCremation, setSelectedCremation] = useState(null);
+    const [modalVisible, setModalVisible] = useState(false);
     const mapRef = useRef(null);
     const markerRefs = useRef([]);
 
@@ -12,16 +15,18 @@ export default function PetCremationMap() {
         {
             latitude: -2.572988041319032,
             longitude: -44.16441173112429,
-            title: "Pet Forever Cemitério e Crematório de Animais",
+            name: "Pet Forever Cemitério e Crematório de Animais",
             description: "Cemitério de animais de estimação",
-            address: "Av. Mascarenhas de Moraes, 58 - Matinha, São José de Ribamar - MA, 65110-000"
+            address: "Av. Mascarenhas de Moraes, 58 - Matinha, São José de Ribamar - MA, 65110-000",
+            phone: "(98) 98463-9566"
         },
         {
             latitude: -2.5575829827636873,
             longitude: -44.189527988163405,
-            title: "Salvatore Pet",
+            name: "Salvatore Pet",
             description: "Serviços funerários para animais de estimação",
-            address: "Estr. de Ribamar - Vila Santa Teresinha, São José de Ribamar - MA, 65137-000"
+            address: "Estr. de Ribamar - Vila Santa Teresinha, São José de Ribamar - MA, 65137-000",
+            phone: "(98) 2109-3999"
         }
     ];
 
@@ -79,17 +84,25 @@ export default function PetCremationMap() {
                         key={index}
                         ref={(ref) => (markerRefs.current[index] = ref)}
                         coordinate={{ latitude: loc.latitude, longitude: loc.longitude }}
-                        title={loc.title}
-                        description={loc.description} // apenas a descrição curta
+                        title={loc.name}
+                        description={loc.description}
                         onPress={() => {
-                            Alert.alert(
-                                loc.title,
-                                `${loc.description}\n\nEndereço:\n${loc.address}`
-                            );
+                            setSelectedCremation({
+                                name: loc.name,
+                                address: loc.address,
+                                phone: loc.phone
+                            });
+                            setModalVisible(true);
                         }}
                     />
                 ))}
             </MapView>
+
+            <VetInfoModal
+                visible={modalVisible}
+                vet={selectedCremation}
+                onClose={() => setModalVisible(false)}
+            />
         </View>
     );
 }
