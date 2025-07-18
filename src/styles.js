@@ -6,6 +6,7 @@ export const { width, height } = Dimensions.get('window')
 export const buttonSizes = width * 0.41
 
 const styles = StyleSheet.create({
+  // GLOBAL CONTAINERS
   fixedLogo: {
     flex: 1,
     alignSelf: 'flex-end',
@@ -28,6 +29,12 @@ const styles = StyleSheet.create({
     padding: buttonSizes * 0.065,
   },
 
+  section: {
+    margin: buttonSizes * 0.03,
+    marginBottom: buttonSizes * 0.05,
+  },
+
+  // MAIN MENU CONTAINERS
   containerMainMenuButtons: {
     flex: 1,
     flexWrap: 'wrap',
@@ -58,8 +65,14 @@ const styles = StyleSheet.create({
     margin: width * .05,
   },
 
-  // Content from SignAndSymptomsScreen4
+  containerInsideButton: {
+    flex: 1,
+    padding: buttonSizes * .01,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 
+  // IMAGE AND ICON CONTAINERS
   firstImageTitlePanel: {
     backgroundColor: colors.primary,
     borderRadius: buttonSizes * 0.5,
@@ -94,11 +107,7 @@ const styles = StyleSheet.create({
     alignSelf: 'stretch',
     alignItems: 'center',
     marginBottom: buttonSizes * 0.01,
-
   },
-
-
-  // Content from SignAndSymptomsScreen3
 
   firstIconContainer: {
     flex: 1,
@@ -114,6 +123,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
+  // TITLE PANELS
   firstTitlePanel: {
     backgroundColor: colors.primary,
     borderRadius: buttonSizes * 0.5,
@@ -132,64 +142,18 @@ const styles = StyleSheet.create({
     paddingVertical: buttonSizes * .01,
   },
 
-  firstTitleText: {
-    color: colors.surfaceWhite,
-    fontSize: buttonSizes * .12,
-    fontFamily: 'Poppins-Bold',
-    textAlign: 'center',
-  },
-
-  secondTitleText: {
-    color: colors.primary,
-    fontSize: buttonSizes * .11,
-    fontFamily: 'Poppins-Bold',
-    textAlign: 'center',
-  },
-
   mainTextPanel: {
     padding: buttonSizes * .12,
     margintop: buttonSizes * .12,
   },
 
-  extendedText: {
-    fontSize: buttonSizes * 0.1,
-    lineHeight: buttonSizes * 0.15,
-    fontFamily: 'Poppins-Regular',
-    textAlign: "justify",
-  },
-
-  // Buttons from main menu
-
-  containerInsideButton: {
-    flex: 1,
-    padding: buttonSizes * .01,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
+  // MAIN MENU BUTTONS
   changeScreenTo: {
     backgroundColor: colors.backgroundChangeScreenButton,
     borderRadius: buttonSizes * .25,
     width: buttonSizes,
     height: buttonSizes,
     margin: buttonSizes * .1,
-  },
-
-  textFromButton: {
-    flexWrap: 'wrap',
-    textAlign: 'center',
-    color: colors.textBlack,
-    fontSize: Math.round(buttonSizes * .11),
-    fontFamily: 'Poppins-SemiBold',
-    maxWidth: buttonSizes,
-  },
-
-  textButtonWhite: {
-    color: colors.surfaceWhite,
-    fontSize: buttonSizes * .1,
-    lineHeight: buttonSizes * .12,
-    fontFamily: "Poppins-Regular",
-    textAlign: 'center',
   },
 
   howToDealButton: {
@@ -199,96 +163,7 @@ const styles = StyleSheet.create({
     borderRadius: buttonSizes * .05
   },
 
-  titleFromHowToDeal: {
-    fontSize: buttonSizes * 0.1,
-    fontFamily: 'Poppins-Bold',
-    color: colors.textBlack,
-    marginTop: 15,
-    marginBottom: 5,
-  },
-
-  titleFromPrevention: {
-    fontSize: 18,
-    fontFamily: 'Poppins-Bold',
-    color: colors.textBlack,
-    marginTop: 15,
-    marginBottom: 5,
-  },
-
-  text: {
-    fontSize: buttonSizes * 0.1,
-    lineHeight: buttonSizes * 0.12,
-    fontFamily: 'Poppins-Regular',
-    textAlign: "justify",
-  },
-
-  textFromAboutUs: {
-    fontFamily: 'Poppins-Regular',
-    fontSize: 16,
-    textAlign: 'justify',
-    marginBottom: buttonSizes * 0.07, // novo
-  },
-
-  titleFromAboutUs: {
-    fontSize: buttonSizes * 0.1,
-    fontFamily: 'Poppins-Bold',
-    color: colors.primary,
-    textAlign: "justify"
-  },
-
-  listItemFromAboutUs: {
-    fontFamily: 'Poppins-Regular',
-    fontSize: 16,
-    marginBottom: buttonSizes * 0.05, // novo
-  },
-
-
-  boldFromAboutUs: {
-    fontSize: buttonSizes * 0.1,
-    fontFamily: 'Poppins-SemiBold',
-    color: colors.primary,
-    textAlign: "justify"
-  },
-
-  textAtention: {
-    fontSize: buttonSizes * 0.1,
-    lineHeight: 22,
-    fontFamily: 'Poppins-Bold',
-    color: colors.attention,
-
-    textAlign: 'center'
-  },
-
-  italicTitle: {
-    fontFamily: "Poppins-Italic",
-    color: colors.surfaceWhite,
-    fontSize: Math.round(buttonSizes * .1),
-  },
-
-  italic: {
-    fontFamily: "Poppins-Italic",
-  },
-
-  description: {
-    fontSize: 16,
-    lineHeight: 22,
-    marginBottom: 15,
-    textAlign: "justify",
-  },
-
-  section: {
-    margin: buttonSizes * 0.03,
-    marginBottom: buttonSizes * 0.05,
-  },
-
-  textFromHeader: {
-    color: colors.surfaceWhite,
-    fontSize: Math.round(width * .05),
-    fontFamily: 'Poppins-SemiBold',
-  },
-
-  //Signs and Symptoms Button 1
-
+  // SIGNS AND SYMPTOMS BUTTONS
   SignsAndSymptomsButton: {
     width: buttonSizes * 1.8,
     height: 'auto',
@@ -306,15 +181,26 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 
-  SignsAndSymptomsButtontitles: {
-    color: colors.surfaceWhite,
-    fontSize: Math.round(buttonSizes * .16),
-    fontFamily: "Poppins-Medium",
-    paddingRight: buttonSizes * 0.04
+  SignsAndSymptomsButton2: {
+    flex: 0.45,
+    backgroundColor: colors.primary,
+    flexDirection: 'row',
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: buttonSizes * 0.05,
+    borderRadius: buttonSizes * 0.5,
+    paddingHorizontal: buttonSizes * 0.1,
   },
 
-  //Signs and Symptoms Panel
+  SignsAndSymptomsButtonViews: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+  },
 
+  // SIGNS AND SYMPTOMS PANELS
   SignsAndSymptomsPanel: {
     backgroundColor: colors.tertiary,
     flex: 1,
@@ -326,17 +212,6 @@ const styles = StyleSheet.create({
     paddingRight: buttonSizes * 0.1,
     paddingBottom: buttonSizes * 0.08,
     paddingTop: buttonSizes * 0.08,
-  },
-
-  SignsAndSymptomsPanelTitle: {
-    fontFamily: 'Poppins-ExtraBold',
-    fontSize: Math.round(buttonSizes * .15),
-  },
-
-  SignsAndSymptomsPanelDescription: {
-    fontFamily: 'Poppins-Medium',
-    fontSize: Math.round(buttonSizes * .09),
-    textAlign: 'justify',
   },
 
   SignsAndSymptomsPanelViews: {
@@ -360,57 +235,50 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
 
-  //Signs and Symptoms Button 2
-
-  SignsAndSymptomsButton2: {
-    flex: 0.45,
-    backgroundColor: colors.primary,
-    flexDirection: 'row',
-    textAlign: 'center',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: buttonSizes * 0.05,
-    borderRadius: buttonSizes * 0.5,
-    paddingHorizontal: buttonSizes * 0.1,
-  },
-
-  SignsAndSymptomsButton2Title: {
-    fontFamily: 'Poppins-SemiBold',
+  // TEXTS - TITLES
+  firstTitleText: {
     color: colors.surfaceWhite,
-    fontSize: Math.round(buttonSizes * .065),
-    marginRight: buttonSizes * 0.02
+    fontSize: buttonSizes * .12,
+    fontFamily: 'Poppins-Bold',
+    textAlign: 'center',
   },
 
-  SignsAndSymptomsButtonViews: {
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    justifyContent: 'space-between',
+  secondTitleText: {
+    color: colors.primary,
+    fontSize: buttonSizes * .11,
+    fontFamily: 'Poppins-Bold',
+    textAlign: 'center',
   },
 
-  // Accordion
-
-  accordionContainer: {
-    marginVertical: buttonSizes * 0.03,
-    marginHorizontal: buttonSizes * 0.07,
-    borderRadius: buttonSizes * 0.1,
-    overflow: "hidden",
-    backgroundColor: colors.primary, // 👈 garante base uniforme
+  titleFromHowToDeal: {
+    fontSize: buttonSizes * 0.1,
+    fontFamily: 'Poppins-Bold',
+    color: colors.textBlack,
+    marginTop: 15,
+    marginBottom: 5,
   },
 
-
-  accordionHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    backgroundColor: colors.primary,
-    padding: buttonSizes * 0.08,
-    borderBottomWidth: 1, // 👈 Evita artefato visual
-    borderBottomColor: colors.secondary, // 👈 Combina com fundo do conteúdo
+  titleFromPrevention: {
+    fontSize: 18,
+    fontFamily: 'Poppins-Bold',
+    color: colors.textBlack,
+    marginTop: 15,
+    marginBottom: 5,
   },
 
-  activeHeader: {
-    backgroundColor: colors.secondary,
+  titleFromAboutUs: {
+    fontSize: buttonSizes * 0.1,
+    fontFamily: 'Poppins-Bold',
+    color: colors.primary,
+    textAlign: "justify"
+  },
+
+  titleMiddle: {
+    fontSize: buttonSizes * 0.1,
+    fontFamily: "Poppins-Bold",
+    color: colors.textBlack,
+    marginBottom: buttonSizes * 0.02,
+    textAlign: "center",
   },
 
   title: {
@@ -426,12 +294,137 @@ const styles = StyleSheet.create({
     fontStyle: "italic",
   },
 
-  titleMiddle: {
-    fontSize: buttonSizes * 0.1,
-    fontFamily: "Poppins-Bold",
+  SignsAndSymptomsPanelTitle: {
+    fontFamily: 'Poppins-ExtraBold',
+    fontSize: Math.round(buttonSizes * .15),
+  },
+
+  // TEXTS - BUTTONS
+  textFromButton: {
+    flexWrap: 'wrap',
+    textAlign: 'center',
     color: colors.textBlack,
-    marginBottom: buttonSizes * 0.02,
-    textAlign: "center",
+    fontSize: Math.round(buttonSizes * .11),
+    fontFamily: 'Poppins-SemiBold',
+    maxWidth: buttonSizes,
+  },
+
+  textButtonWhite: {
+    color: colors.surfaceWhite,
+    fontSize: buttonSizes * .1,
+    lineHeight: buttonSizes * .12,
+    fontFamily: "Poppins-Regular",
+    textAlign: 'center',
+  },
+
+  SignsAndSymptomsButtontitles: {
+    color: colors.surfaceWhite,
+    fontSize: Math.round(buttonSizes * .16),
+    fontFamily: "Poppins-Medium",
+    paddingRight: buttonSizes * 0.04
+  },
+
+  SignsAndSymptomsButton2Title: {
+    fontFamily: 'Poppins-SemiBold',
+    color: colors.surfaceWhite,
+    fontSize: Math.round(buttonSizes * .065),
+    marginRight: buttonSizes * 0.02
+  },
+
+  // TEXTS - GENERAL
+  text: {
+    fontSize: buttonSizes * 0.1,
+    lineHeight: buttonSizes * 0.12,
+    fontFamily: 'Poppins-Regular',
+    textAlign: "justify",
+  },
+
+  extendedText: {
+    fontSize: buttonSizes * 0.1,
+    lineHeight: buttonSizes * 0.15,
+    fontFamily: 'Poppins-Regular',
+    textAlign: "justify",
+  },
+
+  textFromAboutUs: {
+    fontFamily: 'Poppins-Regular',
+    fontSize: 16,
+    textAlign: 'justify',
+    marginBottom: buttonSizes * 0.07,
+  },
+
+  listItemFromAboutUs: {
+    fontFamily: 'Poppins-Regular',
+    fontSize: 16,
+    marginBottom: buttonSizes * 0.05,
+  },
+
+  boldFromAboutUs: {
+    fontSize: buttonSizes * 0.1,
+    fontFamily: 'Poppins-SemiBold',
+    color: colors.primary,
+    textAlign: "justify"
+  },
+
+  textAtention: {
+    fontSize: buttonSizes * 0.1,
+    lineHeight: 22,
+    fontFamily: 'Poppins-Bold',
+    color: colors.attention,
+    textAlign: 'center'
+  },
+
+  italic: {
+    fontFamily: "Poppins-Italic",
+  },
+
+  description: {
+    fontSize: 16,
+    lineHeight: 22,
+    marginBottom: 15,
+    textAlign: "justify",
+  },
+
+  textFromHeader: {
+    color: colors.surfaceWhite,
+    fontSize: Math.round(width * .05),
+    fontFamily: 'Poppins-SemiBold',
+  },
+
+  contentText: {
+    color: colors.surfaceWhite,
+    fontSize: buttonSizes * 0.09,
+    lineHeight: buttonSizes * 0.12,
+    fontFamily: "Poppins-Regular",
+  },
+
+  SignsAndSymptomsPanelDescription: {
+    fontFamily: 'Poppins-Medium',
+    fontSize: Math.round(buttonSizes * .09),
+    textAlign: 'justify',
+  },
+
+  // ACCORDION
+  accordionContainer: {
+    marginVertical: buttonSizes * 0.03,
+    marginHorizontal: buttonSizes * 0.07,
+    borderRadius: buttonSizes * 0.1,
+    overflow: "hidden",
+    backgroundColor: colors.primary,
+  },
+
+  accordionHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: colors.primary,
+    padding: buttonSizes * 0.08,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.secondary,
+  },
+
+  activeHeader: {
+    backgroundColor: colors.secondary,
   },
 
   accordionContent: {
@@ -442,16 +435,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 0,
   },
 
-
-  contentText: {
-    color: colors.surfaceWhite,
-    fontSize: buttonSizes * 0.09,
-    lineHeight: buttonSizes * 0.12,
-    fontFamily: "Poppins-Regular",
-  },
-
-  //Overlay
-
+  // OVERLAY
   overlayContainer: {
     width: "85%",
     borderRadius: buttonSizes * 0.09,
@@ -486,7 +470,6 @@ const styles = StyleSheet.create({
     fontSize: buttonSizes * 0.11,
     textAlign: "justify",
     color: colors.textBlack,
-
     paddingHorizontal: buttonSizes * 0.09,
     fontFamily: "Poppins-Regular",
   },
@@ -505,6 +488,73 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: "Poppins-SemiBold",
   },
+
+  // LOADING SCREENS
+  // LOADING SCREENS
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#ffffff',
+  },
+
+  loadingText: {
+    marginTop: buttonSizes * 0.01,
+    fontSize: buttonSizes * 0.2,
+    color: colors.textBlack,
+    fontFamily: 'Poppins-Regular',
+    textAlign: 'center',
+  },
+
+  loadingScreenContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: buttonSizes * 0.1,
+  },
+
+  loadingLogoContainer: {
+    marginBottom: buttonSizes * 0.005,
+  },
+
+  loadingLogo: {
+    width: buttonSizes * 0.2,
+    height: buttonSizes * 0.2,
+    resizeMode: 'contain',
+  },
+
+  loadingTitle: {
+    fontSize: buttonSizes * 0.15,
+    fontFamily: 'Poppins-Bold',
+    color: colors.textBlack,
+    textAlign: 'center',
+    marginBottom: buttonSizes * 0.025,
+  },
+
+  loadingSubtitleContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    marginBottom: buttonSizes * 0.12,
+  },
+
+  loadingSubtitle: {
+    fontSize: buttonSizes * 0.11,
+    fontFamily: 'Poppins-Regular',
+    color: colors.textBlack,
+    textAlign: 'center',
+  },
+
+  loadingSubtitleHighlight: {
+    fontSize: buttonSizes * 0.11,
+    fontFamily: 'Poppins-SemiBold',
+    color: colors.primary,
+    textAlign: 'center',
+  },
+
+  loadingSpinner: {
+    marginTop: buttonSizes * 0.07,
+  },
 })
 
 export const headerStyle = {
@@ -517,13 +567,3 @@ export const headerStyle = {
 }
 
 export default styles;
-// export const drawerStyle = {
-//     drawerActiveTintColor: colors.surfaceWhite,
-//     drawerInactiveTintColor: colors.textBlue,
-//     drawerActiveBackgroundColor: colors.backgroundTextBlue,
-//     drawerLabelStyle: {
-//         fontSize: width * .042,
-//         fontFamily: 'Poppins-Medium',
-//         color: colors.textBlue,
-//     },
-// }

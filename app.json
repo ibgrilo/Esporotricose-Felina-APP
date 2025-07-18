@@ -2,11 +2,17 @@
   "expo": {
     "name": "Esporotricose-Felina-App",
     "slug": "esporotricose-felina-app",
+    "icon": "./src/assets/images/iconAPP.png",
     "android": {
       "permissions": [
         "ACCESS_FINE_LOCATION"
       ],
       "package": "com.anonymous.seuapp",
+      "icon": "./src/assets/images/iconAPP.png",
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/adaptive-iconAPP.png",
+        "backgroundColor": "#FFFFFF"
+      },
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyAdF6NRC6czSt3vhoz8sH0lGtPd0EIK-lA"
