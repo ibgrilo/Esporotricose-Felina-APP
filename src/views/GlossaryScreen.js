@@ -111,8 +111,7 @@ const Accordion = () => {
             if (expanded === key) {
               setExpanded(null); // fecha se já estiver aberto
             } else {
-              setExpanded(null); // fecha o atual
-              setTimeout(() => setExpanded(key), 260); // abre o novo após animação
+              setExpanded(key); // abre o novo imediatamente
             }
           }}
         />
