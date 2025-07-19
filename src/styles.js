@@ -7,12 +7,6 @@ export const buttonSizes = width * 0.41
 
 const styles = StyleSheet.create({
   // GLOBAL CONTAINERS
-  fixedLogo: {
-    flex: 1,
-    alignSelf: 'flex-end',
-    position: "absolute",
-  },
-
   globalContainer: {
     flex: 1,
     padding: buttonSizes * 0.08,
@@ -28,7 +22,7 @@ const styles = StyleSheet.create({
   scrollContainer: {
     flex: 1,
     backgroundColor: '#f5f5f5',
-    paddingHorizontal: buttonSizes * 0.05,
+    paddingHorizontal: buttonSizes * 0.07,
   },
 
   scrollContent: {
@@ -36,51 +30,11 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
 
-  section: {
-    margin: buttonSizes * 0.03,
-    marginBottom: buttonSizes * 0.05,
-  },
-
-  enhancedDescriptionCard: {
-    backgroundColor: colors.primaryTransparent20,
-    marginHorizontal: buttonSizes * 0.040,
-    marginVertical: buttonSizes * 0.1,
-    paddingHorizontal: buttonSizes * 0.118,
-    paddingVertical: buttonSizes * 0.079,
-    borderRadius: buttonSizes * 0.095,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: buttonSizes * 0.023,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: buttonSizes * 0.048,
-    elevation: 3,
-    alignSelf: 'stretch',
-    flexShrink: 1,
-  },
-
-  enhancedDescriptionText: {
-    fontSize: buttonSizes * 0.095,
-    fontFamily: 'Poppins-Regular',
-    color: colors.primary,
-    lineHeight: buttonSizes * 0.118,
-    fontFamily: 'Poppins-Medium',
-    textAlign: 'justify',
-    flexWrap: 'wrap',
-  },
-
   emptyContainer: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#f5f5f5',
-  },
-
-  emptyText: {
-    fontSize: buttonSizes * 0.098,
-    color: '#666',
-    textAlign: 'center',
   },
 
   bottomSpacing: {
@@ -152,47 +106,18 @@ const styles = StyleSheet.create({
     overflow: 'hidden'
   },
 
-  regionTagsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
+  firstIconContainer: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    marginHorizontal: buttonSizes * 0.122,
-    marginVertical: buttonSizes * 0.061,
-    gap: buttonSizes * 0.037,
-    paddingHorizontal: buttonSizes * 0.061,
+    marginTop: buttonSizes * .09,
+    marginBottom: buttonSizes * .09,
   },
 
-  regionTag: {
-    backgroundColor: colors.primaryTransparent20,
-    borderRadius: buttonSizes * 0.122,
-    paddingHorizontal: buttonSizes * 0.091,
-    paddingVertical: buttonSizes * 0.037,
-    marginHorizontal: buttonSizes * 0.024,
-    marginVertical: buttonSizes * 0.024,
-    minWidth: buttonSizes * 0.366,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: buttonSizes * 0.012,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: buttonSizes * 0.024,
-    elevation: 3,
-  },
-
-  regionTagText: {
-    color: colors.primary,
-    fontSize: buttonSizes * 0.085,
-    fontFamily: 'Poppins-SemiBold',
-    textAlign: 'center',
-  },
-
-  sectionDivider: {
-    height: 1,
-    backgroundColor: colors.primaryTransparent20,
-    marginHorizontal: buttonSizes * 0.2,
-    marginVertical: buttonSizes * 0.061,
+  secondIconContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   enhancedIconContainer: {
@@ -211,25 +136,10 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
 
-  firstIconContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: buttonSizes * .09,
-    marginBottom: buttonSizes * .09,
-  },
-
-  secondIconContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-
   // TITLE PANELS
   firstTitlePanel: {
     backgroundColor: colors.primary,
     borderRadius: buttonSizes * 0.5,
-    margintop: buttonSizes * .09,
     alignSelf: 'center',
     paddingHorizontal: buttonSizes * .1,
     paddingVertical: buttonSizes * .01,
@@ -246,10 +156,9 @@ const styles = StyleSheet.create({
 
   mainTextPanel: {
     padding: buttonSizes * .12,
-    margintop: buttonSizes * .12,
   },
 
-  // MAIN MENU BUTTONS
+  // BUTTONS
   changeScreenTo: {
     backgroundColor: colors.backgroundChangeScreenButton,
     borderRadius: buttonSizes * .25,
@@ -265,7 +174,6 @@ const styles = StyleSheet.create({
     borderRadius: buttonSizes * .05
   },
 
-  // SIGNS AND SYMPTOMS BUTTONS
   SignsAndSymptomsButton: {
     width: buttonSizes * 1.8,
     height: 'auto',
@@ -302,7 +210,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
 
-  // SIGNS AND SYMPTOMS PANELS
+  // PANELS
   SignsAndSymptomsPanel: {
     backgroundColor: colors.tertiary,
     flex: 1,
@@ -337,7 +245,150 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
 
-  // TEXTS - TITLES
+  // CARDS
+  enhancedDescriptionCard: {
+    backgroundColor: colors.primaryTransparent20,
+    marginHorizontal: buttonSizes * 0.040,
+    marginVertical: buttonSizes * 0.1,
+    paddingHorizontal: buttonSizes * 0.118,
+    paddingVertical: buttonSizes * 0.079,
+    borderRadius: buttonSizes * 0.095,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.023,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: buttonSizes * 0.048,
+    elevation: 3,
+    alignSelf: 'stretch',
+    flexShrink: 1,
+  },
+
+  affectedAreaCard: {
+    backgroundColor: colors.primaryTransparent20,
+    marginHorizontal: buttonSizes * 0.122,
+    marginVertical: buttonSizes * 0.02,
+    marginBottom: buttonSizes * 0.09,
+    paddingHorizontal: buttonSizes * 0.122,
+    paddingVertical: buttonSizes * 0.152,
+    borderRadius: buttonSizes * 0.091,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.024,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: buttonSizes * 0.037,
+    elevation: 6,
+    borderWidth: buttonSizes * 0.003,
+    borderColor: colors.primary,
+  },
+
+  howToDealCard: {
+    backgroundColor: 'white',
+    marginHorizontal: buttonSizes * 0.040,
+    marginVertical: buttonSizes * 0.048,
+    paddingHorizontal: buttonSizes * 0.118,
+    paddingVertical: buttonSizes * 0.079,
+    borderRadius: buttonSizes * 0.095,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.023,
+    },
+    shadowOpacity: 0.15,
+    shadowRadius: buttonSizes * 0.048,
+    elevation: 5,
+    borderLeftWidth: buttonSizes * 0.023,
+    borderLeftColor: colors.primary,
+    minHeight: buttonSizes * 0.317,
+  },
+
+  howToDealIconContainer: {
+    backgroundColor: colors.primaryTransparent20,
+    borderRadius: buttonSizes * 0.159,
+    width: buttonSizes * 0.238,
+    height: buttonSizes * 0.238,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: buttonSizes * 0.079,
+    flexShrink: 0,
+  },
+
+  howToDealTextContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingVertical: buttonSizes * 0.016,
+  },
+
+  alertCard: {
+    backgroundColor: colors.attention,
+    marginHorizontal: buttonSizes * 0.040,
+    marginTop: buttonSizes * 0.079,
+    paddingHorizontal: buttonSizes * 0.118,
+    paddingVertical: buttonSizes * 0.079,
+    borderRadius: buttonSizes * 0.095,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.023,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: buttonSizes * 0.048,
+    elevation: 6,
+    minHeight: buttonSizes * 0.238,
+  },
+
+  // TAGS AND DIVIDERS
+  regionTagsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: buttonSizes * 0.122,
+    marginVertical: buttonSizes * 0.061,
+    gap: buttonSizes * 0.037,
+    paddingHorizontal: buttonSizes * 0.061,
+  },
+
+  regionTag: {
+    backgroundColor: colors.primaryTransparent20,
+    borderRadius: buttonSizes * 0.122,
+    paddingHorizontal: buttonSizes * 0.091,
+    paddingVertical: buttonSizes * 0.037,
+    marginHorizontal: buttonSizes * 0.024,
+    marginVertical: buttonSizes * 0.024,
+    minWidth: buttonSizes * 0.366,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.012,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: buttonSizes * 0.024,
+    elevation: 3,
+  },
+
+  sectionDivider: {
+    height: 1,
+    backgroundColor: colors.primaryTransparent20,
+    marginHorizontal: buttonSizes * 0.2,
+    marginVertical: buttonSizes * 0.061,
+  },
+
+  centeredTitleContainer: {
+    alignItems: 'center',
+    marginHorizontal: buttonSizes * 0.122,
+    marginVertical: buttonSizes * 0.061,
+  },
+
+  // TEXTS
   firstTitleText: {
     color: colors.surfaceWhite,
     fontSize: buttonSizes * .12,
@@ -403,12 +454,11 @@ const styles = StyleSheet.create({
 
   enhancedTitleText: {
     color: colors.primary,
-    fontSize: buttonSizes * 0.14,           // Mantém o valor maior para destaque
+    fontSize: buttonSizes * 0.14,
     fontFamily: 'Poppins-Bold',
     textAlign: 'center',
   },
 
-  // TEXTS - BUTTONS
   textFromButton: {
     flexWrap: 'wrap',
     textAlign: 'center',
@@ -440,7 +490,6 @@ const styles = StyleSheet.create({
     marginRight: buttonSizes * 0.02
   },
 
-  // TEXTS - GENERAL
   text: {
     fontSize: buttonSizes * 0.1,
     lineHeight: buttonSizes * 0.12,
@@ -487,13 +536,6 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins-Italic",
   },
 
-  description: {
-    fontSize: 16,
-    lineHeight: 22,
-    marginBottom: 15,
-    textAlign: "justify",
-  },
-
   textFromHeader: {
     color: colors.surfaceWhite,
     fontSize: Math.round(width * .05),
@@ -511,6 +553,65 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: Math.round(buttonSizes * .09),
     textAlign: 'justify',
+  },
+
+  enhancedDescriptionText: {
+    fontSize: buttonSizes * 0.095,
+    fontFamily: 'Poppins-Medium',
+    color: colors.primary,
+    lineHeight: buttonSizes * 0.118,
+    textAlign: 'justify',
+    flexWrap: 'wrap',
+  },
+
+  emptyText: {
+    fontSize: buttonSizes * 0.098,
+    color: '#666',
+    textAlign: 'center',
+  },
+
+  regionTagText: {
+    color: colors.primary,
+    fontSize: buttonSizes * 0.085,
+    fontFamily: 'Poppins-SemiBold',
+    textAlign: 'center',
+  },
+
+  howToDealTitle: {
+    fontSize: buttonSizes * 0.11,
+    fontFamily: 'Poppins-Bold',
+    color: colors.primary,
+    marginBottom: buttonSizes * 0.031,
+    lineHeight: buttonSizes * 0.127,
+  },
+
+  howToDealDescription: {
+    fontSize: buttonSizes * 0.095,
+    fontFamily: 'Poppins-Regular',
+    color: colors.textBlack,
+    lineHeight: buttonSizes * 0.118,
+    textAlign: 'justify',
+    flexWrap: 'wrap',
+  },
+
+  howToDealIcon: {
+    fontSize: buttonSizes * 0.118,
+  },
+
+  alertIcon: {
+    fontSize: buttonSizes * 0.11,
+    marginRight: buttonSizes * 0.048,
+    flexShrink: 0,
+  },
+
+  alertText: {
+    fontSize: buttonSizes * 0.09,
+    fontFamily: 'Poppins-Bold',
+    color: 'white',
+    textAlign: 'center',
+    flex: 1,
+    lineHeight: buttonSizes * 0.127,
+    flexWrap: 'wrap',
   },
 
   // ACCORDION
@@ -544,7 +645,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 0,
   },
 
-  // OVERLAY
+  // MODALS AND OVERLAYS
   overlayContainer: {
     width: "85%",
     borderRadius: buttonSizes * 0.09,
@@ -583,22 +684,6 @@ const styles = StyleSheet.create({
     fontFamily: "Poppins-Regular",
   },
 
-  overlayCloseButton: {
-    marginTop: buttonSizes * 0.09,
-    paddingVertical: 8,
-    paddingHorizontal: buttonSizes * 0.18,
-    borderRadius: buttonSizes * 0.09,
-    backgroundColor: colors.primary,
-  },
-
-  overlayCloseButtonText: {
-    color: "#FFFFFF",
-    fontSize: buttonSizes * 0.1,
-    textAlign: "center",
-    fontFamily: "Poppins-SemiBold",
-  },
-
-  // LOADING SCREENS
   // LOADING SCREENS
   loadingContainer: {
     flex: 1,
@@ -665,90 +750,8 @@ const styles = StyleSheet.create({
     marginTop: buttonSizes * 0.07,
   },
 
-  // VETERINARY MAP
-  mapContainer: {
-    flex: 1,
-  },
-  map: {
-    width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height,
-  },
-  vetModalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  vetModalContainer: {
-    width: '85%',
-    backgroundColor: 'white',
-    borderRadius: buttonSizes * 0.059,
-    overflow: 'hidden',
-  },
-  vetModalHeader: {
-    backgroundColor: colors.primary,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: buttonSizes * 0.089,
-    paddingVertical: buttonSizes * 0.107,
-  },
-  vetModalTitle: {
-    color: 'white',
-    fontSize: buttonSizes * 0.107,
-    fontFamily: 'Poppins-SemiBold',
-    flex: 1,
-    paddingRight: buttonSizes * 0.059,
-  },
-  vetModalBody: {
-    padding: buttonSizes * 0.089,
-  },
-  vetInfoItem: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    marginBottom: buttonSizes * 0.01,
-  },
-  vetInfoText: {
-    marginLeft: buttonSizes * 0.059,
-    flex: 1,
-    fontFamily: 'Poppins-Regular',
-    fontSize: buttonSizes * 0.089,
-  },
-  vetButtonRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    padding: buttonSizes * 0.089,
-    borderTopWidth: 1,
-    borderTopColor: colors.primaryTransparent20,
-  },
-  vetButton: {
-    paddingVertical: buttonSizes * 0.059,
-    paddingHorizontal: buttonSizes * 0.119,
-    borderRadius: buttonSizes * 1.5,
-    minWidth: buttonSizes * 0.593,
-    alignItems: 'center',
-  },
-  vetPrimaryButton: {
-    backgroundColor: colors.primary,
-  },
-  vetSecondaryButton: {
-    backgroundColor: 'white',
-    borderWidth: 1,
-    borderColor: colors.primary,
-  },
-  vetButtonText: {
-    color: 'white',
-    fontFamily: 'Poppins-Medium',
-    fontSize: buttonSizes * 0.1,
-  },
-  vetSecondaryButtonText: {
-    color: colors.primary,
-    fontFamily: 'Poppins-Medium',
-    fontSize: buttonSizes * 0.089,
-  },
-
   mapLoadingTitle: {
-    fontSize: buttonSizes * 0.12,  // Menor que o loadingTitle padrão
+    fontSize: buttonSizes * 0.12,
     fontFamily: 'Poppins-SemiBold',
     color: colors.textBlack,
     textAlign: 'center',
@@ -757,158 +760,107 @@ const styles = StyleSheet.create({
   },
 
   mapLoadingSubtitle: {
-    fontSize: buttonSizes * 0.09,  // Menor que o loadingSubtitle padrão
+    fontSize: buttonSizes * 0.09,
     fontFamily: 'Poppins-Regular',
     color: colors.textBlack,
     textAlign: 'center',
     paddingHorizontal: buttonSizes * 0.12,
   },
 
-  titleWithIcon: {
-    flexDirection: 'row',
-    alignItems: 'center',
+  // VETERINARY MAP
+  mapContainer: {
+    flex: 1,
+  },
+
+  map: {
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height,
+  },
+
+  vetModalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
     justifyContent: 'center',
-    margintop: buttonSizes * 0.05,
+    alignItems: 'center',
   },
 
-  titleWithIconContainer: {
+  vetModalContainer: {
+    width: '85%',
+    backgroundColor: 'white',
+    borderRadius: buttonSizes * 0.059,
+    overflow: 'hidden',
+  },
+
+  vetModalHeader: {
+    backgroundColor: colors.primary,
     flexDirection: 'row',
-    alignItems: 'center',
     justifyContent: 'space-between',
-    marginHorizontal: 20,
-    marginVertical: 10,
-    paddingHorizontal: 15,
-  },
-
-  centeredTitleContainer: {
     alignItems: 'center',
-    marginHorizontal: buttonSizes * 0.122,  // ~20px
-    marginVertical: buttonSizes * 0.061,    // ~10px (10/164 = 0.061)
+    padding: buttonSizes * 0.089,
+    paddingVertical: buttonSizes * 0.107,
   },
 
-  // Novos estilos adicionados
-  affectedAreaCard: {
-    backgroundColor: colors.primaryTransparent20,
-    marginHorizontal: buttonSizes * 0.122,
-    marginVertical: buttonSizes * 0.02,
-    marginBottom: buttonSizes * 0.09,
-    paddingHorizontal: buttonSizes * 0.122,
-    paddingVertical: buttonSizes * 0.152,
-    borderRadius: buttonSizes * 0.091,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: buttonSizes * 0.024,
-    },
-    shadowOpacity: 0.2,
-    shadowRadius: buttonSizes * 0.037,
-    elevation: 6,
-    borderWidth: buttonSizes * 0.003,
+  vetModalTitle: {
+    color: 'white',
+    fontSize: buttonSizes * 0.107,
+    fontFamily: 'Poppins-SemiBold',
+    flex: 1,
+    paddingRight: buttonSizes * 0.059,
+  },
+
+  vetModalBody: {
+    padding: buttonSizes * 0.089,
+  },
+
+  vetInfoItem: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginBottom: buttonSizes * 0.01,
+  },
+
+  vetInfoText: {
+    marginLeft: buttonSizes * 0.059,
+    flex: 1,
+    fontFamily: 'Poppins-Regular',
+    fontSize: buttonSizes * 0.089,
+  },
+
+  vetButtonRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    padding: buttonSizes * 0.089,
+    borderTopWidth: 1,
+    borderTopColor: colors.primaryTransparent20,
+  },
+
+  vetButton: {
+    paddingVertical: buttonSizes * 0.059,
+    paddingHorizontal: buttonSizes * 0.119,
+    borderRadius: buttonSizes * 1.5,
+    minWidth: buttonSizes * 0.593,
+    alignItems: 'center',
+  },
+
+  vetPrimaryButton: {
+    backgroundColor: colors.primary,
+  },
+
+  vetSecondaryButton: {
+    backgroundColor: 'white',
+    borderWidth: 1,
     borderColor: colors.primary,
   },
 
-  cardIcon: {
-    marginRight: 12,
-    marginTop: 2, // Para alinhar com a primeira linha do texto
-
-
-  },
-
-  howToDealCard: {
-    backgroundColor: 'white',
-    marginHorizontal: buttonSizes * 0.040,     // 0.061 * 0.65 = mais espaço na tela
-    marginVertical: buttonSizes * 0.048,       // 0.037 * 1.3
-    paddingHorizontal: buttonSizes * 0.118,    // 0.091 * 1.3
-    paddingVertical: buttonSizes * 0.079,      // 0.061 * 1.3
-    borderRadius: buttonSizes * 0.095,         // 0.073 * 1.3
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: buttonSizes * 0.023,             // 0.018 * 1.3
-    },
-    shadowOpacity: 0.15,
-    shadowRadius: buttonSizes * 0.048,         // 0.037 * 1.3
-    elevation: 5,
-    borderLeftWidth: buttonSizes * 0.023,      // 0.018 * 1.3
-    borderLeftColor: colors.primary,
-    minHeight: buttonSizes * 0.317,            // 0.244 * 1.3
-  },
-
-  howToDealIconContainer: {
-    backgroundColor: colors.primaryTransparent20,
-    borderRadius: buttonSizes * 0.159,         // 0.122 * 1.3
-    width: buttonSizes * 0.238,               // 0.183 * 1.3
-    height: buttonSizes * 0.238,              // 0.183 * 1.3
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginRight: buttonSizes * 0.079,         // 0.061 * 1.3
-    flexShrink: 0,
-  },
-
-  howToDealIcon: {
-    fontSize: buttonSizes * 0.118,            // 0.091 * 1.3
-  },
-
-  howToDealTextContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    paddingVertical: buttonSizes * 0.016,     // 0.012 * 1.3
-  },
-
-  howToDealTitle: {
-    fontSize: buttonSizes * 0.11,            // 0.085 * 1.3
-    fontFamily: 'Poppins-Bold',
-    color: colors.primary,
-    marginBottom: buttonSizes * 0.031,        // 0.024 * 1.3
-    lineHeight: buttonSizes * 0.127,          // 0.098 * 1.3
-  },
-
-  howToDealDescription: {
-    fontSize: buttonSizes * 0.095,            // 0.073 * 1.3
-    fontFamily: 'Poppins-Regular',
-    color: colors.textBlack,
-    lineHeight: buttonSizes * 0.118,          // 0.091 * 1.3
-    textAlign: 'justify',
-    flexWrap: 'wrap',
-  },
-
-  alertCard: {
-    backgroundColor: colors.attention,
-    marginHorizontal: buttonSizes * 0.040,    // 0.061 * 0.65 = mais espaço na tela
-    marginTop: buttonSizes * 0.079,           // 0.061 * 1.3
-    paddingHorizontal: buttonSizes * 0.118,   // 0.091 * 1.3
-    paddingVertical: buttonSizes * 0.079,     // 0.061 * 1.3
-    borderRadius: buttonSizes * 0.095,        // 0.073 * 1.3
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: buttonSizes * 0.023,            // 0.018 * 1.3
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: buttonSizes * 0.048,        // 0.037 * 1.3
-    elevation: 6,
-    minHeight: buttonSizes * 0.238,           // 0.183 * 1.3
-  },
-
-  alertIcon: {
-    fontSize: buttonSizes * 0.11,            // 0.091 * 1.3
-    marginRight: buttonSizes * 0.048,         // 0.037 * 1.3
-    flexShrink: 0,
-  },
-
-  alertText: {
-    fontSize: buttonSizes * 0.09,            // 0.085 * 1.3
-    fontFamily: 'Poppins-Bold',
+  vetButtonText: {
     color: 'white',
-    textAlign: 'center',
-    flex: 1,
-    lineHeight: buttonSizes * 0.127,          // 0.098 * 1.3
-    flexWrap: 'wrap',
+    fontFamily: 'Poppins-Medium',
+    fontSize: buttonSizes * 0.1,
+  },
+
+  vetSecondaryButtonText: {
+    color: colors.primary,
+    fontFamily: 'Poppins-Medium',
+    fontSize: buttonSizes * 0.089,
   },
 })
 
