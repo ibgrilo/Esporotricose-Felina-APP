@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { ScrollView, View, Text } from "react-native";
 import SVGComponent from "../assets/svg/SVGComponent";
-import styles from "../styles";
+import styles, { buttonSizes } from "../styles";
 
 export default (props) => {
     const { name, description, types, system, extended } = props.route.params;
+
     function chooseMainIcons(system) {
         let iconNames;
         switch (system) {
@@ -28,39 +29,48 @@ export default (props) => {
     }
 
     const iconNames = chooseMainIcons(system);
+
     if (system != null) {
         return (
-            <ScrollView>
+            <ScrollView
+                style={styles.scrollContainer}
+                contentContainerStyle={styles.scrollContent}
+                showsVerticalScrollIndicator={false}
+            >
                 <View style={styles.firstIconContainer}>
                     <SVGComponent name={iconNames[0]} />
                 </View>
 
+                {/* Título centralizado */}
                 <View style={styles.firstTitlePanel}>
                     <Text style={styles.firstTitleText}>{name}</Text>
                 </View>
 
-                <View style={styles.mainTextPanel}>
-                    <Text style={styles.extendedText}>{extended}</Text>
+                {/* Card com descrição destacada */}
+                <View style={styles.enhancedDescriptionCard}>
+                    <Text style={styles.enhancedDescriptionText}>{extended}</Text>
                 </View>
-
                 <View style={styles.firstTitlePanel}>
                     <Text style={styles.firstTitleText}>Áreas afetadas</Text>
                 </View>
 
-                <View style={styles.secondIconContainer} >
+                <View style={styles.secondIconContainer}>
                     <SVGComponent name={iconNames[1]} />
                 </View>
 
                 <View style={styles.secondTitlePanel}>
                     <Text style={styles.secondTitleText}>{system}</Text>
                 </View>
-            </ScrollView >
+
+                {/* Espaçamento inferior */}
+                <View style={styles.bottomSpacing} />
+            </ScrollView>
         );
     }
 
     return (
-        <View>
-
+        <View style={styles.emptyContainer}>
+            <Text style={styles.emptyText}>Informações não disponíveis</Text>
         </View>
     )
 };

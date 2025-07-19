@@ -73,6 +73,7 @@ const InfoButton = ({ type, name, description, types, system, extended, affected
                 <Overlay
                     isVisible={visible}
                     onBackdropPress={() => setVisible(false)}
+                    animationType="fade"
                     overlayStyle={styles.overlayContainer}
                 >
                     <View style={styles.overlayContent}>

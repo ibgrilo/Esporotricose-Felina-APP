@@ -9,6 +9,7 @@ const HowToDealOverlay = ({ visible, onClose, title, message }) => {
             isVisible={visible}
             onBackdropPress={onClose}
             overlayStyle={styles.overlayContainer}
+            animationType="fade"
         >
             <View style={styles.overlayContent}>
                 <Text style={styles.overlayText}>{message}</Text>

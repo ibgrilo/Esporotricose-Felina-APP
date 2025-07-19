@@ -31,7 +31,7 @@ const AboutUsText = () => {
 
             <Text style={styles.titleFromAboutUs}>Impacto Esperado</Text>
             <Text style={styles.textFromAboutUs}>
-                Com a implementação deste aplicativo, espera-se reduzir o tempo entre a aparição dos sintomas e o início do tratamento, aumentando as chances de recuperação dos animais afetados.
+                Com a implementação deste aplicativo, espera-se reduzir o tempo entre a aparição dos sinais e o início do tratamento, aumentando as chances de recuperação dos animais afetados.
             </Text>
             <Text style={styles.textFromAboutUs}>
                 Ademais, o "Infoesporotricose" contribuirá para a capacitação de profissionais e estudantes da área veterinária, além de aumentar a conscientização da população sobre a importância do manejo adequado da doença.
