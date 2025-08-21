@@ -37,17 +37,15 @@ const cleanOldCache = async () => {
 
 // Função de cache híbrido otimizada
 const getCachedDetails = async (placeId) => {
-    // Primeiro verifica cache em memória (instantâneo)
     if (memoryCache[placeId]) {
         return memoryCache[placeId];
     }
 
-    // Se não estiver em memória, verifica AsyncStorage
     try {
         const cached = await AsyncStorage.getItem(`vet_${placeId}`);
         if (cached) {
             const data = JSON.parse(cached);
-            memoryCache[placeId] = data; // Salva no cache de memória
+            memoryCache[placeId] = data;
             return data;
         }
     } catch (err) {
@@ -57,10 +55,8 @@ const getCachedDetails = async (placeId) => {
 };
 
 const setCachedDetails = async (placeId, data) => {
-    // Salva primeiro no cache de memória (instantâneo)
     memoryCache[placeId] = data;
 
-    // Depois salva no AsyncStorage (não bloqueia)
     try {
         AsyncStorage.setItem(`vet_${placeId}`, JSON.stringify(data));
     } catch (err) {
@@ -77,8 +73,9 @@ const fetchPlaceDetails = async (placeId) => {
     try {
         const response = await fetch(detailsUrl);
         const data = await response.json();
-        if (data.result) {
-            setCachedDetails(placeId, data.result); // Não espera salvar
+
+        if (data.status === "OK" && data.result) {
+            setCachedDetails(placeId, data.result);
             return data.result;
         }
         return null;
@@ -133,13 +130,14 @@ const NearbyVeterinariesMap = () => {
 
             setLocationPermissionGranted(true);
 
-            // SEM accuracy balanceada - usa padrão (High)
-            const location = await Location.getCurrentPositionAsync({});
+            const location = await Location.getCurrentPositionAsync({
+                accuracy: Location.Accuracy.Balanced,
+                timeout: 15000,
+            });
 
             setUserLocation(location.coords);
             setIsLoadingLocation(false);
 
-            // Buscar veterinários em background
             fetchNearbyVeterinaries(location.coords);
         } catch (error) {
             console.error("Erro ao obter localização:", error);
@@ -155,16 +153,15 @@ const NearbyVeterinariesMap = () => {
 
     const fetchNearbyVeterinaries = async ({ latitude, longitude }) => {
         try {
-            const radius = 3000; // Raio menor = mais rápido
+            const radius = 5000;
             const type = "veterinary_care";
             const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${latitude},${longitude}&radius=${radius}&type=${type}&key=${API_KEY}`;
 
             const response = await fetch(url);
             const data = await response.json();
 
-            if (data.results) {
-                // Processar apenas os 8 primeiros para ser mais rápido
-                const topResults = data.results.slice(0, 20);
+            if (data.status === "OK" && data.results) {
+                const topResults = data.results.slice(0, 15);
 
                 const detailedVets = await Promise.all(
                     topResults.map(async (place) => {
@@ -193,7 +190,6 @@ const NearbyVeterinariesMap = () => {
 
     useFocusEffect(
         React.useCallback(() => {
-            // Reset states
             setUserLocation(null);
             setVeterinaries([]);
             setSelectedVet(null);
@@ -201,10 +197,7 @@ const NearbyVeterinariesMap = () => {
             setLocationPermissionGranted(null);
             setIsLoadingLocation(true);
 
-            // Limpar cache periodicamente
             cleanOldCache();
-
-            // Start location request immediately
             requestLocationPermission();
         }, [])
     );
@@ -227,13 +220,12 @@ const NearbyVeterinariesMap = () => {
                     markerRefs.current.forEach((ref) => {
                         if (ref) ref.showCallout();
                     });
-                }, 300); // Reduzido de 500ms para 300ms
-            }, 200); // Reduzido de 300ms para 200ms
+                }, 300);
+            }, 200);
             return () => clearTimeout(timer);
         }
     }, [userLocation, veterinaries]);
 
-    // Loading simples SEM barra de progresso
     if (isLoadingLocation) {
         return (
             <View style={styles.loadingScreenContainer}>
@@ -253,7 +245,7 @@ const NearbyVeterinariesMap = () => {
                 initialRegion={{
                     latitude: userLocation ? userLocation.latitude : -2.5307,
                     longitude: userLocation ? userLocation.longitude : -44.2915,
-                    latitudeDelta: 0.08, // Zoom um pouco mais próximo
+                    latitudeDelta: 0.08,
                     longitudeDelta: 0.08,
                 }}
             >
@@ -286,7 +278,7 @@ const NearbyVeterinariesMap = () => {
             {veterinaries.length > 0 && (
                 <View style={styles.resultCountBanner}>
                     <Text style={styles.resultCountText}>
-                        {`Encontramos ${veterinaries.length} veterinário${veterinaries.length > 1 ? "s" : ""} próximo${veterinaries.length > 1 ? "s" : ""}.`}
+                        {`${veterinaries.length} veterinário${veterinaries.length > 1 ? "s" : ""} próximo${veterinaries.length > 1 ? "s" : ""} encontrado${veterinaries.length > 1 ? "s" : ""}.`}
                     </Text>
                 </View>
             )}

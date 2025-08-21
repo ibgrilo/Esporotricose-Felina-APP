@@ -1,23 +1,30 @@
 import React from "react";
-import { StatusBar } from "expo-status-bar";
-import { View, Text, ScrollView } from "react-native";
-import Prevention from "../assets/svg/icons/Prevention.svg"
+import { View, Text } from "react-native";
 import styles from "../styles";
-import colors from "../theme/colors";
-import { buttonSizes } from "../styles";
-import PreventionText from "../data/PreventionText";
-import FixedLogo from "../components/FixedLogo";
+import PreventionAccordion from "../components/PreventionAccordion";
+import preventionText from "../data/PreventionText";
+import SVGComponent from "../assets/svg/SVGComponent";
 
 export default props => {
     return (
+        <View style={styles.preventionMainContainer}>
+            <SVGComponent name="prevention" />
 
-        <ScrollView style={styles.scrollContainer}>
-            <StatusBar translucent={false} backgroundColor={colors.primary} />
-            <View style={styles.container}>
-                <Prevention width={`${buttonSizes * .7}`} height={`${buttonSizes * .7}`} />
+            <View style={[styles.enhancedDescriptionCard, styles.preventionIntroCard]}>
+                <Text style={styles.enhancedDescriptionText}>
+                    A esporotricose felina é transmitida principalmente pela inoculação do fungo
+                    <Text style={styles.italic}> Sporothrix sp.</Text> na pele. Pequenas ações podem evitá-la:
+                </Text>
             </View>
-            <PreventionText />
-        </ScrollView>
 
-    )
-}
+            <PreventionAccordion data={preventionText} />
+
+            <View style={[styles.alertCard, styles.preventionFinalAlert]}>
+                <Text style={styles.alertIcon}>💚</Text>
+                <Text style={styles.alertText}>
+                    CUIDE DO SEU FELINO COM AMOR E RESPONSABILIDADE!
+                </Text>
+            </View>
+        </View>
+    );
+};

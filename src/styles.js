@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet, Dimensions } from 'react-native';
 import colors from './theme/colors';
 
@@ -777,91 +776,323 @@ const styles = StyleSheet.create({
     height: Dimensions.get("window").height,
   },
 
-  vetModalOverlay: {
+  noLocationBanner: {
+    position: 'absolute',
+    top: 50,
+    left: 20,
+    right: 20,
+    backgroundColor: colors.attention,
+    padding: buttonSizes * 0.05,
+    borderRadius: buttonSizes * 0.05,
+    elevation: 5,
+  },
+
+  noLocationText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: buttonSizes * 0.08,
+    fontFamily: 'Poppins-Medium',
+  },
+
+  resultCountBanner: {
+    position: 'absolute',
+    bottom: 100,
+    left: 20,
+    right: 20,
+    backgroundColor: colors.primary,
+    padding: buttonSizes * 0.05,
+    borderRadius: buttonSizes * 0.05,
+    elevation: 5,
+  },
+
+  resultCountText: {
+    color: 'white',
+    textAlign: 'center',
+    fontSize: buttonSizes * 0.08,
+    fontFamily: 'Poppins-Medium',
+  },
+
+  // VET INFO MODAL STYLES
+  modalOverlay: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'flex-end',
+  },
+
+  modalSafeArea: {
+    backgroundColor: 'transparent',
+  },
+
+  modalContainer: {
+    backgroundColor: colors.surfaceWhite,
+    borderTopLeftRadius: buttonSizes * 0.1,
+    borderTopRightRadius: buttonSizes * 0.1,
+    maxHeight: height * 0.7,
+    minHeight: height * 0.4,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: -2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 10,
+  },
+
+  modalHeader: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    padding: buttonSizes * 0.08,
+    paddingBottom: buttonSizes * 0.05,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.lightGray,
+  },
+
+  modalHeaderContent: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginRight: buttonSizes * 0.05,
+  },
+
+  modalTitle: {
+    fontSize: buttonSizes * 0.12,
+    fontFamily: 'Poppins-Bold',
+    color: colors.primary,
+    marginLeft: buttonSizes * 0.05,
+    flex: 1,
+    lineHeight: buttonSizes * 0.15,
+  },
+
+  modalCloseButton: {
+    padding: buttonSizes * 0.02,
+    borderRadius: buttonSizes * 0.05,
+    backgroundColor: colors.lightGray,
+  },
+
+  modalContent: {
+    flex: 1,
+    paddingHorizontal: buttonSizes * 0.08,
+    paddingVertical: buttonSizes * 0.05,
+  },
+
+  modalInfoItem: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    marginBottom: buttonSizes * 0.08,
+    paddingBottom: buttonSizes * 0.05,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.lightGray,
+  },
+
+  modalInfoTextContainer: {
+    flex: 1,
+    marginLeft: buttonSizes * 0.05,
+  },
+
+  modalInfoLabel: {
+    fontSize: buttonSizes * 0.085,
+    fontFamily: 'Poppins-Bold',
+    color: colors.primary,
+    marginBottom: buttonSizes * 0.02,
+  },
+
+  modalInfoText: {
+    fontSize: buttonSizes * 0.09,
+    fontFamily: 'Poppins-Regular',
+    color: colors.textBlack,
+    lineHeight: buttonSizes * 0.12,
+    textAlign: 'justify',
+  },
+
+  modalActions: {
+    flexDirection: 'row',
+    paddingHorizontal: buttonSizes * 0.08,
+    paddingVertical: buttonSizes * 0.05,
+    paddingBottom: buttonSizes * 0.08,
+    gap: buttonSizes * 0.05,
+  },
+
+  modalActionButton: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: buttonSizes * 0.08,
+    borderRadius: buttonSizes * 0.08,
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+  },
+
+  modalCallButton: {
+    backgroundColor: colors.success || '#28a745',
+  },
+
+  modalDirectionsButton: {
+    backgroundColor: colors.primary,
+  },
+
+  modalActionButtonText: {
+    fontSize: buttonSizes * 0.095,
+    fontFamily: 'Poppins-Bold',
+    color: colors.surfaceWhite,
+    marginLeft: buttonSizes * 0.03,
+  },
+
+  // PREVENTION SCREEN SPECIFIC STYLES
+  preventionMainContainer: {
+    marginBottom: buttonSizes * 0.079,
+    paddingHorizontal: buttonSizes * 0.020
+  },
+
+  preventionIntroCard: {
+    marginBottom: buttonSizes * 0.05,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.02,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: buttonSizes * 0.04,
+    elevation: 3,
+  },
+
+  preventionFinalAlert: {
+    backgroundColor: '#28a745',
+    marginTop: buttonSizes * 0.079,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.03,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: buttonSizes * 0.06,
+    elevation: 8,
+  },
+
+  // PREVENTION ACCORDION SPECIFIC STYLES
+  preventionAccordionCard: {
+    marginBottom: buttonSizes * 0.03,
+  },
+
+  preventionCardActive: {
+    borderWidth: 2,
+    borderColor: colors.primary,
+    backgroundColor: colors.primaryTransparent20,
+    elevation: 8,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.04,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: buttonSizes * 0.06,
+  },
+
+  preventionCardInactive: {
+    borderWidth: 1,
+    borderColor: 'transparent',
+    backgroundColor: 'white',
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.02,
+    },
+    shadowOpacity: 0.15,
+    shadowRadius: buttonSizes * 0.04,
+  },
+
+  preventionIconActive: {
+    backgroundColor: colors.primary,
+  },
+
+  preventionIconInactive: {
+    backgroundColor: colors.primaryTransparent20,
+  },
+
+  preventionTitleActive: {
+    color: colors.primary,
+    fontSize: buttonSizes * 0.115,
+    marginBottom: 0,
+  },
+
+  preventionTitleInactive: {
+    color: colors.primary,
+    fontSize: buttonSizes * 0.11,
+    marginBottom: 0,
+  },
+
+  preventionHeaderContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
+
+  preventionArrowWrapper: {
+    marginLeft: buttonSizes * 0.02,
+  },
+
+  preventionArrowActive: {
+    width: buttonSizes * 0.12,
+    height: buttonSizes * 0.12,
+    borderRadius: buttonSizes * 0.06,
+    backgroundColor: colors.primary,
     justifyContent: 'center',
     alignItems: 'center',
   },
 
-  vetModalContainer: {
-    width: '85%',
-    backgroundColor: 'white',
-    borderRadius: buttonSizes * 0.059,
-    overflow: 'hidden',
-  },
-
-  vetModalHeader: {
-    backgroundColor: colors.primary,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+  preventionArrowInactive: {
+    width: buttonSizes * 0.12,
+    height: buttonSizes * 0.12,
+    borderRadius: buttonSizes * 0.06,
+    backgroundColor: '#e0e0e0',
+    justifyContent: 'center',
     alignItems: 'center',
-    padding: buttonSizes * 0.089,
-    paddingVertical: buttonSizes * 0.107,
   },
 
-  vetModalTitle: {
-    color: 'white',
-    fontSize: buttonSizes * 0.107,
-    fontFamily: 'Poppins-SemiBold',
-    flex: 1,
-    paddingRight: buttonSizes * 0.059,
+  preventionArrowTextActive: {
+    fontSize: buttonSizes * 0.07,
+    color: colors.surfaceWhite,
+    fontFamily: 'Poppins-Bold',
   },
 
-  vetModalBody: {
-    padding: buttonSizes * 0.089,
+  preventionArrowTextInactive: {
+    fontSize: buttonSizes * 0.07,
+    color: '#666',
+    fontFamily: 'Poppins-Bold',
   },
 
-  vetInfoItem: {
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    marginBottom: buttonSizes * 0.01,
+  preventionContentWrapper: {
+    overflow: "hidden",
   },
 
-  vetInfoText: {
-    marginLeft: buttonSizes * 0.059,
-    flex: 1,
-    fontFamily: 'Poppins-Regular',
-    fontSize: buttonSizes * 0.089,
-  },
-
-  vetButtonRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    padding: buttonSizes * 0.089,
+  preventionContentBorder: {
+    marginTop: buttonSizes * 0.03,
+    paddingTop: buttonSizes * 0.03,
     borderTopWidth: 1,
-    borderTopColor: colors.primaryTransparent20,
+    borderTopColor: colors.primary,
   },
 
-  vetButton: {
-    paddingVertical: buttonSizes * 0.059,
-    paddingHorizontal: buttonSizes * 0.119,
-    borderRadius: buttonSizes * 1.5,
-    minWidth: buttonSizes * 0.593,
-    alignItems: 'center',
+  preventionDescriptionStyle: {
+    lineHeight: buttonSizes * 0.125,
   },
 
-  vetPrimaryButton: {
-    backgroundColor: colors.primary,
+  preventionHiddenMeasurer: {
+    position: "absolute",
+    opacity: 0,
+    zIndex: -1,
+    left: 0,
+    right: 0,
   },
 
-  vetSecondaryButton: {
-    backgroundColor: 'white',
-    borderWidth: 1,
-    borderColor: colors.primary,
-  },
-
-  vetButtonText: {
-    color: 'white',
-    fontFamily: 'Poppins-Medium',
-    fontSize: buttonSizes * 0.1,
-  },
-
-  vetSecondaryButtonText: {
-    color: colors.primary,
-    fontFamily: 'Poppins-Medium',
-    fontSize: buttonSizes * 0.089,
-  },
 })
 
 export const headerStyle = {
