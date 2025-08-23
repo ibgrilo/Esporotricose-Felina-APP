@@ -327,6 +327,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.attention,
     marginHorizontal: buttonSizes * 0.040,
     marginTop: buttonSizes * 0.079,
+    marginBottom: buttonSizes * 0.079,
     paddingHorizontal: buttonSizes * 0.118,
     paddingVertical: buttonSizes * 0.079,
     borderRadius: buttonSizes * 0.095,
@@ -411,11 +412,11 @@ const styles = StyleSheet.create({
   },
 
   titleFromPrevention: {
-    fontSize: 18,
+    fontSize: buttonSizes * 0.11, // era 18
     fontFamily: 'Poppins-Bold',
     color: colors.textBlack,
-    marginTop: 15,
-    marginBottom: 5,
+    marginTop: buttonSizes * 0.037, // era 15
+    marginBottom: buttonSizes * 0.012, // era 5
   },
 
   titleFromAboutUs: {
@@ -505,14 +506,14 @@ const styles = StyleSheet.create({
 
   textFromAboutUs: {
     fontFamily: 'Poppins-Regular',
-    fontSize: 16,
+    fontSize: buttonSizes * 0.098, // era 16
     textAlign: 'justify',
     marginBottom: buttonSizes * 0.07,
   },
 
   listItemFromAboutUs: {
     fontFamily: 'Poppins-Regular',
-    fontSize: 16,
+    fontSize: buttonSizes * 0.098, // era 16
     marginBottom: buttonSizes * 0.05,
   },
 
@@ -525,7 +526,7 @@ const styles = StyleSheet.create({
 
   textAtention: {
     fontSize: buttonSizes * 0.1,
-    lineHeight: 22,
+    lineHeight: buttonSizes * 0.134, // era 22
     fontFamily: 'Poppins-Bold',
     color: colors.attention,
     textAlign: 'center'
@@ -977,12 +978,12 @@ const styles = StyleSheet.create({
     elevation: 8,
   },
 
-  // PREVENTION ACCORDION SPECIFIC STYLES
-  preventionAccordionCard: {
+  // GENERIC ACCORDION STYLES (renomeados de prevention)
+  accordionCard: {
     marginBottom: buttonSizes * 0.03,
   },
 
-  preventionCardActive: {
+  cardActive: {
     borderWidth: 2,
     borderColor: colors.primary,
     backgroundColor: colors.primaryTransparent20,
@@ -996,7 +997,7 @@ const styles = StyleSheet.create({
     shadowRadius: buttonSizes * 0.06,
   },
 
-  preventionCardInactive: {
+  cardInactive: {
     borderWidth: 1,
     borderColor: 'transparent',
     backgroundColor: 'white',
@@ -1010,37 +1011,37 @@ const styles = StyleSheet.create({
     shadowRadius: buttonSizes * 0.04,
   },
 
-  preventionIconActive: {
+  iconActive: {
     backgroundColor: colors.primary,
   },
 
-  preventionIconInactive: {
+  iconInactive: {
     backgroundColor: colors.primaryTransparent20,
   },
 
-  preventionTitleActive: {
+  titleActive: {
     color: colors.primary,
     fontSize: buttonSizes * 0.115,
     marginBottom: 0,
   },
 
-  preventionTitleInactive: {
+  titleInactive: {
     color: colors.primary,
     fontSize: buttonSizes * 0.11,
     marginBottom: 0,
   },
 
-  preventionHeaderContainer: {
+  headerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between'
   },
 
-  preventionArrowWrapper: {
+  arrowWrapper: {
     marginLeft: buttonSizes * 0.02,
   },
 
-  preventionArrowActive: {
+  arrowActive: {
     width: buttonSizes * 0.12,
     height: buttonSizes * 0.12,
     borderRadius: buttonSizes * 0.06,
@@ -1049,7 +1050,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  preventionArrowInactive: {
+  arrowInactive: {
     width: buttonSizes * 0.12,
     height: buttonSizes * 0.12,
     borderRadius: buttonSizes * 0.06,
@@ -1058,34 +1059,34 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  preventionArrowTextActive: {
+  arrowTextActive: {
     fontSize: buttonSizes * 0.07,
     color: colors.surfaceWhite,
     fontFamily: 'Poppins-Bold',
   },
 
-  preventionArrowTextInactive: {
+  arrowTextInactive: {
     fontSize: buttonSizes * 0.07,
     color: '#666',
     fontFamily: 'Poppins-Bold',
   },
 
-  preventionContentWrapper: {
+  contentWrapper: {
     overflow: "hidden",
   },
 
-  preventionContentBorder: {
+  contentBorder: {
     marginTop: buttonSizes * 0.03,
     paddingTop: buttonSizes * 0.03,
     borderTopWidth: 1,
     borderTopColor: colors.primary,
   },
 
-  preventionDescriptionStyle: {
+  descriptionStyle: {
     lineHeight: buttonSizes * 0.125,
   },
 
-  preventionHiddenMeasurer: {
+  hiddenMeasurer: {
     position: "absolute",
     opacity: 0,
     zIndex: -1,

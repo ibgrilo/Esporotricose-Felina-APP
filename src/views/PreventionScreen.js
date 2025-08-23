@@ -1,14 +1,17 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { ScrollView, View, Text } from "react-native";
 import styles from "../styles";
-import PreventionAccordion from "../components/PreventionAccordion";
-import preventionText from "../data/PreventionText";
-import SVGComponent from "../assets/svg/SVGComponent";
+import preventionText from "../data/preventionText";
+import Prevention from "../assets/svg/icons/Prevention";
+import { buttonSizes } from "../styles";
+import AccordionCard from "../components/AccordionCard";
 
 export default props => {
     return (
-        <View style={styles.preventionMainContainer}>
-            <SVGComponent name="prevention" />
+        <ScrollView style={styles.scrollContainer}>
+            <View style={styles.container}>
+                <Prevention width={buttonSizes * 0.7} height={buttonSizes * 0.7} />
+            </View>
 
             <View style={[styles.enhancedDescriptionCard, styles.preventionIntroCard]}>
                 <Text style={styles.enhancedDescriptionText}>
@@ -17,14 +20,14 @@ export default props => {
                 </Text>
             </View>
 
-            <PreventionAccordion data={preventionText} />
+            <AccordionCard data={preventionText} />
 
             <View style={[styles.alertCard, styles.preventionFinalAlert]}>
-                <Text style={styles.alertIcon}>💚</Text>
+
                 <Text style={styles.alertText}>
                     CUIDE DO SEU FELINO COM AMOR E RESPONSABILIDADE!
                 </Text>
             </View>
-        </View>
+        </ScrollView>
     );
 };

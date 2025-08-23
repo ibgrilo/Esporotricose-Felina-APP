@@ -1,84 +1,34 @@
-import React from "react";
-import { View, Text } from "react-native";
-import styles from "../styles"
-import { buttonSizes } from "../styles";
+const howToDealText1 = {
+    castracao: {
+        icon: "🐱",
+        title: "Castre seu gato",
+        description: "A castração é muito importante, pois diminui comportamentos de risco, como brigas por território e por fêmeas, e deslocamentos por grandes áreas."
+    },
+    localSeguro: {
+        icon: "🏠",
+        title: "Mantenha em local seguro",
+        description: "Animais que vivem em casa têm uma chance menor de serem expostos ao fungo através do solo contaminado ou do contato com animais doentes."
+    },
+    gatosErrantes: {
+        icon: "🚫",
+        title: "Evite contato com gatos errantes",
+        description: "Contato com animais de rua pode expor o seu gato ao fungo causador da esporotricose. Em caso de resgate, mantenha o animal isolado até a avaliação por um médico veterinário."
+    },
+    enriquecimento: {
+        icon: "🎾",
+        title: "Enriquecimento ambiental",
+        description: "Gatos estressados têm maior chance de desenvolver a esporotricose, por isso é importante que tenham acesso a brinquedos e arranhadores."
+    },
+    higiene: {
+        icon: "🧼",
+        title: "Higiene ambiental",
+        description: "Limpe regularmente os objetos e os locais onde o seu gato vive, como brinquedos, camas e caixas de areia."
+    },
+    checkup: {
+        icon: "🩺",
+        title: "Check Up veterinário",
+        description: "Realize avaliações veterinárias periódicas, pois é importante para a detecção precoce dos sinais clínicos da esporotricose e de outras doenças."
+    }
+};
 
-export default props => (
-    <View style={{ marginBottom: buttonSizes * 0.15 }}>
-        {/* Card Isolar */}
-        <View style={styles.howToDealCard}>
-            <View style={styles.howToDealIconContainer}>
-                <Text style={styles.howToDealIcon}>🐱</Text>
-            </View>
-            <View style={styles.howToDealTextContainer}>
-                <Text style={styles.howToDealTitle}>Isole o seu gato</Text>
-                <Text style={styles.howToDealDescription}>
-                    Mantenha o seu felino em um ambiente limpo e longe de outros animais e pessoas.
-                </Text>
-            </View>
-        </View>
-
-        {/* Card Proteger */}
-        <View style={styles.howToDealCard}>
-            <View style={styles.howToDealIconContainer}>
-                <Text style={styles.howToDealIcon}>🧤</Text>
-            </View>
-            <View style={styles.howToDealTextContainer}>
-                <Text style={styles.howToDealTitle}>Proteja-se</Text>
-                <Text style={styles.howToDealDescription}>
-                    Use luvas para manusear seu gato e evite contato direto com as lesões.
-                </Text>
-            </View>
-        </View>
-
-        {/* Card Veterinário */}
-        <View style={styles.howToDealCard}>
-            <View style={styles.howToDealIconContainer}>
-                <Text style={styles.howToDealIcon}>🏥</Text>
-            </View>
-            <View style={styles.howToDealTextContainer}>
-                <Text style={styles.howToDealTitle}>Procure um veterinário</Text>
-                <Text style={styles.howToDealDescription}>
-                    Leve o seu animal para uma avaliação veterinária, assim o médico veterinário pode
-                    confirmar a doença e indicar o melhor tratamento.
-                </Text>
-            </View>
-        </View>
-
-        {/* Card Tratamento */}
-        <View style={styles.howToDealCard}>
-            <View style={styles.howToDealIconContainer}>
-                <Text style={styles.howToDealIcon}>💊</Text>
-            </View>
-            <View style={styles.howToDealTextContainer}>
-                <Text style={styles.howToDealTitle}>Inicie o tratamento</Text>
-                <Text style={styles.howToDealDescription}>
-                    O veterinário prescreverá antifúngicos. Siga a sua orientação e nunca interrompa
-                    o tratamento por conta própria.
-                </Text>
-            </View>
-        </View>
-
-        {/* Card Higiene */}
-        <View style={styles.howToDealCard}>
-            <View style={styles.howToDealIconContainer}>
-                <Text style={styles.howToDealIcon}>🧼</Text>
-            </View>
-            <View style={styles.howToDealTextContainer}>
-                <Text style={styles.howToDealTitle}>Higiene</Text>
-                <Text style={styles.howToDealDescription}>
-                    Limpe regularmente o ambiente com produtos antifúngicos, lave bem as mãos após lidar
-                    com o gato doente ou com objetos que ele utiliza.
-                </Text>
-            </View>
-        </View>
-
-        {/* Card de Alerta */}
-        <View style={styles.alertCard}>
-            <Text style={styles.alertIcon}>⚠️</Text>
-            <Text style={styles.alertText}>
-                NUNCA ABANDONE UM ANIMAL DOENTE!
-            </Text>
-        </View>
-    </View>
-)
+export default howToDealText1;

@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, Animated, Easing } from "react-native";
 import styles from "../styles";
 import { buttonSizes } from "../styles";
 
-const PreventionCard = ({ keyId, icon, title, description, expanded, onPress }) => {
+const AccordionItem = ({ keyId, icon, title, description, expanded, onPress }) => {
     const animation = useRef(new Animated.Value(0)).current;
     const [scaleValue] = useState(new Animated.Value(1));
     const [contentHeight, setContentHeight] = useState(0);
@@ -56,20 +56,20 @@ const PreventionCard = ({ keyId, icon, title, description, expanded, onPress }) 
 
     return (
         <Animated.View style={[
-            styles.preventionAccordionCard,
+            styles.accordionCard,
             { transform: [{ scale: scaleValue }] }
         ]}>
             <TouchableOpacity
                 style={[
                     styles.howToDealCard,
-                    expanded ? styles.preventionCardActive : styles.preventionCardInactive
+                    expanded ? styles.cardActive : styles.cardInactive
                 ]}
                 activeOpacity={0.95}
                 onPress={handlePress}
             >
                 <View style={[
                     styles.howToDealIconContainer,
-                    expanded ? styles.preventionIconActive : styles.preventionIconInactive,
+                    expanded ? styles.iconActive : styles.iconInactive,
                     { transform: [{ scale: expanded ? 1.1 : 1 }] }
                 ]}>
                     <Text style={[
@@ -81,21 +81,21 @@ const PreventionCard = ({ keyId, icon, title, description, expanded, onPress }) 
                 </View>
 
                 <View style={[styles.howToDealTextContainer, { flex: 1 }]}>
-                    <View style={styles.preventionHeaderContainer}>
+                    <View style={styles.headerContainer}>
                         <Text style={[
                             styles.howToDealTitle,
-                            expanded ? styles.preventionTitleActive : styles.preventionTitleInactive,
+                            expanded ? styles.titleActive : styles.titleInactive,
                             { flex: 1 }
                         ]}>
                             {title}
                         </Text>
 
                         <Animated.View style={[
-                            styles.preventionArrowWrapper,
+                            styles.arrowWrapper,
                             { transform: [{ rotate: rotateInterpolation }] }
                         ]}>
-                            <View style={expanded ? styles.preventionArrowActive : styles.preventionArrowInactive}>
-                                <Text style={expanded ? styles.preventionArrowTextActive : styles.preventionArrowTextInactive}>
+                            <View style={expanded ? styles.arrowActive : styles.arrowInactive}>
+                                <Text style={expanded ? styles.arrowTextActive : styles.arrowTextInactive}>
                                     ▶
                                 </Text>
                             </View>
@@ -103,22 +103,22 @@ const PreventionCard = ({ keyId, icon, title, description, expanded, onPress }) 
                     </View>
 
                     <Animated.View style={[
-                        styles.preventionContentWrapper,
+                        styles.contentWrapper,
                         {
                             height,
                             opacity,
                             transform: [{ translateY }],
                         }
                     ]}>
-                        <View style={styles.preventionContentBorder}>
-                            <Text style={[styles.howToDealDescription, styles.preventionDescriptionStyle]}>
+                        <View style={styles.contentBorder}>
+                            <Text style={[styles.howToDealDescription, styles.descriptionStyle]}>
                                 {description}
                             </Text>
                         </View>
                     </Animated.View>
 
                     <View
-                        style={styles.preventionHiddenMeasurer}
+                        style={styles.hiddenMeasurer}
                         onLayout={(e) => {
                             const h = e.nativeEvent.layout.height;
                             if (h > 0 && h !== contentHeight) {
@@ -126,8 +126,8 @@ const PreventionCard = ({ keyId, icon, title, description, expanded, onPress }) 
                             }
                         }}
                     >
-                        <View style={styles.preventionContentBorder}>
-                            <Text style={[styles.howToDealDescription, styles.preventionDescriptionStyle]}>
+                        <View style={styles.contentBorder}>
+                            <Text style={[styles.howToDealDescription, styles.descriptionStyle]}>
                                 {description}
                             </Text>
                         </View>
@@ -138,30 +138,50 @@ const PreventionCard = ({ keyId, icon, title, description, expanded, onPress }) 
     );
 };
 
-const PreventionAccordion = ({ data }) => {
+const AccordionCard = ({ data }) => {
     const [expanded, setExpanded] = useState(null);
+
+    console.log("AccordionCard recebeu data:", data);
+    console.log("AccordionCard data type:", typeof data);
+    console.log("AccordionCard data keys:", data ? Object.keys(data) : 'undefined');
+
+    // Corrigida a condição - removi a verificação de Object.keys(data).length === 0
+    if (!data) {
+        return (
+            <View style={{ padding: 20 }}>
+                <Text>Nenhum dado disponível</Text>
+            </View>
+        );
+    }
+
+    const dataEntries = Object.entries(data);
+    console.log("AccordionCard entries:", dataEntries);
 
     return (
         <View>
-            {Object.entries(data).map(([key, { icon, title, description }]) => (
-                <PreventionCard
-                    key={key}
-                    keyId={key}
-                    icon={icon}
-                    title={title}
-                    description={description}
-                    expanded={expanded === key}
-                    onPress={() => {
-                        if (expanded === key) {
-                            setExpanded(null);
-                        } else {
-                            setExpanded(key);
-                        }
-                    }}
-                />
-            ))}
+            {dataEntries.map(([key, item]) => {
+                console.log("Renderizando item:", key, item);
+                return (
+                    <AccordionItem
+                        key={key}
+                        keyId={key}
+                        icon={item.icon}
+                        title={item.title}
+                        description={item.description}
+                        expanded={expanded === key}
+                        onPress={() => {
+                            console.log("Pressionado:", key);
+                            if (expanded === key) {
+                                setExpanded(null);
+                            } else {
+                                setExpanded(key);
+                            }
+                        }}
+                    />
+                );
+            })}
         </View>
     );
 };
 
-export default PreventionAccordion;
+export default AccordionCard;

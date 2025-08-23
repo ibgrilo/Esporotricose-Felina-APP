@@ -1,16 +1,23 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { View, Text, TouchableOpacity, ScrollView } from "react-native";
+import { ScrollView, View, Text } from "react-native";
 import colors from "../theme/colors";
-import HowToDealText1 from "../data/HowToDealText1";
+import AccordionCard from "../components/AccordionCard";
 import styles from "../styles";
-import FixedLogo from "../components/FixedLogo";
+import howToDealText1 from "../data/howToDealText1";
 
 export default props => {
     return (
         <ScrollView style={styles.scrollContainer}>
             <StatusBar translucent={false} backgroundColor={colors.primary} />
-            <HowToDealText1 />
+            <AccordionCard data={howToDealText1} />
+
+            <View style={styles.alertCard}>
+
+                <Text style={styles.alertText}>
+                    NUNCA ABANDONE UM ANIMAL DOENTE!
+                </Text>
+            </View>
         </ScrollView>
     )
 }
