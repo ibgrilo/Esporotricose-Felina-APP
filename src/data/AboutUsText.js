@@ -7,7 +7,6 @@ const AboutUsText = () => {
         <View>
             <Text style={styles.titleFromAboutUs}>Finalidade</Text>
             <Text style={styles.textFromAboutUs}>
-                description: `
                 O aplicativo "EsporoVet" tem como principal finalidade fornecer informações educativas sobre a esporotricose felina, uma doença fúngica que afeta gatos e pode ser transmitida a humanos.
             </Text>
             <Text style={styles.textFromAboutUs}>
