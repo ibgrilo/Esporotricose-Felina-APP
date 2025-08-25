@@ -141,11 +141,10 @@ const AccordionItem = ({ keyId, icon, title, description, expanded, onPress }) =
 const AccordionCard = ({ data }) => {
     const [expanded, setExpanded] = useState(null);
 
-    console.log("AccordionCard recebeu data:", data);
-    console.log("AccordionCard data type:", typeof data);
-    console.log("AccordionCard data keys:", data ? Object.keys(data) : 'undefined');
-
-    // Corrigida a condição - removi a verificação de Object.keys(data).length === 0
+    // console.log("AccordionCard recebeu data:", data);
+    // console.log("AccordionCard data type:", typeof data);
+    // console.log("AccordionCard data keys:", data ? Object.keys(data) : 'undefined');
+    
     if (!data) {
         return (
             <View style={{ padding: 20 }}>

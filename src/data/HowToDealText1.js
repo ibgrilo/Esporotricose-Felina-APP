@@ -1,33 +1,28 @@
 const howToDealText1 = {
-    castracao: {
+    isole: {
         icon: "🐱",
-        title: "Castre seu gato",
-        description: "A castração é muito importante, pois diminui comportamentos de risco, como brigas por território e por fêmeas, e deslocamentos por grandes áreas."
+        title: "Isole o seu gato",
+        description: "Mantenha o seu felino em um ambiente limpo, longe de outros animais e pessoas."
     },
-    localSeguro: {
-        icon: "🏠",
-        title: "Mantenha em local seguro",
-        description: "Animais que vivem em casa têm uma chance menor de serem expostos ao fungo através do solo contaminado ou do contato com animais doentes."
+    proteja: {
+        icon: "🧤",
+        title: "Proteja-se",
+        description: "Use luvas para manusear seu gato e evite contato direto com as lesões."
     },
-    gatosErrantes: {
-        icon: "🚫",
-        title: "Evite contato com gatos errantes",
-        description: "Contato com animais de rua pode expor o seu gato ao fungo causador da esporotricose. Em caso de resgate, mantenha o animal isolado até a avaliação por um médico veterinário."
+    veterinario: {
+        icon: "🏥",
+        title: "Procure um veterinário",
+        description: "Leve o seu animal para consulta com veterinário, para que seja avaliado e realizado exames para diagnóstico e início de tratamento."
     },
-    enriquecimento: {
-        icon: "🎾",
-        title: "Enriquecimento ambiental",
-        description: "Gatos estressados têm maior chance de desenvolver a esporotricose, por isso é importante que tenham acesso a brinquedos e arranhadores."
+    tratamento: {
+        icon: "💊",
+        title: "Inicie o tratamento",
+        description: "Siga a orientação do médico veterinário. Não interrompa o tratamento ou utilize medicação por conta própria."
     },
     higiene: {
         icon: "🧼",
-        title: "Higiene ambiental",
-        description: "Limpe regularmente os objetos e os locais onde o seu gato vive, como brinquedos, camas e caixas de areia."
-    },
-    checkup: {
-        icon: "🩺",
-        title: "Check Up veterinário",
-        description: "Realize avaliações veterinárias periódicas, pois é importante para a detecção precoce dos sinais clínicos da esporotricose e de outras doenças."
+        title: "Higiene",
+        description: "Limpe regularmente o ambiente, lave bem as mãos após manusear o gato doente ou objetos que sejam utilizados."
     }
 };
 

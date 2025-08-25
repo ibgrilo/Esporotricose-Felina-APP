@@ -26,15 +26,15 @@ const sintomas = {
             "🧤 Sempre faça o manejo do animal utilizando luvas para reduzir o risco de infecção cruzada.\n\n" +
             "🛡️ Isolar o animal é importante para prevenir a transmissão da doença."
     },
-    disseminacaoDasLesoes: {
-        nome: "Disseminação das Lesões",
-        descricao: "Em casos graves, as lesões podem se espalhar por todo o corpo do animal.",
-        regioesAfetadas: ["Cabeça", "Pescoço", "Patas", "Tronco", "Cauda", "Membros"],
-        dicasECuidados:
-            "🚨 Trata-se de uma situação de emergência.\n\n" +
-            "🧤 Ao manusear o animal, utilize luvas e outros equipamentos de proteção individual para sua segurança.\n\n" +
-            "🏥 Procure atendimento veterinário imediatamente e mantenha o animal isolado de outros animais e crianças."
-    }
+    // disseminacaoDasLesoes: {
+    //     nome: "Disseminação das Lesões",
+    //     descricao: "Em casos graves, as lesões podem se espalhar por todo o corpo do animal.",
+    //     regioesAfetadas: ["Cabeça", "Pescoço", "Patas", "Tronco", "Cauda", "Membros"],
+    //     dicasECuidados:
+    //         "🚨 Trata-se de uma situação de emergência.\n\n" +
+    //         "🧤 Ao manusear o animal, utilize luvas e outros equipamentos de proteção individual para sua segurança.\n\n" +
+    //         "🏥 Procure atendimento veterinário imediatamente e mantenha o animal isolado de outros animais e crianças."
+    // }
 };
 
 export default sintomas;
