@@ -7,7 +7,8 @@ const AboutUsText = () => {
         <View>
             <Text style={styles.titleFromAboutUs}>Finalidade</Text>
             <Text style={styles.textFromAboutUs}>
-                O aplicativo "Infoesporotricose" tem como principal finalidade fornecer informações educativas sobre a esporotricose felina, uma doença fúngica que afeta gatos e pode ser transmitida a humanos.
+                description: `
+                O aplicativo "EsporoVet" tem como principal finalidade fornecer informações educativas sobre a esporotricose felina, uma doença fúngica que afeta gatos e pode ser transmitida a humanos.
             </Text>
             <Text style={styles.textFromAboutUs}>
                 A plataforma visa conscientizar tutores, veterinários e profissionais da área de saúde sobre os sinais clínicos, diagnóstico, tratamento e prevenção da doença, promovendo uma abordagem de Saúde Única e contribuindo para o bem-estar animal e humano.
@@ -34,7 +35,7 @@ const AboutUsText = () => {
                 Com a implementação deste aplicativo, espera-se reduzir o tempo entre a aparição dos sinais e o início do tratamento, aumentando as chances de recuperação dos animais afetados.
             </Text>
             <Text style={styles.textFromAboutUs}>
-                Ademais, o "Infoesporotricose" contribuirá para a capacitação de profissionais e estudantes da área veterinária, além de aumentar a conscientização da população sobre a importância do manejo adequado da doença.
+                Ademais, o "EsporoVet" contribuirá para a capacitação de profissionais e estudantes da área veterinária, além de aumentar a conscientização da população sobre a importância do manejo adequado da doença.
             </Text>
             <Text style={styles.textFromAboutUs}>
                 O projeto também servirá como referência para outras iniciativas de extensão voltadas para a Saúde Única e bem-estar animal.
@@ -48,7 +49,7 @@ const AboutUsText = () => {
                 A iniciativa é coordenada pela Profa. Dra. Larissa Sarmento dos Santos Ribeiro e integra ações da Universidade Estadual do Maranhão (UEMA), voltadas para a educação, conscientização e promoção da saúde animal e humana.
             </Text>
             <Text style={styles.textFromAboutUs}>
-                O desenvolvimento do aplicativo "Infoesporotricose" teve como objetivo principal fornecer uma ferramenta educativa para facilitar a identificação dos sinais clínicos da esporotricose felina, orientar sobre o diagnóstico e tratamento precoce, e disseminar informações de prevenção à comunidade.
+                O desenvolvimento do aplicativo "EsporoVet" teve como objetivo principal fornecer uma ferramenta educativa para facilitar a identificação dos sinais clínicos da esporotricose felina, orientar sobre o diagnóstico e tratamento precoce, e disseminar informações de prevenção à comunidade.
             </Text>
 
             <Text style={styles.titleFromAboutUs}>Créditos</Text>

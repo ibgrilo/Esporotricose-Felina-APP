@@ -707,6 +707,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: buttonSizes * 0.1,
   },
 
+  loadingScreenContainerFullScreen: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: buttonSizes * 0.1,
+    paddingTop: buttonSizes * 0.15, // Espaço para a status bar
+  },
+
   loadingLogoContainer: {
     marginBottom: buttonSizes * 0.005,
   },
