@@ -23,17 +23,18 @@ export default props => {
     );
 };
 
+console.log(buttonSizes)
+
 const localStyles = StyleSheet.create({
     logoContainer: {
         flexDirection: "row",
         justifyContent: "space-around",
         alignItems: "center",
-        marginVertical: 24,
-        paddingHorizontal: 16,
+        marginBottom: buttonSizes*0.1,
     },
     logo: {
-        width: 70,
-        height: 70,
+        width: buttonSizes*0.55,
+        height: buttonSizes*0.55,
         resizeMode: "contain",
     },
 });
