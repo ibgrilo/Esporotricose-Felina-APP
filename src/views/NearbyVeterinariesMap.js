@@ -92,13 +92,12 @@ const NearbyVeterinariesMap = () => {
     const [selectedVet, setSelectedVet] = useState(null);
     const [modalVisible, setModalVisible] = useState(false);
     const [locationPermissionGranted, setLocationPermissionGranted] = useState(null);
-    const [isLoadingLocation, setIsLoadingLocation] = useState(true);
+    const [showResultBanner, setShowResultBanner] = useState(false);
     const mapRef = useRef(null);
     const markerRefs = useRef([]);
 
     const requestLocationPermission = async () => {
         try {
-            setIsLoadingLocation(true);
             const currentPermission = await Location.getForegroundPermissionsAsync();
 
             let status = currentPermission.status;
@@ -124,7 +123,6 @@ const NearbyVeterinariesMap = () => {
                     ]
                 );
                 setLocationPermissionGranted(false);
-                setIsLoadingLocation(false);
                 return;
             }
 
@@ -136,7 +134,6 @@ const NearbyVeterinariesMap = () => {
             });
 
             setUserLocation(location.coords);
-            setIsLoadingLocation(false);
 
             fetchNearbyVeterinaries(location.coords);
         } catch (error) {
@@ -147,7 +144,6 @@ const NearbyVeterinariesMap = () => {
                     onPress: () => navigation.goBack(),
                 },
             ]);
-            setIsLoadingLocation(false);
         }
     };
 
@@ -182,6 +178,12 @@ const NearbyVeterinariesMap = () => {
                 );
 
                 setVeterinaries(detailedVets.filter(Boolean));
+                
+                // Mostrar banner por 4 segundos
+                setShowResultBanner(true);
+                setTimeout(() => {
+                    setShowResultBanner(false);
+                }, 6000);
             }
         } catch (error) {
             console.error("Erro ao buscar locais:", error);
@@ -195,7 +197,7 @@ const NearbyVeterinariesMap = () => {
             setSelectedVet(null);
             setModalVisible(false);
             setLocationPermissionGranted(null);
-            setIsLoadingLocation(true);
+            setShowResultBanner(false);
 
             cleanOldCache();
             requestLocationPermission();
@@ -225,15 +227,6 @@ const NearbyVeterinariesMap = () => {
             return () => clearTimeout(timer);
         }
     }, [userLocation, veterinaries]);
-
-    if (isLoadingLocation) {
-        return (
-            <View style={styles.loadingScreenContainer}>
-                <ActivityIndicator size="large" color={colors.primary} style={styles.loadingSpinner} />
-                <Text style={styles.mapLoadingTitle}>Carregando localização...</Text>
-            </View>
-        );
-    }
 
     return (
         <View style={styles.mapContainer}>
@@ -275,7 +268,7 @@ const NearbyVeterinariesMap = () => {
                 </View>
             )}
 
-            {veterinaries.length > 0 && (
+            {veterinaries.length > 0 && showResultBanner && (
                 <View style={styles.resultCountBanner}>
                     <Text style={styles.resultCountText}>
                         {`${veterinaries.length} veterinário${veterinaries.length > 1 ? "s" : ""} próximo${veterinaries.length > 1 ? "s" : ""} encontrado${veterinaries.length > 1 ? "s" : ""}.`}

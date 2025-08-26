@@ -20,52 +20,68 @@ const VetInfoModal = ({ visible, vet, onClose }) => {
             animationType="fade"
             onRequestClose={onClose}
         >
-            <View style={styles.vetModalOverlay}>
-                <View style={styles.vetModalContainer}>
-                    <View style={styles.vetModalHeader}>
-                        <Text style={styles.vetModalTitle} numberOfLines={2} ellipsizeMode="tail">
+            <TouchableOpacity 
+                style={styles.modalOverlay}
+                activeOpacity={1}
+                onPress={onClose}
+            >
+                <TouchableOpacity 
+                    style={styles.modalContainer}
+                    activeOpacity={1}
+                    onPress={(e) => e.stopPropagation()}
+                >
+                    <View style={styles.modalHeader}>
+                        <Text style={styles.modalTitle} numberOfLines={2} ellipsizeMode="tail">
                             {vet.name}
                         </Text>
                         <TouchableOpacity
                             onPress={onClose}
-                            style={{ marginLeft: buttonSizes * 0.059 }}
+                            style={styles.modalCloseButton}
                         >
-                            <Ionicons name="close-circle" size={buttonSizes * .2} color="white" />
+                            <Ionicons name="close-circle" size={buttonSizes * .15} color={colors.textBlack} />
                         </TouchableOpacity>
                     </View>
 
-                    <View style={styles.vetModalBody}>
-                        <View style={styles.vetInfoItem}>
-                            <Ionicons name="location" size={buttonSizes * 0.15} color={colors.primary} />
-                            <Text style={styles.vetInfoText}>{formatAddress(vet.address)}</Text>
+                    <View style={styles.modalContent}>
+                        <View style={styles.modalInfoItem}>
+                            <Ionicons name="location" size={buttonSizes * 0.12} color={colors.primary} />
+                            <View style={styles.modalInfoTextContainer}>
+                                <Text style={styles.modalInfoLabel}>Endereço:</Text>
+                                <Text style={styles.modalInfoText}>{formatAddress(vet.address)}</Text>
+                            </View>
                         </View>
 
-                        <View style={styles.vetInfoItem}>
-                            <Ionicons name="call" size={buttonSizes * 0.15} color={colors.primary} />
-                            <Text style={styles.vetInfoText}>{vet.phone || "Telefone não disponível"}</Text>
+                        <View style={styles.modalInfoItem}>
+                            <Ionicons name="call" size={buttonSizes * 0.12} color={colors.primary} />
+                            <View style={styles.modalInfoTextContainer}>
+                                <Text style={styles.modalInfoLabel}>Telefone:</Text>
+                                <Text style={styles.modalInfoText}>{vet.phone || "Telefone não disponível"}</Text>
+                            </View>
                         </View>
                     </View>
 
-                    <View style={styles.vetButtonRow}>
+                    <View style={styles.modalActions}>
                         <TouchableOpacity
-                            style={[styles.vetButton, styles.vetPrimaryButton]}
+                            style={[styles.modalActionButton, styles.modalCallButton]}
                             onPress={() => {
-                                Linking.openURL(`tel:${vet.phone}`);
+                                if (vet.phone && vet.phone !== "Telefone não disponível") {
+                                    Linking.openURL(`tel:${vet.phone}`);
+                                }
                                 onClose();
                             }}
                         >
-                            <Text style={styles.vetButtonText}>Ligar</Text>
+                            <Text style={styles.modalActionButtonText}>Ligar</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
-                            style={[styles.vetButton, styles.vetSecondaryButton]}
+                            style={[styles.modalActionButton, styles.modalDirectionsButton]}
                             onPress={onClose}
                         >
-                            <Text style={styles.vetSecondaryButtonText}>Fechar</Text>
+                            <Text style={styles.modalActionButtonText}>Fechar</Text>
                         </TouchableOpacity>
                     </View>
-                </View>
-            </View>
+                </TouchableOpacity>
+            </TouchableOpacity>
         </Modal>
     );
 };

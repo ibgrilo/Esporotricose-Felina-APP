@@ -877,7 +877,6 @@ const styles = StyleSheet.create({
   modalCloseButton: {
     padding: buttonSizes * 0.02,
     borderRadius: buttonSizes * 0.05,
-    backgroundColor: colors.lightGray,
   },
 
   modalContent: {
@@ -901,7 +900,7 @@ const styles = StyleSheet.create({
   },
 
   modalInfoLabel: {
-    fontSize: buttonSizes * 0.085,
+    fontSize: buttonSizes * 0.1,
     fontFamily: 'Poppins-Bold',
     color: colors.primary,
     marginBottom: buttonSizes * 0.02,

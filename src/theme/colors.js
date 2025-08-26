@@ -11,6 +11,7 @@ const colors = {
     attention: '#D94141',
     almostAttention: '#FF6B35',
     primaryTransparent20: '#D7DEED',
+    lightGray: '#D3D3D3',
 };
 
 export default colors;
