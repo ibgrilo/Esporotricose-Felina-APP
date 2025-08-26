@@ -7,11 +7,12 @@ import colors from "../theme/colors";
 
 const LoadingScreen = ({ onFinish }) => {
     useEffect(() => {
+        // Delay mínimo para garantir que a loading seja visível
         const timer = setTimeout(() => {
             if (onFinish) {
                 onFinish();
             }
-        }, 3000); // 3 segundos
+        }, 1500); // 1.5 segundos - tempo mínimo para ver a loading
 
         return () => clearTimeout(timer);
     }, [onFinish]);
