@@ -4,7 +4,7 @@ const sintomas = {
         descricao: "Feridas com bordas elevadas e que não cicatrizam facilmente, geralmente na cabeça, nos membros ou na cauda.",
         regioesAfetadas: ["Cabeça", "Membros", "Cauda"],
         dicasECuidados:
-            "🧼 Mantenha a ferida limpa utilizando soro fisiológico.\n\n" +
+            //"🧼 Mantenha a ferida limpa utilizando soro fisiológico.\n\n" +
             "🧤 Durante o manuseio, recomenda-se o uso de equipamentos de proteção individual, como luvas, para evitar o risco de contaminação.\n\n" +
             "🚑 Procure atendimento veterinário o mais rápido possível para início do tratamento adequado."
     },
