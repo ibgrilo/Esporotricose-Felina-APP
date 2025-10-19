@@ -6,50 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidade - EsporoVet</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            line-height: 1.6;
-            color: #222;
+        :root {
+            --primary: #004c8c;
+            --text: #222;
+            --bg: #f9fafc;
+            --card-bg: #fff;
         }
 
-        h1,
+        body {
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 1.5em;
+        }
+
         h2 {
-            color: #004c8c;
+            color: var(--primary);
+            margin-top: 1.5em;
+        }
+
+        ul {
+            margin-left: 1.2em;
+        }
+
+        p,
+        li {
+            font-size: 1rem;
+        }
+
+        footer {
+            margin-top: 3em;
+            font-size: 0.9rem;
+            text-align: center;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h1>Política de Privacidade – EsporoVet</h1>
-    <p><strong>Última atualização:</strong> 19 de outubro de 2025</p>
+    <div class="container">
+        <h1>Política de Privacidade – EsporoVet</h1>
+        <p><strong>Última atualização:</strong> 19 de outubro de 2025</p>
 
-    <h2>1. Sobre o aplicativo</h2>
-    <p>O aplicativo <strong>EsporoVet</strong> foi desenvolvido com o objetivo de disseminar informações educativas
-        sobre a esporotricose felina, incluindo sinais clínicos, prevenção e serviços veterinários.</p>
+        <h2>1. Sobre o aplicativo</h2>
+        <p>O aplicativo <strong>EsporoVet</strong> foi desenvolvido com o objetivo de disseminar informações educativas
+            sobre a esporotricose felina, incluindo sinais clínicos, prevenção e serviços veterinários.</p>
 
-    <h2>2. Coleta e uso de informações</h2>
-    <ul>
-        <li>O EsporoVet <strong>não exige login, cadastro ou fornecimento de dados pessoais</strong> para uso das
-            funcionalidades.</li>
-        <li>O app pode solicitar acesso <strong>opcional à localização</strong> do dispositivo apenas para exibir
-            clínicas veterinárias próximas. Essa permissão é opcional e o usuário pode negar sem prejuízo ao uso.</li>
-        <li>Nenhum dado de localização é armazenado ou compartilhado.</li>
-    </ul>
+        <h2>2. Coleta e uso de informações</h2>
+        <ul>
+            <li>O EsporoVet <strong>não exige login, cadastro ou fornecimento de dados pessoais</strong> para uso das
+                funcionalidades.</li>
+            <li>O app pode solicitar acesso <strong>opcional à localização</strong> do dispositivo apenas para exibir
+                clínicas veterinárias próximas. Essa permissão é opcional e o usuário pode negar sem prejuízo ao uso.
+            </li>
+            <li>Nenhum dado de localização é armazenado ou compartilhado.</li>
+        </ul>
 
-    <h2>3. Compartilhamento de dados</h2>
-    <p>O EsporoVet não compartilha informações com terceiros nem envia dados a servidores externos.</p>
+        <h2>3. Compartilhamento de dados</h2>
+        <p>O EsporoVet não compartilha informações com terceiros nem envia dados a servidores externos.</p>
 
-    <h2>4. Segurança</h2>
-    <p>Como o app não coleta informações pessoais, não realiza tratamento de dados sensíveis. Caso novas funcionalidades
-        exijam coleta, esta política será atualizada.</p>
+        <h2>4. Segurança</h2>
+        <p>Como o app não coleta informações pessoais, não realiza tratamento de dados sensíveis. Caso novas
+            funcionalidades exijam coleta, esta política será atualizada.</p>
 
-    <h2>5. Público-alvo</h2>
-    <p>O aplicativo é voltado para tutores, profissionais e estudantes da área veterinária, com idade igual ou superior
-        a 18 anos.</p>
+        <h2>5. Público-alvo</h2>
+        <p>O aplicativo é voltado para tutores, profissionais e estudantes da área veterinária, com idade igual ou
+            superior
+            a 18 anos.</p>
 
-    <h2>6. Contato</h2>
-    <p>Em caso de dúvidas, entre em contato: <strong>igorbarrosgrilo@gmail.com</strong></p>
+        <h2>6. Contato</h2>
+        <p>Em caso de dúvidas, entre em contato: <strong>igorbarrosgrilo@gmail.com</strong></p>
+
+        <footer>
+            <p>© 2025 EsporoVet. Todos os direitos reservados.</p>
+        </footer>
+    </div>
 </body>
 
 </html>
