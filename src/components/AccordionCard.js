@@ -144,7 +144,7 @@ const AccordionCard = ({ data }) => {
     // console.log("AccordionCard recebeu data:", data);
     // console.log("AccordionCard data type:", typeof data);
     // console.log("AccordionCard data keys:", data ? Object.keys(data) : 'undefined');
-    
+
     if (!data) {
         return (
             <View style={{ padding: 20 }}>
@@ -154,12 +154,12 @@ const AccordionCard = ({ data }) => {
     }
 
     const dataEntries = Object.entries(data);
-    console.log("AccordionCard entries:", dataEntries);
+    // console.log("AccordionCard entries:", dataEntries);
 
     return (
         <View>
             {dataEntries.map(([key, item]) => {
-                console.log("Renderizando item:", key, item);
+                // console.log("Renderizando item:", key, item);
                 return (
                     <AccordionItem
                         key={key}
