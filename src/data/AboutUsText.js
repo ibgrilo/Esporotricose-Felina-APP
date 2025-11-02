@@ -59,6 +59,7 @@ const AboutUsText = () => {
             <Text style={styles.listItemFromAboutUs}>• Yanna Leidy Ketley Fernandes Cruz</Text>
             <Text style={styles.listItemFromAboutUs}>• Thaís Camila Pereira Veloso</Text>
             <Text style={styles.listItemFromAboutUs}>• Larissa Sarmento dos Santos Ribeiro</Text>
+            <Text style={styles.listItemFromAboutUs}>• Ewaldo Eder Carvalho Santana</Text>
 
             <Text style={styles.textFromAboutUs}>
                 Projeto desenvolvido em parceria entre o <Text style={styles.boldFromAboutUs}>Laboratório de Aquisição de Processamento de Sinais (LAPS)</Text> e o <Text style={styles.boldFromAboutUs}>Laboratório de Micologia</Text>, ambos vinculados à <Text style={styles.boldFromAboutUs}>Universidade Estadual do Maranhão (UEMA)</Text>.{"\n\n"}
