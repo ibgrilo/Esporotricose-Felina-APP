@@ -40,22 +40,14 @@
       }
     },
     "scheme": "esporovet",
-    "extra": {
-      "eas": {
-        "projectId": "efe478ee-8ca6-495c-85d1-499415fe323f"
-      }
-    },
     "owner": "ibgrilo",
     "plugins": [
-      "expo-splash-screen",
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "kotlinVersion": "1.9.25"
-          }
-        }
-      ]
-    ]
+      "expo-splash-screen"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "706c2ea6-e249-4ad3-88f4-466b06d78400"
+      }
+    }
   }
 }
