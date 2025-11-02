@@ -6,11 +6,6 @@
     "orientation": "portrait",
     "icon": "./src/assets/images/logo/iconAPP.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./src/assets/images/logo/splashScreen.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#f5f5f5"
-    },
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -39,6 +34,11 @@
           "locationAlwaysAndWhenInUsePermission": "Permitir que $(PRODUCT_NAME) use sua localização para mostrar clínicas veterinárias próximas."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "706c2ea6-e249-4ad3-88f4-466b06d78400"
+      }
+    }
   }
 }
