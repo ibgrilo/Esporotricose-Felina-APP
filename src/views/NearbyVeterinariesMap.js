@@ -178,7 +178,7 @@ const NearbyVeterinariesMap = () => {
                 );
 
                 setVeterinaries(detailedVets.filter(Boolean));
-                
+
                 // Mostrar banner por 4 segundos
                 setShowResultBanner(true);
                 setTimeout(() => {
