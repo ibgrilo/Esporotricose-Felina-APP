@@ -8,16 +8,20 @@ const ChooseAffectedRegionSvg = ({ name }) => {
         "Úlceras na Pele": "UlcerasNaPele",
         "Nódulos e Abscessos": "NodulosEAbscessos",
         "Secreção Purulenta": "SecrecaoPurulenta",
-        "Disseminação das Lesões": "DisseminacaoPorLesoes",
-    };
 
+    };
     const iconName = iconsMap[name];
     return iconName ? <SVGComponent name={iconName} /> : null;
 };
 
+const iconsImage = {
+    "Úlceras na Pele": require("../assets/images/signs/ulcerasNaPele.jpg"),
+    "Nódulos e Abscessos": require("../assets/images/signs/nodulosEAbscessos.jpg"),
+    "Secreção Purulenta": require("../assets/images/signs/secrecaoPurulenta.jpg"),
+}
+
 export default ({ route }) => {
     const { affectedRegions, name } = route.params;
-
     return (
         <ScrollView>
             <View style={styles.firstImageTitlePanel}>
@@ -26,8 +30,11 @@ export default ({ route }) => {
 
             <View style={styles.imageContainer}>
                 <Image
-                    source={require("../assets/images/DemonstrativeImage.png")}
-                    style={styles.image}
+                    source={iconsImage[name]}
+                    style={[styles.image, {
+                        width: buttonSizes * 2.3,   // Aumentado de 0.8 para 1.2
+                        height: buttonSizes * 2.4  // Aumentado de 0.86 para 1.29 (mantém proporção)
+                    }]}
                 />
             </View>
 

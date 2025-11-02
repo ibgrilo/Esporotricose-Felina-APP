@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Esporotricose-Felina-App",
-    "slug": "esporotricose-felina-app",
+    "name": "EsporoVet",
+    "slug": "esporoVet",
     "icon": "./src/assets/images/iconAPP.png",
     "android": {
       "permissions": [
