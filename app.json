@@ -2,44 +2,41 @@
   "expo": {
     "name": "EsporoVet",
     "slug": "esporoVet",
-    "icon": "./src/assets/images/iconAPP.png",
-    "android": {
-      "permissions": [
-        "ACCESS_FINE_LOCATION"
-      ],
-      "package": "com.anonymous.seuapp",
-      "icon": "./src/assets/images/iconAPP.png",
-      "adaptiveIcon": {
-        "foregroundImage": "./src/assets/images/adaptive-iconAPP.png",
-        "backgroundColor": "#FFFFFF"
-      },
-      "config": {
-        "googleMaps": {
-          "apiKey": "AIzaSyAdF6NRC6czSt3vhoz8sH0lGtPd0EIK-lA"
-        }
-      }
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/logo/iconAPP.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/images/logo/splashScreen.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#f5f5f5"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "Este app precisa da sua localização para mostrar crematórios próximos."
+      "supportsTablet": true,
+      "bundleIdentifier": "com.esporovet.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./src/assets/images/logo/adaptive-iconAPP.png",
+        "backgroundColor": "#f5f5f5"
       },
-      "config": {
-        "googleMapsApiKey": "AIzaSyAdF6NRC6czSt3vhoz8sH0lGtPd0EIK-lA"
-      }
+      "package": "com.esporovet.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
     },
-    "extra": {
-      "eas": {
-        "projectId": "efe478ee-8ca6-495c-85d1-499415fe323f"
-      }
+    "web": {
+      "favicon": "./src/assets/images/logo/iconAPP.png"
     },
-    "owner": "ibgrilo",
     "plugins": [
       [
-        "expo-build-properties",
+        "expo-location",
         {
-          "android": {
-            "kotlinVersion": "1.9.25"
-          }
+          "locationAlwaysAndWhenInUsePermission": "Permitir que $(PRODUCT_NAME) use sua localização para mostrar clínicas veterinárias próximas."
         }
       ]
     ]
