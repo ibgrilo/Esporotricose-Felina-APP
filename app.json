@@ -2,12 +2,22 @@
   "expo": {
     "name": "EsporoVet",
     "slug": "esporoVet",
-    "icon": "./src/assets/images/iconAPP.png",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/images/logo/iconAPP.png",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "splash": {
+      "backgroundColor": "#FFFFFF",
+      "resizeMode": "contain"
+    },
     "android": {
+      "package": "com.esporovet.app",
       "permissions": [
         "ACCESS_FINE_LOCATION"
       ],
-      "package": "com.anonymous.seuapp",
       "icon": "./src/assets/images/logo/iconAPP.png",
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/logo/adaptive-iconAPP.png",
@@ -20,13 +30,16 @@
       }
     },
     "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.esporovet.app",
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "Este app precisa da sua localização para mostrar crematórios próximos."
+        "NSLocationWhenInUseUsageDescription": "Permitir que EsporoVet use sua localização para mostrar clínicas veterinárias próximas."
       },
       "config": {
         "googleMapsApiKey": "AIzaSyAdF6NRC6czSt3vhoz8sH0lGtPd0EIK-lA"
       }
     },
+    "scheme": "esporovet",
     "extra": {
       "eas": {
         "projectId": "efe478ee-8ca6-495c-85d1-499415fe323f"
@@ -34,6 +47,7 @@
     },
     "owner": "ibgrilo",
     "plugins": [
+      "expo-splash-screen",
       [
         "expo-build-properties",
         {
