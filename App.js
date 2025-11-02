@@ -13,41 +13,41 @@ SplashScreen.preventAutoHideAsync();
 const Drawer = createDrawerNavigator();
 
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
-  const [fontsLoaded] = useFonts({
-    "Poppins-Black": require("./src/assets/fonts/Poppins-Black.ttf"),
-    // ...existing fonts...
-  });
+    const [fontsLoaded] = useFonts({
+        "Poppins-Black": require("./src/assets/fonts/Poppins-Black.ttf"),
+        // ...existing fonts...
+    });
 
-  const onLayoutRootView = useCallback(async () => {
-    if (fontsLoaded) {
-      // Esconde o splash nativo assim que as fontes carregarem
-      await SplashScreen.hideAsync();
+    const onLayoutRootView = useCallback(async () => {
+        if (fontsLoaded) {
+            // Esconde o splash nativo assim que as fontes carregarem
+            await SplashScreen.hideAsync();
+        }
+    }, [fontsLoaded]);
+
+    useEffect(() => {
+        if (fontsLoaded) {
+            onLayoutRootView();
+        }
+    }, [fontsLoaded]);
+
+    if (!fontsLoaded) {
+        return null; // Retorna null enquanto carrega as fontes
     }
-  }, [fontsLoaded]);
 
-  useEffect(() => {
-    if (fontsLoaded) {
-      onLayoutRootView();
+    if (isLoading) {
+        return <LoadingScreen onFinish={() => setIsLoading(false)} />;
     }
-  }, [fontsLoaded]);
 
-  if (!fontsLoaded) {
-    return null; // Retorna null enquanto carrega as fontes
-  }
-
-  if (isLoading) {
-    return <LoadingScreen onFinish={() => setIsLoading(false)} />;
-  }
-
-  return (
-    <NavigationContainer>
-      <Drawer.Navigator
-        // ...existing drawer config...
-      >
-        {/* ...existing screens... */}
-      </Drawer.Navigator>
-    </NavigationContainer>
-  );
+    return (
+        <NavigationContainer>
+            <Drawer.Navigator
+            // ...existing drawer config...
+            >
+                {/* ...existing screens... */}
+            </Drawer.Navigator>
+        </NavigationContainer>
+    );
 }
