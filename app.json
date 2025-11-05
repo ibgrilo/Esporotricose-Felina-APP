@@ -6,12 +6,22 @@
     "orientation": "portrait",
     "icon": "./src/assets/images/logo/iconAPP.png",
     "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/images/logo/splashScreen.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F2F2F2"
+    },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.esporovet.app"
+      "bundleIdentifier": "com.esporovet.app",
+      "splash": {
+        "image": "./src/assets/images/logo/splashScreen.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#F2F2F2"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -22,7 +32,12 @@
       "permissions": [
         "ACCESS_FINE_LOCATION",
         "ACCESS_COARSE_LOCATION"
-      ]
+      ],
+      "splash": {
+        "image": "./src/assets/images/logo/splashScreen.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#F2F2F2"
+      }
     },
     "web": {
       "favicon": "./src/assets/images/logo/iconAPP.png"
@@ -32,6 +47,14 @@
         "expo-location",
         {
           "locationAlwaysAndWhenInUsePermission": "Permitir que $(PRODUCT_NAME) use sua localização para mostrar clínicas veterinárias próximas."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./src/assets/images/logo/splashScreen.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#F2F2F2"
         }
       ]
     ],
