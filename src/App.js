@@ -7,34 +7,19 @@ import LoadingScreen from './views/LoadingScreen';
 import { useState, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 
-// Manter o splash screen até que estejamos prontos
-SplashScreen.preventAutoHideAsync();
+// Esconder splash nativa imediatamente
+SplashScreen.hideAsync();
 
 export default function App() {
   const fontsLoaded = customFonts();
   const [showLoading, setShowLoading] = useState(true);
 
-  useEffect(() => {
-    async function prepare() {
-      try {
-        // Aguardar fontes carregarem
-        if (fontsLoaded) {
-          // Esconder o splash screen nativo
-          await SplashScreen.hideAsync();
-        }
-      } catch (e) {
-        console.warn(e);
-      }
-    }
-    prepare();
-  }, [fontsLoaded]);
-
   // Só mostrar algo quando fontes estiverem carregadas
   if (!fontsLoaded) {
-    return null; // Splash screen nativo ainda visível
+    return null;
   }
 
-  // LoadingScreen personalizada APENAS com fontes carregadas
+  // LoadingScreen personalizada
   if (showLoading) {
     return (
       <LoadingScreen
