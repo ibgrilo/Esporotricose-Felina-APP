@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import * as SplashScreen from 'expo-splash-screen';
 
 // Esconder splash nativa imediatamente
-SplashScreen.hideAsync();
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   const fontsLoaded = customFonts();
