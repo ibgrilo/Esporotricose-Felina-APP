@@ -1,8 +1,11 @@
 import { StyleSheet, Dimensions } from 'react-native';
 import colors from './theme/colors';
 
-export const { width, height } = Dimensions.get('window')
-export const buttonSizes = width * 0.41
+// Volta para abordagem direta (compatível com Bridgeless)
+export const { width, height } = Dimensions.get('window');
+const shortDimension = Math.min(width, height);
+const isTablet = shortDimension >= 600;
+export const buttonSizes = isTablet ? shortDimension * 0.35 : shortDimension * 0.38; // Aumentado para 0.35/0.55
 
 const styles = StyleSheet.create({
   // GLOBAL CONTAINERS
@@ -45,9 +48,10 @@ const styles = StyleSheet.create({
     flex: 1,
     flexWrap: 'wrap',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-around', // Mudado de space-around para space-evenly
     alignItems: 'center',
-    padding: buttonSizes * .01,
+    paddingHorizontal: buttonSizes * 0.08, // Adiciona padding horizontal
+    paddingVertical: buttonSizes * 0.05, // Adiciona padding vertical
   },
 
   containerSignAndSymptomsMenu: {
@@ -161,13 +165,13 @@ const styles = StyleSheet.create({
   changeScreenTo: {
     backgroundColor: colors.backgroundChangeScreenButton,
     borderRadius: buttonSizes * .25,
-    width: buttonSizes,
-    height: buttonSizes,
-    margin: buttonSizes * .1,
+    minHeight: width * 0.4,
+    minWidth: "40%",
+    marginVertical: buttonSizes * .07,
   },
 
   howToDealButton: {
-    margin: buttonSizes * 0.05,
+    margin: buttonSizes * 0.04,
     padding: buttonSizes * 0.07,
     backgroundColor: colors.primary,
     borderRadius: buttonSizes * .05
@@ -213,14 +217,13 @@ const styles = StyleSheet.create({
   SignsAndSymptomsPanel: {
     backgroundColor: colors.tertiary,
     flex: 1,
+    width: "90%",
     textAlign: 'center',
     justifyContent: 'center',
-    width: buttonSizes * 2.2,
-    margin: buttonSizes * 0.08,
-    paddingLeft: buttonSizes * 0.1,
-    paddingRight: buttonSizes * 0.1,
-    paddingBottom: buttonSizes * 0.08,
-    paddingTop: buttonSizes * 0.08,
+    marginHorizontal: buttonSizes * 0.05, // Reduzido de 0.08 para 0.03
+    marginVertical: buttonSizes * 0.05, // Adicionado para consistência
+    paddingHorizontal: buttonSizes * 0.08, // Reduzido de 0.1 para 0.06
+    paddingVertical: buttonSizes * 0.08,
   },
 
   SignsAndSymptomsPanelViews: {
@@ -538,7 +541,7 @@ const styles = StyleSheet.create({
 
   textFromHeader: {
     color: colors.surfaceWhite,
-    fontSize: Math.round(width * .05),
+    fontSize: Math.round(shortDimension * .035), // Reduzido de .05 para .04
     fontFamily: 'Poppins-SemiBold',
   },
 
@@ -617,7 +620,7 @@ const styles = StyleSheet.create({
   // ACCORDION
   accordionContainer: {
     marginVertical: buttonSizes * 0.03,
-    marginHorizontal: buttonSizes * 0.07,
+    marginHorizontal: buttonSizes * 0.04,
     borderRadius: buttonSizes * 0.1,
     overflow: "hidden",
     backgroundColor: colors.primary,
