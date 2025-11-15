@@ -17,6 +17,8 @@
         "foregroundImage": "./src/assets/images/logo/adaptive-iconAPP.png",
         "backgroundColor": "#FFFFFF"
       },
+      "targetSdkVersion": 35,
+      "compileSdkVersion": 35,
       "config": {
         "googleMaps": {
           "apiKey": "AIzaSyAdF6NRC6czSt3vhoz8sH0lGtPd0EIK-lA"
@@ -58,7 +60,10 @@
         "expo-build-properties",
         {
           "android": {
-            "kotlinVersion": "1.9.25"
+            "kotlinVersion": "1.9.25",
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "buildToolsVersion": "35.0.0"
           }
         }
       ]
