@@ -11,9 +11,12 @@ export default props => {
         <ScrollView style={styles.scrollContainer}>
             <StatusBar translucent={false} backgroundColor={colors.primary} />
             <AccordionCard data={howToDealText2} />
-            <View style={styles.alertCard}>
-                <Text style={styles.alertText}>
-                    CONTATO DIRETO É NECESSÁRIO PARA TRANSMISSÃO!
+            <View style={styles.infoCard}>
+                <Text style={styles.infoCardTitle}>
+                    Contato direto é necessário para a transmissão!
+                </Text>
+                <Text style={styles.infoCardDescription}>
+                    A esporotricose não se transmite pelo ar. É preciso contato direto com as lesões do animal infectado ou com o fungo presente no ambiente. Evite o contato próximo com gatos doentes e sempre use luvas e máscara ao manuseá-los.
                 </Text>
             </View>
         </ScrollView>

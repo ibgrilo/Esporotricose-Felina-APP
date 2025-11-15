@@ -12,10 +12,12 @@ export default props => {
             <StatusBar translucent={false} backgroundColor={colors.primary} />
             <AccordionCard data={howToDealText1} />
 
-            <View style={styles.alertCard}>
-
-                <Text style={styles.alertText}>
-                    NUNCA ABANDONE UM ANIMAL DOENTE!
+            <View style={styles.legalWarningCard}>
+                <Text style={styles.legalWarningTitle}>
+                    ⚖️ Abandono de animais é crime
+                </Text>
+                <Text style={styles.legalWarningText}>
+                    O abandono de animais é considerado crime ambiental pela Lei nº 9.605/98, artigo 32, com pena de 3 meses a 1 ano de detenção, além de multa. Abandono é maus-tratos e pode resultar em processo criminal.
                 </Text>
             </View>
         </ScrollView>

@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { Overlay } from "@rneui/base";
 import styles from "../styles";
+import SVGComponent from "../assets/svg/SVGComponent";
 
 const HowToDealOverlay = ({ visible, onClose, title, message }) => {
     return (
@@ -11,6 +12,9 @@ const HowToDealOverlay = ({ visible, onClose, title, message }) => {
             overlayStyle={styles.overlayContainer}
             animationType="fade"
         >
+            <View style={styles.overlayHeader}>
+                <Text style={styles.overlayHeaderText}>{title}</Text>
+            </View>
             <View style={styles.overlayContent}>
                 <Text style={styles.overlayText}>{message}</Text>
             </View>

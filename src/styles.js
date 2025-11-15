@@ -334,7 +334,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: buttonSizes * 0.118,
     paddingVertical: buttonSizes * 0.079,
     borderRadius: buttonSizes * 0.095,
-    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     shadowColor: '#000',
@@ -345,7 +344,137 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: buttonSizes * 0.048,
     elevation: 6,
-    minHeight: buttonSizes * 0.238,
+  },
+
+  legalWarningCard: {
+    backgroundColor: '#FFEBEE',
+    marginHorizontal: buttonSizes * 0.08,
+    marginTop: buttonSizes * 0.08,
+    marginBottom: buttonSizes * 0.08,
+    paddingHorizontal: buttonSizes * 0.1,
+    paddingVertical: buttonSizes * 0.1,
+    borderRadius: buttonSizes * 0.08,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.02,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: buttonSizes * 0.05,
+    elevation: 6,
+  },
+
+  legalWarningHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: buttonSizes * 0.04,
+  },
+
+  legalWarningIcon: {
+    fontSize: buttonSizes * 0.13,
+    marginRight: buttonSizes * 0.05,
+  },
+
+  legalWarningTitle: {
+    fontSize: buttonSizes * 0.09,
+    fontFamily: 'Poppins-Bold',
+    color: colors.attention,
+    marginBottom: buttonSizes * 0.05,
+    textAlign: 'center',
+  },
+
+  legalWarningSubtitle: {
+    fontSize: buttonSizes * 0.08,
+    fontFamily: 'Poppins-SemiBold',
+    color: colors.attention,
+    marginBottom: buttonSizes * 0.03,
+    opacity: 0.95,
+  },
+
+  legalWarningText: {
+    fontSize: buttonSizes * 0.08,
+    fontFamily: 'Poppins-Regular',
+    color: '#5F2120',
+    lineHeight: buttonSizes * 0.12,
+    textAlign: 'justify',
+  },
+
+  infoCard: {
+    backgroundColor: '#FFEBEE',
+    marginHorizontal: buttonSizes * 0.07,
+    marginTop: buttonSizes * 0.07,
+    marginBottom: buttonSizes * 0.07,
+    paddingHorizontal: buttonSizes * 0.1,
+    paddingVertical: buttonSizes * 0.1,
+    borderRadius: buttonSizes * 0.08,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.02,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: buttonSizes * 0.05,
+    elevation: 6,
+  },
+
+  infoCardTitle: {
+    fontSize: buttonSizes * 0.085,
+    fontFamily: 'Poppins-Bold',
+    color: colors.attention,
+    textAlign: 'center',
+    lineHeight: buttonSizes * 0.12,
+    marginBottom: buttonSizes * 0.05,
+  },
+
+  infoCardText: {
+    fontSize: buttonSizes * 0.08,
+    fontFamily: 'Poppins-Bold',
+    color: colors.attention,
+    textAlign: 'center',
+    lineHeight: buttonSizes * 0.12,
+  },
+
+  infoCardDescription: {
+    fontSize: buttonSizes * 0.08,
+    fontFamily: 'Poppins-Regular',
+    color: '#5F2120',
+    textAlign: 'justify',
+    lineHeight: buttonSizes * 0.12,
+  },
+
+  preventionCard: {
+    backgroundColor: '#E8F5E9',
+    marginHorizontal: buttonSizes * 0.08,
+    marginTop: buttonSizes * 0.08,
+    marginBottom: buttonSizes * 0.08,
+    paddingHorizontal: buttonSizes * 0.1,
+    paddingVertical: buttonSizes * 0.1,
+    borderRadius: buttonSizes * 0.08,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.02,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: buttonSizes * 0.05,
+    elevation: 6,
+  },
+
+  preventionCardTitle: {
+    fontSize: buttonSizes * 0.08,
+    fontFamily: 'Poppins-Bold',
+    color: '#28a745',
+    textAlign: 'center',
+    lineHeight: buttonSizes * 0.12,
+    marginBottom: buttonSizes * 0.05,
+  },
+
+  preventionCardDescription: {
+    fontSize: buttonSizes * 0.08,
+    fontFamily: 'Poppins-Regular',
+    color: '#1B5E20',
+    textAlign: 'justify',
+    lineHeight: buttonSizes * 0.12,
   },
 
   // TAGS AND DIVIDERS
@@ -612,9 +741,56 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Bold',
     color: 'white',
     textAlign: 'center',
-    flex: 1,
     lineHeight: buttonSizes * 0.127,
-    flexWrap: 'wrap',
+  },
+
+  alertClickableText: {
+    fontSize: buttonSizes * 0.065,
+    fontFamily: 'Poppins-SemiBold',
+    color: 'white',
+    textAlign: 'center',
+    marginTop: buttonSizes * 0.03,
+    opacity: 0.9,
+  },
+
+  alertArrowContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: buttonSizes * 0.04,
+  },
+
+  alertArrow: {
+    fontSize: buttonSizes * 0.08,
+    color: 'white',
+    fontFamily: 'Poppins-Bold',
+  },
+
+  alertContentWrapper: {
+    overflow: 'hidden',
+    width: '100%',
+  },
+
+  alertContentBorder: {
+    marginTop: buttonSizes * 0.05,
+    paddingTop: buttonSizes * 0.05,
+    borderTopWidth: 1,
+    borderTopColor: 'rgba(255, 255, 255, 0.3)',
+  },
+
+  alertSubText: {
+    fontSize: buttonSizes * 0.08,
+    fontFamily: 'Poppins-Regular',
+    color: 'white',
+    textAlign: 'left',
+    lineHeight: buttonSizes * 0.12,
+  },
+
+  alertHiddenMeasurer: {
+    position: 'absolute',
+    opacity: 0,
+    zIndex: -1,
+    left: 0,
+    right: 0,
   },
 
   // ACCORDION
@@ -708,6 +884,30 @@ const styles = StyleSheet.create({
     color: colors.textBlack,
     fontFamily: "Poppins-Regular",
     letterSpacing: 0.2,
+  },
+
+  overlayCloseButton: {
+    backgroundColor: colors.primary,
+    borderRadius: buttonSizes * 0.08,
+    paddingVertical: buttonSizes * 0.08,
+    paddingHorizontal: buttonSizes * 0.15,
+    marginTop: buttonSizes * 0.1,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.02,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: buttonSizes * 0.04,
+    elevation: 5,
+  },
+
+  overlayCloseButtonText: {
+    fontSize: buttonSizes * 0.09,
+    color: '#FFF',
+    fontFamily: 'Poppins-Bold',
+    letterSpacing: 0.5,
   },
 
   // LOADING SCREENS

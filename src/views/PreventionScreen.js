@@ -22,10 +22,12 @@ export default props => {
 
             <AccordionCard data={preventionText} />
 
-            <View style={[styles.alertCard, styles.preventionFinalAlert]}>
-
-                <Text style={styles.alertText}>
-                    CUIDE DO SEU FELINO COM AMOR E RESPONSABILIDADE!
+            <View style={styles.preventionCard}>
+                <Text style={styles.preventionCardTitle}>
+                    Cuide do seu felino com amor e responsabilidade!
+                </Text>
+                <Text style={styles.preventionCardDescription}>
+                    Seguindo as medidas preventivas, você protege seu gato da esporotricose e garante uma vida mais saudável e feliz para ele. Lembre-se: prevenção é sempre o melhor remédio! Em caso de dúvidas, consulte sempre um médico veterinário.
                 </Text>
             </View>
         </ScrollView>
