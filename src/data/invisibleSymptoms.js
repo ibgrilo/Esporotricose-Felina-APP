@@ -4,14 +4,14 @@ const sintomas = {
         descricao: "Esforço para respirar, respiração acelerada e/ou chiados no tórax.",
         sistemaAssociado: "Sistema respiratório",
         extendido: "A respiração se torna trabalhosa devido à inflamação nas vias aéreas e nos pulmões, fazendo com que o gato respire de forma ofegante, acelerada ou com sons como chiados e roncos.",
-        dicasECuidados: "🏥 Dificuldade respiratória é uma emergência! Transporte o animal de forma rápida e segura ao veterinário.\n\n🧤 Utilize equipamentos de proteção individual (EPI) como luvas ao manuseá-lo, evitando estresse adicional que possa piorar o quadro respiratório."
+        dicasECuidados: "🏥 Dificuldade respiratória é uma emergência! Transporte o animal de forma rápida e segura ao veterinário.\n\n🧤 Utilize equipamentos de proteção individual (EPI) como luvas e máscaras ao manuseá-lo, evitando estresse adicional que possa piorar o quadro respiratório."
     },
     secrecoesNasais: {
         nome: "Secreções nasais",
         descricao: "Transparente e fluida no início da infecção, mas tende a evoluir para uma cor amarelada ou esverdeada com consistência espessa. Em casos graves, pode vir misturada com sangue, apresentando uma cor avermelhada.",
         sistemaAssociado: "Sistema respiratório",
         extendido: "Espirros frequentes e secreção persistente indicam inflamação nas vias aéreas. A secreção pode dificultar a respiração e piorar com infecções secundárias, mudando de cor e espessura.",
-        dicasECuidados: "🧴 Evite limpar agressivamente a região nasal. Se possível, mantenha o animal em ambiente limpo e ventilado.\n\n🧤 Ao realizar qualquer manuseio, utilize luvas e encaminhe o gato ao veterinário para diagnóstico e tratamento adequados."
+        dicasECuidados: "🧴 Evite limpar agressivamente a região nasal. Se possível, mantenha o animal em ambiente limpo e ventilado.\n\n🧤 Ao realizar qualquer manuseio, utilize luvas e máscaras e encaminhe o gato ao veterinário para diagnóstico e tratamento adequados."
     },
     // tosse: {
     //     nome: "Tosse",
@@ -39,7 +39,7 @@ const sintomas = {
         descricao: "O animal pode evitar colocar a pata no chão e claudicar (mancar).",
         sistemaAssociado: "Sistema locomotor",
         extendido: "O gato pode apresentar dor ao andar, evitar apoiar uma das patas ou mancar, como consequência de inflamação articular ou óssea, causando desconforto ao se movimentar.",
-        dicasECuidados: "🚗 Transporte o animal com cuidado, evitando forçar a movimentação da pata afetada.\n\n🧤 Utilize EPI ao manipular o animal e leve-o ao veterinário para avaliação da origem da dor."
+        dicasECuidados: "🚗 Transporte o animal com cuidado, evitando forçar a movimentação da pata afetada.\n\n🧤 Utilize EPI (luvas e máscaras) ao manipular o animal e leve-o ao veterinário para avaliação da origem da dor."
     },
     // artrite: {
     //     nome: "Artrite",
@@ -60,7 +60,7 @@ const sintomas = {
         descricao: "O animal pode dormir mais ou menos que o normal, ficar mais agressivo ou se isolar.",
         sistemaAssociado: "Sistema nervoso",
         extendido: "Essas alterações incluem mudanças repentinas no comportamento habitual do gato, como agressividade, apatia, excesso ou falta de sono, e isolamento social, podendo indicar desconforto ou dor.",
-        dicasECuidados: "🧠 Respeite o espaço do animal, evitando forçar aproximações que possam gerar estresse.\n\n🧤 Sempre use EPI ao interagir e leve o animal para avaliação veterinária, principalmente em casos de comportamento agressivo."
+        dicasECuidados: "🧠 Respeite o espaço do animal, evitando forçar aproximações que possam gerar estresse.\n\n🧤 Sempre use EPI (luvas e máscaras) ao interagir e leve o animal para avaliação veterinária, principalmente em casos de comportamento agressivo."
     },
     // convulsoes: {
     //     nome: "Convulsões",

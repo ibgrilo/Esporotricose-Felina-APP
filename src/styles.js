@@ -541,7 +541,7 @@ const styles = StyleSheet.create({
 
   textFromHeader: {
     color: colors.surfaceWhite,
-    fontSize: Math.round(shortDimension * .035), // Reduzido de .05 para .04
+    fontSize: Math.round(shortDimension * .045), // Reduzido de .05 para .04
     fontFamily: 'Poppins-SemiBold',
   },
 
@@ -650,41 +650,64 @@ const styles = StyleSheet.create({
 
   // MODALS AND OVERLAYS
   overlayContainer: {
-    width: "85%",
-    borderRadius: buttonSizes * 0.09,
+    width: "90%",
+    maxWidth: width * 0.95,
+    borderRadius: buttonSizes * 0.12,
     padding: 0,
     backgroundColor: "#FFFFFF",
-    alignContent: 'center',
-    paddingTop: buttonSizes * 0.05,
-    paddingBottom: buttonSizes * 0.05
+    overflow: 'hidden',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.04,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: buttonSizes * 0.08,
+    elevation: buttonSizes * 0.06,
   },
 
   overlayContent: {
-    justifyContent: "center",
-    alignItems: "center",
-    padding: buttonSizes * 0.1,
+    paddingHorizontal: buttonSizes * 0.12,
+    paddingVertical: buttonSizes * 0.15,
   },
 
   overlayHeader: {
     width: "100%",
     backgroundColor: colors.primary,
-    paddingVertical: buttonSizes * 0.09,
-    borderRadius: buttonSizes * 0.09,
+    paddingVertical: buttonSizes * 0.10,
+    paddingHorizontal: buttonSizes * 0.1,
+    flexDirection: 'row',
     alignItems: "center",
+    justifyContent: "center",
+    gap: buttonSizes * 0.06,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.02,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: buttonSizes * 0.04,
+    elevation: buttonSizes * 0.024,
+  },
+
+  overlayHeaderIcon: {
+    transform: [{ scale: 1.2 }],
   },
 
   overlayHeaderText: {
-    fontSize: buttonSizes * 0.1,
+    fontSize: buttonSizes * 0.12,
     color: colors.surfaceWhite,
-    fontFamily: "Poppins-Medium",
+    fontFamily: "Poppins-Bold",
+    letterSpacing: 0.5,
   },
 
   overlayText: {
-    fontSize: buttonSizes * 0.11,
+    fontSize: buttonSizes * 0.105,
+    lineHeight: buttonSizes * 0.16,
     textAlign: "justify",
     color: colors.textBlack,
-    paddingHorizontal: buttonSizes * 0.09,
     fontFamily: "Poppins-Regular",
+    letterSpacing: 0.2,
   },
 
   // LOADING SCREENS

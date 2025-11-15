@@ -7,7 +7,7 @@ const howToDealText1 = {
     proteja: {
         icon: "🧤",
         title: "Proteja-se",
-        description: "Use luvas para manusear seu gato e evite contato direto com as lesões."
+        description: "Use luvas e máscaras para manusear seu gato e evite contato direto com as lesões."
     },
     veterinario: {
         icon: "🏥",

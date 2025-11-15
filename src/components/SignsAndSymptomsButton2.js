@@ -76,6 +76,12 @@ const InfoButton = ({ type, name, description, types, system, extended, affected
                     animationType="fade"
                     overlayStyle={styles.overlayContainer}
                 >
+                    <View style={styles.overlayHeader}>
+                        <View style={styles.overlayHeaderIcon}>
+                            <SVGComponent name="Cross" />
+                        </View>
+                        <Text style={styles.overlayHeaderText}>Dicas e Cuidados</Text>
+                    </View>
                     <View style={styles.overlayContent}>
                         <Text style={styles.overlayText}>
                             {tipsAndCare ? tipsAndCare : "⚠️ Procure um veterinário para avaliação e tratamento adequado."}
