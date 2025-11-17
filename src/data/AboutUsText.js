@@ -5,7 +5,13 @@ import styles, { buttonSizes } from '../styles';
 const AboutUsText = () => {
     return (
         <View>
+            <Text style={styles.titleFromAboutUs}>O que é a Esporotricose?</Text>
+            <Text style={styles.textFromAboutUs}>
+                A esporotricose é uma micose causada pelo fungo <Text style={styles.italic}>Sporothrix sp.</Text>, que pode infectar gatos, humanos e outros animais. É uma doença de importância em Saúde Única, exigindo atenção especial de tutores, veterinários e profissionais de saúde.
+            </Text>
+
             <Text style={styles.titleFromAboutUs}>Finalidade</Text>
+
             <Text style={styles.textFromAboutUs}>
                 O aplicativo "EsporoVet" tem como principal finalidade fornecer informações educativas sobre a esporotricose felina, uma doença fúngica que afeta gatos e pode ser transmitida a humanos.
             </Text>

@@ -14,6 +14,11 @@ const preventionText = {
         title: "Evite contato com gatos errantes",
         description: "Contato com animais de rua pode expor o seu gato ao fungo causador da esporotricose. Em caso de resgate, mantenha o animal isolado até a avaliação por um médico veterinário."
     },
+    protecaoHumana: {
+        icon: "🧤",
+        title: "Proteção ao manipular gatos doentes",
+        description: "A esporotricose pode ser transmitida para humanos por meio de arranhões, mordidas ou contato com secreções de feridas de gatos doentes. Para prevenir, evite o contato direto com gatos que tenham úlceras, use sempre luvas ao manipular animais doentes e lave bem as mãos após cuidar deles."
+    },
     enriquecimento: {
         icon: "🎾",
         title: "Enriquecimento ambiental",

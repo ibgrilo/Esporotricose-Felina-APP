@@ -1,4 +1,9 @@
 const howToDealText1 = {
+    oque: {
+        icon: "🔬",
+        title: "O que é a Esporotricose?",
+        description: "A esporotricose é uma micose causada pelo fungo Sporothrix sp., que pode infectar gatos, humanos e outros animais. É uma doença de importância em Saúde Única, exigindo atenção especial de tutores, veterinários e profissionais de saúde."
+    },
     isole: {
         icon: "🐱",
         title: "Isole o seu gato",
@@ -23,6 +28,16 @@ const howToDealText1 = {
         icon: "🧼",
         title: "Higiene",
         description: "Limpe regularmente o ambiente, lave bem as mãos após manusear o gato doente ou objetos que sejam utilizados."
+    },
+    sintomasHumanos: {
+        icon: "🩹",
+        title: "Sintomas em humanos",
+        description: "Nos humanos, surgem nódulos e feridas na pele, geralmente nos braços, mãos ou pernas, que podem se espalhar ao longo dos vasos linfáticos formando uma cadeia. As formas mais graves como disseminada e extracutânea podem ocorrer em pessoas com a imunidade comprometida."
+    },
+    diagnosticoTratamento: {
+        icon: "💊",
+        title: "Diagnóstico e tratamento em humanos",
+        description: "O diagnóstico é feito por exames laboratoriais como citologia e cultura. O tratamento é realizado com antifúngicos, como o itraconazol, por semanas ou meses. Em casos graves, pode ser necessário o uso de medicamentos mais fortes, como a Anfotericina B."
     }
 };
 

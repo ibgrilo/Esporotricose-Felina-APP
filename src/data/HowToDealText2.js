@@ -1,9 +1,4 @@
 const howToDealText2 = {
-    oque: {
-        icon: "🔬",
-        title: "O que é a Esporotricose?",
-        description: "A esporotricose é uma micose causada pelo fungo Sporothrix sp., que pode infectar gatos, humanos e outros animais."
-    },
     origem: {
         icon: "🌱",
         title: "Onde o fungo está presente",
@@ -23,6 +18,11 @@ const howToDealText2 = {
         icon: "💨",
         title: "Não se transmite pelo ar!",
         description: "O contato direto com as lesões ou secreções infectadas é necessário para a contaminação."
+    },
+    transmissaoHumanos: {
+        icon: "👤",
+        title: "Transmissão para humanos",
+        description: "A esporotricose também pode afetar os seres humanos e é transmitida principalmente por gatos domésticos doentes. A infecção ocorre quando o fungo entra na pele por meio de arranhões, mordidas ou pelo contato com secreções das feridas desses animais."
     }
 };
 

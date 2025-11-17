@@ -507,6 +507,13 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
 
+  divider: {
+    height: 1,
+    backgroundColor: colors.primary,
+    marginVertical: buttonSizes * 0.08,
+    width: '100%',
+  },
+
   sectionDivider: {
     height: 1,
     backgroundColor: colors.primaryTransparent20,
@@ -666,6 +673,7 @@ const styles = StyleSheet.create({
 
   italic: {
     fontFamily: "Poppins-Italic",
+    fontStyle: "italic",
   },
 
   textFromHeader: {
@@ -829,8 +837,10 @@ const styles = StyleSheet.create({
     width: "90%",
     maxWidth: width * 0.95,
     borderRadius: buttonSizes * 0.12,
+
+    borderColor: colors.primary,
     padding: 0,
-    backgroundColor: "#FFFFFF",
+    backgroundColor: colors.primaryTransparent20,
     overflow: 'hidden',
     shadowColor: '#000',
     shadowOffset: {
@@ -845,17 +855,20 @@ const styles = StyleSheet.create({
   overlayContent: {
     paddingHorizontal: buttonSizes * 0.12,
     paddingVertical: buttonSizes * 0.15,
+    backgroundColor: colors.primaryTransparent20,
   },
 
   overlayHeader: {
     width: "100%",
     backgroundColor: colors.primary,
-    paddingVertical: buttonSizes * 0.10,
-    paddingHorizontal: buttonSizes * 0.1,
+    paddingVertical: buttonSizes * 0.06,
+    paddingHorizontal: buttonSizes * 0.08,
     flexDirection: 'row',
     alignItems: "center",
     justifyContent: "center",
-    gap: buttonSizes * 0.06,
+    gap: buttonSizes * 0.04,
+    borderTopLeftRadius: buttonSizes * 0.11,
+    borderTopRightRadius: buttonSizes * 0.11,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -867,11 +880,11 @@ const styles = StyleSheet.create({
   },
 
   overlayHeaderIcon: {
-    transform: [{ scale: 1.2 }],
+    transform: [{ scale: 1.0 }],
   },
 
   overlayHeaderText: {
-    fontSize: buttonSizes * 0.12,
+    fontSize: buttonSizes * 0.10,
     color: colors.surfaceWhite,
     fontFamily: "Poppins-Bold",
     letterSpacing: 0.5,
@@ -884,6 +897,17 @@ const styles = StyleSheet.create({
     color: colors.textBlack,
     fontFamily: "Poppins-Regular",
     letterSpacing: 0.2,
+  },
+
+  overlayListItem: {
+    paddingVertical: buttonSizes * 0.06,
+    borderBottomWidth: 1,
+    borderBottomColor: colors.primary + '30',
+  },
+
+  overlayListItemLast: {
+    borderBottomWidth: 0,
+    paddingBottom: 0,
   },
 
   overlayCloseButton: {

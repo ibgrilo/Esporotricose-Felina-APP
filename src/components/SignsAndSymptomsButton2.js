@@ -83,9 +83,23 @@ const InfoButton = ({ type, name, description, types, system, extended, affected
                         <Text style={styles.overlayHeaderText}>Dicas e Cuidados</Text>
                     </View>
                     <View style={styles.overlayContent}>
-                        <Text style={styles.overlayText}>
-                            {tipsAndCare ? tipsAndCare : "⚠️ Procure um veterinário para avaliação e tratamento adequado."}
-                        </Text>
+                        {tipsAndCare ? (
+                            tipsAndCare.split('\n\n').map((item, index, array) => (
+                                <View
+                                    key={index}
+                                    style={[
+                                        styles.overlayListItem,
+                                        index === array.length - 1 && styles.overlayListItemLast
+                                    ]}
+                                >
+                                    <Text style={styles.overlayText}>{item.trim()}</Text>
+                                </View>
+                            ))
+                        ) : (
+                            <Text style={styles.overlayText}>
+                                ⚠️ Procure um veterinário para avaliação e tratamento adequado.
+                            </Text>
+                        )}
                     </View>
                 </Overlay>
             )}
