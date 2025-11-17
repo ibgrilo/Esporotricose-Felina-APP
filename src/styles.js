@@ -1308,6 +1308,10 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
 
+  wrapper: {
+    width: "100%",
+  },
+
   contentBorder: {
     marginTop: buttonSizes * 0.03,
     paddingTop: buttonSizes * 0.03,

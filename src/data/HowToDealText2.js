@@ -1,9 +1,3 @@
-import React from 'react';
-import { View, Text } from 'react-native';
-import styles from '../styles';
-import { buttonSizes } from '../styles';
-import colors from '../theme/colors';
-
 const howToDealText2 = {
     oque: {
         icon: "🔬",

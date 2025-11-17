@@ -96,7 +96,7 @@ const AccordionItem = ({ title, meaning, expanded, onPress }) => {
 
 
 const Accordion = () => {
-  const [expanded, setExpanded] = useState(null);
+  const [expandedItems, setExpandedItems] = useState({});
 
   return (
     <ScrollView style={styles.scrollContainer}>
@@ -106,13 +106,12 @@ const Accordion = () => {
           key={key}
           title={title}
           meaning={meaning}
-          expanded={expanded === key}
+          expanded={expandedItems[key] || false}
           onPress={() => {
-            if (expanded === key) {
-              setExpanded(null); // fecha se já estiver aberto
-            } else {
-              setExpanded(key); // abre o novo imediatamente
-            }
+            setExpandedItems(prev => ({
+              ...prev,
+              [key]: !prev[key]
+            }));
           }}
         />
       ))}
