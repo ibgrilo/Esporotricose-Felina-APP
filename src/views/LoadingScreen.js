@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import SVGComponent from "../assets/svg/SVGComponent";
-import { View, ActivityIndicator, Text, StatusBar } from "react-native";
+import { View, ActivityIndicator, Text, StatusBar, Image } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from "../styles";
 import colors from "../theme/colors";
@@ -12,7 +12,7 @@ const LoadingScreen = ({ onFinish }) => {
             if (onFinish) {
                 onFinish();
             }
-        }, 1500); // 1.5 segundos - tempo mínimo para ver a loading
+        }, 5000); // 1.5 segundos - tempo mínimo para ver a loading
 
         return () => clearTimeout(timer);
     }, [onFinish]);
@@ -26,7 +26,11 @@ const LoadingScreen = ({ onFinish }) => {
             >
                 {/* Logo do gato */}
                 <View style={styles.loadingLogoContainer}>
-                    <SVGComponent name="LoadingLogo" />
+                    <Image
+                        source={require("../assets/images/logo/loadingLogo.png")}
+                        style={styles.loadingLogoImage}
+                        resizeMode="contain"
+                    />
                 </View>
 
                 {/* Título */}

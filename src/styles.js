@@ -969,6 +969,11 @@ const styles = StyleSheet.create({
     marginBottom: buttonSizes * 0.005,
   },
 
+  loadingLogoImage: {
+    width: buttonSizes,
+    height: buttonSizes,
+  },
+
   loadingLogo: {
     width: buttonSizes * 0.2,
     height: buttonSizes * 0.2,

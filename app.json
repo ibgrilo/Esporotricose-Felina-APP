@@ -2,9 +2,9 @@
   "expo": {
     "name": "EsporoVet",
     "slug": "esporoVet",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "orientation": "portrait",
-    "icon": "./src/assets/images/logo/iconAPP.png",
+    "icon": "./src/assets/images/logo/adaptive-icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "android": {
@@ -12,9 +12,9 @@
         "ACCESS_FINE_LOCATION"
       ],
       "package": "com.esporovet.app",
-      "icon": "./src/assets/images/logo/iconAPP.png",
+      "icon": "./src/assets/images/logo/icon.png",
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/images/logo/adaptive-iconAPP.png",
+        "foregroundImage": "./src/assets/images/logo/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
       "targetSdkVersion": 35,
@@ -39,7 +39,7 @@
       "**/*"
     ],
     "web": {
-      "favicon": "./src/assets/images/logo/iconAPP.png"
+      "favicon": "./src/assets/images/logo/icon.png"
     },
     "owner": "tayigu",
     "plugins": [
@@ -48,9 +48,9 @@
         "expo-splash-screen",
         {
           "backgroundColor": "#f2f2f2",
-          "image": "./src/assets/images/logo/splash-icon-light.png",
+          "image": "./src/assets/images/logo/splashIconLight.png",
           "dark": {
-            "image": "./src/assets/images/logo/splash-icon-dark.png",
+            "image": "./src/assets/images/logo/splashIconDark.png",
             "backgroundColor": "#000000"
           },
           "imageWidth": 200

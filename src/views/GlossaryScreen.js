@@ -115,6 +115,7 @@ const Accordion = () => {
           }}
         />
       ))}
+
     </ScrollView>
   );
 };

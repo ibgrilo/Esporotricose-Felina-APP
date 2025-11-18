@@ -5,10 +5,12 @@ import preventionText from "../data/preventionText";
 import Prevention from "../assets/svg/icons/Prevention";
 import { buttonSizes } from "../styles";
 import AccordionCard from "../components/AccordionCard";
+import SVGComponent from "../assets/svg/SVGComponent";
 
 export default props => {
     return (
         <ScrollView style={styles.scrollContainer}>
+            <SVGComponent name="LoadingLogo" />
             <View style={styles.container}>
                 <Prevention width={buttonSizes * 0.7} height={buttonSizes * 0.7} />
             </View>

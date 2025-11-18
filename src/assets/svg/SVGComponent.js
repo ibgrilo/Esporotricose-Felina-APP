@@ -28,7 +28,6 @@ import NodulosEAbscessos from "./icons/NodulosEAbscessos.svg";
 import SecrecaoPurulenta from "./icons/SecrecaoPurulenta.svg";
 import UlcerasNaPele from "./icons/UlcerasNaPele.svg";
 import Location from "./icons/Location.svg";
-import MainLogo from "./icons/MainLogo.svg";
 
 
 import { buttonSizes } from "../../styles";
@@ -93,8 +92,6 @@ const SVGComponent = (props) => {
             return <SecrecaoPurulenta width={buttonSizes * 1.2} height={buttonSizes * 1.2} />;
         case "UlcerasNaPele":
             return <UlcerasNaPele width={buttonSizes * 1.2} height={buttonSizes * 1.2} />;
-        case "LoadingLogo":
-            return <MainLogo width={buttonSizes * .8} height={buttonSizes * .8} />;
         default:
             return null;
     }
