@@ -60,3 +60,4 @@ export const fetchNearbyVeterinaries = async ({ latitude, longitude }) => {
 
     return [];
 };
+

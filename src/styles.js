@@ -1360,6 +1360,58 @@ const styles = StyleSheet.create({
     right: 0,
   },
 
+  // SENSITIVE CONTENT WARNING STYLES
+  sensitiveContentContainer: {
+    backgroundColor: colors.primaryTransparent20,
+    padding: buttonSizes * 0.15,
+    borderRadius: buttonSizes * 0.08,
+    borderWidth: 2,
+    borderColor: colors.primary,
+    alignItems: 'center',
+    width: buttonSizes * 2.3,
+    minHeight: buttonSizes * 2.4,
+    justifyContent: 'center',
+  },
+
+  sensitiveContentWarningIcon: {
+    fontSize: buttonSizes * 0.2,
+    marginBottom: buttonSizes * 0.08,
+  },
+
+  sensitiveContentTitle: {
+    fontSize: buttonSizes * 0.1,
+    fontFamily: 'Poppins-Bold',
+    color: colors.primary,
+    textAlign: 'center',
+    marginBottom: buttonSizes * 0.06,
+  },
+
+  sensitiveContentDescription: {
+    fontSize: buttonSizes * 0.075,
+    fontFamily: 'Poppins-Regular',
+    color: colors.primary,
+    textAlign: 'center',
+    marginBottom: buttonSizes * 0.12,
+  },
+
+  sensitiveContentButton: {
+    backgroundColor: colors.primary,
+    paddingVertical: buttonSizes * 0.08,
+    paddingHorizontal: buttonSizes * 0.15,
+    borderRadius: buttonSizes * 0.25,
+  },
+
+  sensitiveContentButtonText: {
+    color: 'white',
+    fontSize: buttonSizes * 0.09,
+    fontFamily: 'Poppins-SemiBold',
+  },
+
+  sensitiveContentImageWrapper: {
+    width: buttonSizes * 2.3,
+    height: buttonSizes * 2.4,
+  },
+
 })
 
 export const headerStyle = {

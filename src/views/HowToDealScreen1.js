@@ -8,7 +8,7 @@ import howToDealText1 from "../data/howToDealText1";
 
 export default props => {
     return (
-        <ScrollView 
+        <ScrollView
             style={styles.scrollContainer}
             keyboardShouldPersistTaps="handled"
             scrollEventThrottle={16}
