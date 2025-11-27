@@ -7,6 +7,10 @@ const AccordionItem = memo(({ keyId, icon, title, description, expanded, onPress
     const animation = useRef(new Animated.Value(expanded ? 1 : 0)).current;
     const [contentHeight, setContentHeight] = useState(0);
 
+    const handlePress = useCallback(() => {
+        onPress(keyId);
+    }, [keyId, onPress]);
+
     useEffect(() => {
         Animated.timing(animation, {
             toValue: expanded ? 1 : 0,
@@ -25,10 +29,6 @@ const AccordionItem = memo(({ keyId, icon, title, description, expanded, onPress
             inputRange: [0, 1],
             outputRange: [0, 1],
         }),
-        translateY: animation.interpolate({
-            inputRange: [0, 1],
-            outputRange: [-10, 0],
-        }),
         rotate: animation.interpolate({
             inputRange: [0, 1],
             outputRange: ['0deg', '90deg'],
@@ -44,13 +44,11 @@ const AccordionItem = memo(({ keyId, icon, title, description, expanded, onPress
 
     const iconContainerStyle = useMemo(() => [
         styles.howToDealIconContainer,
-        expanded ? styles.iconActive : styles.iconInactive,
-        { transform: [{ scale: expanded ? 1.1 : 1 }] }
+        expanded ? styles.iconActive : styles.iconInactive
     ], [expanded]);
 
     const iconTextStyle = useMemo(() => [
-        styles.howToDealIcon,
-        { fontSize: expanded ? buttonSizes * 0.13 : buttonSizes * 0.118 }
+        styles.howToDealIcon
     ], [expanded]);
 
     const titleTextStyle = useMemo(() => [
@@ -67,7 +65,8 @@ const AccordionItem = memo(({ keyId, icon, title, description, expanded, onPress
                     expanded ? styles.cardActive : styles.cardInactive
                 ]}
                 activeOpacity={0.8}
-                onPress={onPress}
+                onPress={handlePress}
+                disabled={false}
             >
                 <View style={iconContainerStyle}>
                     <Text style={iconTextStyle}>
@@ -97,7 +96,6 @@ const AccordionItem = memo(({ keyId, icon, title, description, expanded, onPress
                         height: interpolations.height,
                         overflow: "hidden",
                         opacity: interpolations.opacity,
-                        transform: [{ translateY: interpolations.translateY }],
                     }}>
                         <View style={styles.contentBorder}>
                             <Text style={[styles.howToDealDescription, styles.descriptionStyle]}>
@@ -110,9 +108,10 @@ const AccordionItem = memo(({ keyId, icon, title, description, expanded, onPress
                         style={{
                             position: "absolute",
                             opacity: 0,
-                            zIndex: -1,
+                            zIndex: -999,
                             left: 0,
                             right: 0,
+                            pointerEvents: "none",
                         }}
                         onLayout={handleLayout}
                     >
@@ -163,7 +162,7 @@ const AccordionCard = ({ data }) => {
                     title={item.title}
                     description={item.description}
                     expanded={expandedItems[key] || false}
-                    onPress={() => handleToggle(key)}
+                    onPress={handleToggle}
                 />
             ))}
         </View>

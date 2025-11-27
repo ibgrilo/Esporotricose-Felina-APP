@@ -8,10 +8,17 @@ import howToDealText1 from "../data/howToDealText1";
 
 export default props => {
     return (
-        <ScrollView style={styles.scrollContainer}>
+        <ScrollView 
+            style={styles.scrollContainer}
+            keyboardShouldPersistTaps="handled"
+            scrollEventThrottle={16}
+            maintainVisibleContentPosition={{
+                minIndexForVisible: 0,
+                autoscrollToTopThreshold: 10
+            }}
+        >
             <StatusBar translucent={false} backgroundColor={colors.primary} />
             <AccordionCard data={howToDealText1} />
-
             <View style={styles.legalWarningCard}>
                 <Text style={styles.legalWarningTitle}>
                     ⚖️ Abandono de animais é crime
