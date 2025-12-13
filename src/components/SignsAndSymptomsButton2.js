@@ -54,7 +54,14 @@ const InfoButton = ({ type, name, description, types, system, extended, affected
 
         return (
             <>
-                <Text style={styles.SignsAndSymptomsButton2Title}>{label}</Text>
+                <Text 
+                    style={styles.SignsAndSymptomsButton2Title}
+                    numberOfLines={1}
+                    adjustsFontSizeToFit
+                    minimumFontScale={0.8}
+                >
+                    {label}
+                </Text>
                 {svgName && <SVGComponent name={svgName} />}
             </>
         );

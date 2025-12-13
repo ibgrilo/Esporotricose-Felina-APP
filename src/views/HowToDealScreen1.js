@@ -12,6 +12,7 @@ export default props => {
             style={styles.scrollContainer}
             keyboardShouldPersistTaps="handled"
             scrollEventThrottle={16}
+            removeClippedSubviews={true}
             maintainVisibleContentPosition={{
                 minIndexForVisible: 0,
                 autoscrollToTopThreshold: 10

@@ -6,6 +6,7 @@ import { buttonSizes } from "../styles";
 const AccordionItem = memo(({ keyId, icon, title, description, expanded, onPress }) => {
     const animation = useRef(new Animated.Value(expanded ? 1 : 0)).current;
     const [contentHeight, setContentHeight] = useState(0);
+    const heightMeasured = useRef(false);
 
     const handlePress = useCallback(() => {
         onPress(keyId);
@@ -14,8 +15,8 @@ const AccordionItem = memo(({ keyId, icon, title, description, expanded, onPress
     useEffect(() => {
         Animated.timing(animation, {
             toValue: expanded ? 1 : 0,
-            duration: 250,
-            easing: Easing.bezier(0.4, 0.0, 0.2, 1),
+            duration: 200,
+            easing: Easing.out(Easing.ease),
             useNativeDriver: false,
         }).start();
     }, [expanded]);
@@ -25,10 +26,6 @@ const AccordionItem = memo(({ keyId, icon, title, description, expanded, onPress
             inputRange: [0, 1],
             outputRange: [0, contentHeight],
         }),
-        opacity: animation.interpolate({
-            inputRange: [0, 1],
-            outputRange: [0, 1],
-        }),
         rotate: animation.interpolate({
             inputRange: [0, 1],
             outputRange: ['0deg', '90deg'],
@@ -36,11 +33,14 @@ const AccordionItem = memo(({ keyId, icon, title, description, expanded, onPress
     }), [animation, contentHeight]);
 
     const handleLayout = useCallback((e) => {
+        if (heightMeasured.current) return;
+        
         const h = e.nativeEvent.layout.height;
-        if (h > 0 && h !== contentHeight) {
+        if (h > 0) {
             setContentHeight(h);
+            heightMeasured.current = true;
         }
-    }, [contentHeight]);
+    }, []);
 
     const iconContainerStyle = useMemo(() => [
         styles.howToDealIconContainer,
@@ -95,7 +95,6 @@ const AccordionItem = memo(({ keyId, icon, title, description, expanded, onPress
                     <Animated.View style={{
                         height: interpolations.height,
                         overflow: "hidden",
-                        opacity: interpolations.opacity,
                     }}>
                         <View style={styles.contentBorder}>
                             <Text style={[styles.howToDealDescription, styles.descriptionStyle]}>

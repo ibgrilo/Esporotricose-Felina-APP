@@ -13,7 +13,14 @@ export default ({ name, buttonName, navigation }) => {
             onPress={() => navigation.push("Lista de sinais", name)}
         >
             <View style={styles.SignsAndSymptomsButtonContainer}>
-                <Text style={styles.SignsAndSymptomsButtontitles}>{buttonName}</Text>
+                <Text 
+                    style={styles.SignsAndSymptomsButtontitles}
+                    numberOfLines={1}
+                    adjustsFontSizeToFit
+                    minimumFontScale={0.8}
+                >
+                    {buttonName}
+                </Text>
                 <SVGComponent name={name} />
             </View>
         </TouchableOpacity>

@@ -192,6 +192,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
+    paddingHorizontal: buttonSizes * 0.03,
   },
 
   SignsAndSymptomsButton2: {
@@ -203,7 +204,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: buttonSizes * 0.05,
     borderRadius: buttonSizes * 0.5,
-    paddingHorizontal: buttonSizes * 0.1,
+    paddingHorizontal: buttonSizes * 0.08,
+    minHeight: buttonSizes * 0.25,
   },
 
   SignsAndSymptomsButtonViews: {
@@ -617,16 +619,18 @@ const styles = StyleSheet.create({
 
   SignsAndSymptomsButtontitles: {
     color: colors.surfaceWhite,
-    fontSize: Math.round(buttonSizes * .14),
+    fontSize: Math.round(buttonSizes * .13),
     fontFamily: "Poppins-Medium",
-    paddingRight: buttonSizes * 0.04
+    paddingRight: buttonSizes * 0.04,
+    flexShrink: 1,
   },
 
   SignsAndSymptomsButton2Title: {
     fontFamily: 'Poppins-SemiBold',
     color: colors.surfaceWhite,
     fontSize: Math.round(buttonSizes * .065),
-    marginRight: buttonSizes * 0.02
+    marginRight: buttonSizes * 0.02,
+    flexShrink: 1,
   },
 
   text: {
@@ -1135,7 +1139,8 @@ const styles = StyleSheet.create({
   },
 
   modalContent: {
-    flex: 1,
+    flexGrow: 0,
+    flexShrink: 1,
     paddingHorizontal: buttonSizes * 0.08,
     paddingVertical: buttonSizes * 0.05,
   },

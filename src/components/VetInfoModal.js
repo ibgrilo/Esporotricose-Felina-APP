@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal, View, Text, TouchableOpacity, Linking } from "react-native";
+import { Modal, View, Text, TouchableOpacity, Linking, ScrollView } from "react-native";
 import { Ionicons } from '@expo/vector-icons';
 import styles from "../styles";
 import colors from "../theme/colors";
@@ -42,7 +42,11 @@ const VetInfoModal = ({ visible, vet, onClose }) => {
                         </TouchableOpacity>
                     </View>
 
-                    <View style={styles.modalContent}>
+                    <ScrollView 
+                        style={styles.modalContent}
+                        contentContainerStyle={{ flexGrow: 1 }}
+                        showsVerticalScrollIndicator={false}
+                    >
                         <View style={styles.modalInfoItem}>
                             <Ionicons name="location" size={buttonSizes * 0.12} color={colors.primary} />
                             <View style={styles.modalInfoTextContainer}>
@@ -58,7 +62,7 @@ const VetInfoModal = ({ visible, vet, onClose }) => {
                                 <Text style={styles.modalInfoText}>{vet.phone || "Telefone não disponível"}</Text>
                             </View>
                         </View>
-                    </View>
+                    </ScrollView>
 
                     <View style={styles.modalActions}>
                         <TouchableOpacity

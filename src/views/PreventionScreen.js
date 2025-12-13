@@ -9,7 +9,11 @@ import SVGComponent from "../assets/svg/SVGComponent";
 
 export default props => {
     return (
-        <ScrollView style={styles.scrollContainer}>
+        <ScrollView 
+            style={styles.scrollContainer}
+            removeClippedSubviews={true}
+            scrollEventThrottle={16}
+        >
             <SVGComponent name="LoadingLogo" />
             <View style={styles.container}>
                 <Prevention width={buttonSizes * 0.7} height={buttonSizes * 0.7} />
