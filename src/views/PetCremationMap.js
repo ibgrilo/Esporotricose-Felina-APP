@@ -90,7 +90,11 @@ export default function PetCremationMap() {
                             setSelectedCremation({
                                 name: loc.name,
                                 address: loc.address,
-                                phone: loc.phone
+                                phone: loc.phone,
+                                location: {
+                                    lat: loc.latitude,
+                                    lng: loc.longitude
+                                }
                             });
                             setModalVisible(true);
                         }}

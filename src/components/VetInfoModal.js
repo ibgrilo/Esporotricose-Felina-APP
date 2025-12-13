@@ -20,12 +20,12 @@ const VetInfoModal = ({ visible, vet, onClose }) => {
             animationType="fade"
             onRequestClose={onClose}
         >
-            <TouchableOpacity 
+            <TouchableOpacity
                 style={styles.modalOverlay}
                 activeOpacity={1}
                 onPress={onClose}
             >
-                <TouchableOpacity 
+                <TouchableOpacity
                     style={styles.modalContainer}
                     activeOpacity={1}
                     onPress={(e) => e.stopPropagation()}
@@ -42,7 +42,7 @@ const VetInfoModal = ({ visible, vet, onClose }) => {
                         </TouchableOpacity>
                     </View>
 
-                    <ScrollView 
+                    <ScrollView
                         style={styles.modalContent}
                         contentContainerStyle={{ flexGrow: 1 }}
                         showsVerticalScrollIndicator={false}
@@ -71,17 +71,23 @@ const VetInfoModal = ({ visible, vet, onClose }) => {
                                 if (vet.phone && vet.phone !== "Telefone não disponível") {
                                     Linking.openURL(`tel:${vet.phone}`);
                                 }
-                                onClose();
                             }}
                         >
+                            <Ionicons name="call" size={buttonSizes * 0.1} color={colors.surfaceWhite} />
                             <Text style={styles.modalActionButtonText}>Ligar</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity
                             style={[styles.modalActionButton, styles.modalDirectionsButton]}
-                            onPress={onClose}
+                            onPress={() => {
+                                if (vet.location) {
+                                    const url = `https://www.google.com/maps/dir/?api=1&destination=${vet.location.lat},${vet.location.lng}`;
+                                    Linking.openURL(url);
+                                }
+                            }}
                         >
-                            <Text style={styles.modalActionButtonText}>Fechar</Text>
+                            <Ionicons name="navigate" size={buttonSizes * 0.1} color={colors.surfaceWhite} />
+                            <Text style={styles.modalActionButtonText}>Localizar</Text>
                         </TouchableOpacity>
                     </View>
                 </TouchableOpacity>

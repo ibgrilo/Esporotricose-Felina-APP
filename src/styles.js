@@ -1123,7 +1123,6 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: buttonSizes * 0.1,
     borderTopRightRadius: buttonSizes * 0.1,
     maxHeight: height * 0.7,
-    minHeight: height * 0.4,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
