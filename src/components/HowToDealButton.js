@@ -54,7 +54,8 @@ export default function HowToDealButton(props) {
                 visible={modalVisible}
                 onClose={toggleOverlay}
                 title="O seu gatinho partiu. O que fazer?"
-                message="Não descarte nem sepulte o animal. Ele deve ser cremado, pois o fungo se dissemina em matéria orgânica e no solo."
+                message="⚠️ Não descarte nem sepulte o animal. Ele deve ser cremado, pois o fungo se dissemina em matéria orgânica e no solo."
+                helpMessage="💡 Precisa de ajuda? Se você não tem condições financeiras para realizar a cremação, entre em contato com a UVZ (Unidade de Vigilância em Zoonoses) do seu município. Eles podem auxiliar com o descarte adequado e seguro do corpo do animal."
             />
         </View>
     );

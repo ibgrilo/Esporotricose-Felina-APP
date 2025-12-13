@@ -914,6 +914,33 @@ const styles = StyleSheet.create({
     paddingBottom: 0,
   },
 
+  overlayHelpSection: {
+    marginTop: buttonSizes * 0.15,
+    borderWidth: buttonSizes * 0.009,
+    borderColor: colors.primary,
+    backgroundColor: colors.surfaceWhite,
+    borderRadius: buttonSizes * 0.1,
+    padding: buttonSizes * 0.12,
+    overflow: 'hidden',
+    elevation: 3,
+    shadowColor: colors.primary,
+    shadowOffset: {
+      width: 0,
+      height: buttonSizes * 0.015,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: buttonSizes * 0.03,
+  },
+
+  overlayHelpText: {
+    fontSize: buttonSizes * 0.095,
+    lineHeight: buttonSizes * 0.15,
+    textAlign: "justify",
+    color: colors.textBlack,
+    fontFamily: "Poppins-Regular",
+    letterSpacing: 0.2,
+  },
+
   overlayCloseButton: {
     backgroundColor: colors.primary,
     borderRadius: buttonSizes * 0.08,

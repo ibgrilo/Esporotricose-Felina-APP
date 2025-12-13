@@ -4,7 +4,7 @@ import { Overlay } from "@rneui/base";
 import styles from "../styles";
 import SVGComponent from "../assets/svg/SVGComponent";
 
-const HowToDealOverlay = ({ visible, onClose, title, message }) => {
+const HowToDealOverlay = ({ visible, onClose, title, message, helpMessage }) => {
     return (
         <Overlay
             isVisible={visible}
@@ -17,6 +17,12 @@ const HowToDealOverlay = ({ visible, onClose, title, message }) => {
             </View>
             <View style={styles.overlayContent}>
                 <Text style={styles.overlayText}>{message}</Text>
+                
+                {helpMessage && (
+                    <View style={styles.overlayHelpSection}>
+                        <Text style={styles.overlayHelpText}>{helpMessage}</Text>
+                    </View>
+                )}
             </View>
         </Overlay>
     );

@@ -8,11 +8,7 @@ import howToDealText2 from "../data/howToDealText2";
 
 export default props => {
     return (
-        <ScrollView 
-            style={styles.scrollContainer}
-            removeClippedSubviews={true}
-            scrollEventThrottle={16}
-        >
+        <ScrollView style={styles.scrollContainer}>
             <StatusBar translucent={false} backgroundColor={colors.primary} />
             <AccordionCard data={howToDealText2} />
             <View style={styles.infoCard}>
