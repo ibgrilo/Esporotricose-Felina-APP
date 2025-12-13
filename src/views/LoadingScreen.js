@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import SVGComponent from "../assets/svg/SVGComponent";
 import { View, ActivityIndicator, Text, StatusBar, Image } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
@@ -6,17 +6,6 @@ import styles from "../styles";
 import colors from "../theme/colors";
 
 const LoadingScreen = ({ onFinish }) => {
-    useEffect(() => {
-        // Delay mínimo para garantir que a loading seja visível
-        const timer = setTimeout(() => {
-            if (onFinish) {
-                onFinish();
-            }
-        }, 5000); // 1.5 segundos - tempo mínimo para ver a loading
-
-        return () => clearTimeout(timer);
-    }, [onFinish]);
-
     return (
         <>
             <StatusBar translucent backgroundColor="transparent" barStyle="dark-content" />
