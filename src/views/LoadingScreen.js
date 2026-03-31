@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SVGComponent from "../assets/svg/SVGComponent";
 import { View, ActivityIndicator, Text, StatusBar, Image } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import styles from "../styles";
 import colors from "../theme/colors";
 
+
+
 const LoadingScreen = ({ onFinish }) => {
+
+    useEffect(() => {
+    const init = async () => {
+        try {
+            console.log("Loading inicial...");
+        } catch (e) {
+            console.error(e);
+        } finally {
+            onFinish && onFinish(); // 🔥 ISSO AQUI RESOLVE TUDO
+        }
+    };
+
+    init();
+}, [onFinish]);
+
     return (
         <>
             <StatusBar translucent backgroundColor="transparent" barStyle="dark-content" />
