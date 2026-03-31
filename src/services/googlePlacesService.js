@@ -1,7 +1,6 @@
 import { getCachedDetails, setCachedDetails } from './vetCacheService';
 
-const API_KEY = "AIzaSyAdF6NRC6czSt3vhoz8sH0lGtPd0EIK-lA";
-
+const API_KEY = process.env.EXPO_PUBLIC_GOOGLE_MAPS_API_KEY;
 // Buscar detalhes de um local específico
 export const fetchPlaceDetails = async (placeId) => {
     const cached = await getCachedDetails(placeId);
@@ -32,6 +31,7 @@ export const fetchNearbyVeterinaries = async ({ latitude, longitude }) => {
 
     const response = await fetch(url);
     const data = await response.json();
+    console.log("Resposta da API de lugares próximos:", data);
 
     if (data.status === "OK" && data.results) {
         const topResults = data.results.slice(0, 15);
