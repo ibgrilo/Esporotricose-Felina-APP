@@ -39,5 +39,7 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+.vscode/
+
 # Keys
 .env

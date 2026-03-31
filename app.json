@@ -16,9 +16,7 @@
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/logo/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "targetSdkVersion": 35,
-      "compileSdkVersion": 35
+      }
     },
     "ios": {
       "supportsTablet": true,
@@ -46,17 +44,6 @@
             "backgroundColor": "#000000"
           },
           "imageWidth": 200
-        }
-      ],
-      [
-        "expo-build-properties",
-        {
-          "android": {
-            "kotlinVersion": "1.9.25",
-            "compileSdkVersion": 35,
-            "targetSdkVersion": 35,
-            "buildToolsVersion": "35.0.0"
-          }
         }
       ]
     ],
